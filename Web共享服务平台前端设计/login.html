@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="static/css/initi.css">
+    <script src="static/js/jquery.js"></script>
+    <style>
+        html{height: 100%}
+        body{
+            background: url("static/imge/loginBg.png") no-repeat;
+            background-size: cover;
+            height: 100%;
+        }
+        .login_main{
+            height: 100%;
+            background: rgba(255,255,255,.6);
+        }
+        .content{
+            position: relative;
+            top: 140px;
+            text-align: center;
+            /*background: #999999;*/
+            max-width: 600px;
+            min-height:400px ;
+            margin:auto;
+            border: 1px solid #eee;
+            border-radius: 14px;
+            box-shadow: 2px 2px 7px #414141;
+            background: rgba(255,255,255,.4);
+        }
+        .content h1{
+            text-align: center;
+            color: black;
+            padding-top: 40px;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+            border-bottom: 1px solid lightblue;
+        }
+        .content table{
+            height: 140px;
+            width: 300px;
+            font-size: 16px;
+        }
+        .content input[type="text"],.content input[type="password"]{
+            height: 30px;
+            width: 220px;
+            font-size: 14px;
+            padding-left: 20px;
+            border-bottom: 1px solid rgba(0,0,0,.6);
+            background: rgba(0,0,0,0);
+        }
+        .content button{
+            height: 38px;
+            background: lightblue;
+            width: 240px;
+            border-radius: 5px;
+            font-size: 14px;
+            margin-top: 20px;
+        }
+        .info{
+            height: 40px;
+            width: 600px;
+            line-height: 40px;
+            text-align: center;
+            font-size: 16px;
+            color: white;
+            border-radius: 6px;
+            border: 1px solid #3d72b4;
+            background: rgba(137, 196, 244, .5);
+            position: absolute;
+            top: -50px;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            /*display: none;*/
+        }
+    </style>
+
+</head>
+<body>
+    <div class="login_main">
+        <div class="info">提示内容</div>
+        <div class="content">
+            <h1>登录</h1>
+            <table style="margin: auto" >
+                <tr>
+                    <td>用户名:</td>
+                    <td><input type="text" id="username" placeholder="请输入账号"></td>
+                </tr>
+                <tr>
+                    <td>密码:</td>
+                    <td><input type="password" id="passwd" placeholder="请输入密码"></td>
+                </tr>
+            </table>
+            <div style="text-align: right;width: 440px">
+                <a class="fl" style="padding-left: 200px" href="register.html">注册账号</a>
+                <a href="#">忘记密码？</a>
+            </div>
+            <button class="cursor" style="color: white">立即登录 </button>
+        </div>
+    </div>
+</body>
+<script>
+    function anim(){
+        $(".info").animate({top:"30px"},300,function () {
+            $(this).fadeOut(1000,function () {
+                $(this).css({"top":"-60px","display":"block"})
+            });
+        })
+    }
+    /*密码验证*/
+    $(document).ready(function () {
+        var account={
+            "123":"123",
+            "13390789082":"123456"
+        }
+
+        $(".content button").click(function () {
+            $(".info").animate({top:"30px"},300,function () {
+                $(".info").stop(false,true)
+                $(this).fadeOut(1000,function () {
+                    $(this).css({"top":"-60px","display":"block"})
+                });
+            })
+            var userName=$("#username").val()
+            var passWord=$("#passwd").val()
+            if (userName===""||passWord===""){
+                $(".info").html("不能输入空的内容！")
+                console.log("不能输入空的内容")
+            }else if (account[userName]!==passWord){
+                $(".info").html("账号或密码输出错误！")
+            }else{
+                $(".info").html("登录成功！")
+                $(function () {
+                    window.location.href = "index.html";
+                })
+            }
+        })
+    })
+</script>
+</html>

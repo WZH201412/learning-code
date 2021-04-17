@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>活动详情</title>
+    <link rel="stylesheet" href="static/css/head-footer.css">
+    <link rel="stylesheet" href="static/css/initi.css">
+    <script src="static/js/vue.js"></script>
+    <style type="text/css">
+        .page_main {
+            min-width: 1344px;
+            max-width: 1600px;
+            margin: auto;
+            width: 100%;
+            background-color: whitesmoke;
+        }
+        /**/
+       /* .page_main .info.competition .detail {
+            min-height: 224px;
+        }*/
+        .page_main .info.competition{
+            margin-top: 50px;
+            font-family: 微软雅黑;
+
+        }
+         .page_main .info .detail {
+             overflow: hidden;
+             background: #fff;
+             padding: 40px;
+             margin-right: 391px;
+         }
+        .page_main .info .detail .detail-partial:last-child {
+            margin-bottom: 0;
+        }
+         .page_main .info .detail .detail-partial {
+             position: relative;
+             margin-bottom: 30px;
+         }
+        .page_main .info {
+            font-size: 16px;
+            line-height: 1.85;
+            margin: 0 40px 16px;
+            position: relative;
+        }
+        .page_main .info .detail .detail-partial .detail-title {
+            letter-spacing: 10px;
+            line-height: 22px;
+            margin: 0;
+            margin-bottom: 25px;
+            font-size: 16px;
+        }
+        .text-linear {
+            font-weight: 500;
+            letter-spacing: 10px;
+        }
+         .text-linear {
+             position: relative;
+             z-index: 1;
+         }
+        .text-linear:after {
+            width: 80%;
+        }
+         .text-linear:after {
+             content: '';
+             position: absolute;
+             top: 10px;
+             left: 12px;
+             z-index: -1;
+             width: 100%;
+             height: 14px;
+             background: linear-gradient(90deg,#c99a05 30%,rgba(255,255,255,0) 30%);
+             background-size: 3px 100%;
+         }
+        .page_main .info .detail .detail-partial .detail-desc {
+            font-size: 13px;
+            word-break: break-all;
+            position: relative;
+            min-height: 116px;
+        }
+         .banner-large .detail-desc {
+             /*font-size: 13px;*/
+             /*position: relative;*/
+             display: flex;
+             align-items: center;
+         }
+        /*右边参加*/
+        .page_main .info .handler {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            width: 312px;
+            line-height: 22px;
+            padding: 40px 29px 0;
+            background: #fff;
+        }
+        .page_main .info .handler .state p {
+            margin: 0;
+            margin-bottom: 20px;
+            display: inline-block;
+        }
+        .page_main .info .handler .state p em {
+            display: inline-block;
+            font-size: 16px;
+            color: #c99a05;
+            font-style: normal;
+            text-align: center;
+            font-weight: 500;
+        }
+        .page_main .info .handler .state p span {
+            color: #c99a05;
+        }
+        .page_main .info .handler .sponsor {
+            font-size: 0;
+            position: relative;
+            height: 28px;
+            line-height: 28px;
+        }
+        .page_main .info .handler .sponsor img {
+            width: 28px;
+            height: 28px;
+            border-radius: 21px;
+        }
+        a {
+            text-decoration: none;
+            cursor: pointer;
+            color: inherit;
+        }
+        .page_main .info .handler .sponsor .intro {
+            display: inline-block;
+            width: 250px;
+            margin-left: 10px;
+            vertical-align: middle;
+            font-size: 16px;
+        }
+        .page_main .info .handler .sponsor .intro p {
+            padding: 0;
+            margin: 0;
+            word-break: break-all;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+        }
+        .page_main .info .handler .sponsor .share-group {
+            vertical-align: top;
+            display: inline-block;
+            line-height: 32px;
+            height: 32px;
+            margin-top: 20px;
+        }
+        .page_main .info .handler .sponsor .share-group span {
+            font-size: 16px;
+        }
+        .page_main .info .handler .sponsor .share-group span::after {
+            content: "";
+            display: inline-block;
+            border-right: 1px solid;
+            border-color: gray;
+            margin-right: 10px;
+            margin-left: 12px;
+            width: 6px;
+            height: 15px;
+            vertical-align: middle;
+        }
+        .page_main .info .handler .sponsor .share-group .share-wechat {
+            cursor: pointer;
+            vertical-align: top;
+            display: inline-block;
+            position: relative;
+            margin-left: 6px;
+            top: 4px;
+        }
+        .page_main .info .handler .sponsor .share-group .share-wechat .wechat-icon {
+            width: 26px;
+            height: 26px;
+            background-repeat: no-repeat;
+            background-size: cover;
+            display: block;
+            background-image: url(static/imge/activity-image/WeChat.png);
+        }
+         .page_main .info .handler .sponsor .share-group .share-wechat i {
+             color: green;
+         }
+        .page_main .info .handler .publish-btn {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 48px;
+            line-height: 48px;
+            letter-spacing: 10px;
+            text-indent: 10px;
+            text-align: center;
+            color: #fff;
+        }
+        .page_main .info .handler .sponsor .share-group .share-weibo {
+            cursor: pointer;
+            vertical-align: top;
+            top: 4px;
+            display: inline-block;
+            position: relative;
+            margin-left: 10px;
+        }
+        .page_main .info .handler .sponsor .share-group .share-weibo .weibo-icon {
+            width: 26px;
+            height: 26px;
+            background-repeat: no-repeat;
+            background-size: cover;
+            display: block;
+            background-image: url(static/imge/activity-image/weibo.png);
+        }
+         .page_main .info .handler .sponsor .share-group .share-weibo i {
+             color: #da0000;
+         }
+         .enable {
+             background-color: #c99a05;
+         }
+         /*活动详情介绍*/
+        .play-by-play{
+            margin: 0 150px 16px;
+            font-family: 微软雅黑;
+            font-size: 16px;
+            background:#fff;
+        }
+        .play-by-play_text p{
+            margin-top: 15px;
+            text-align: center;
+        }
+        .play-by-play_img{
+            margin-top: 30px;
+            margin-left: 200px;
+            display: table-cell;
+            vertical-align: middle;
+            text-align: center;
+        }
+        .play-by-play_detail{
+            padding: 20px 200px 20px
+        }
+        .play-by-play_detail p{
+            margin-top: 15px;
+            font-size: 14px;
+            letter-spacing:0.5mm;
+        }
+    </style>
+</head>
+<body>
+<div class="page_main">
+    <div class="header">
+        <div style="height: 70px;background: #FFF">
+            <div class="logo fl">
+                <img src="static/imge/logo.png" width="100%" alt="">
+            </div>
+            <div class="navbar fr">
+                <ul>
+                    <li class="fl">
+                        <a href="#"> 首 页</a>
+                        <div class="line"></div>
+                        <div class="navContent"><br><br>Welcome to Rakuten Technology</div>
+                    </li>
+                    <li class="fl">
+                        <a href="#">产品分类</a>
+                        <div class="line"></div>
+                        <div class="navContent">
+                            <ul>
+                                <a href="car-sharing.html">
+                                    <li>共享汽车</li>
+                                </a>
+                                <a href="bike-sharing.html">
+                                    <li>共享单车</li>
+                                </a>
+                                <a href="Charging.html">
+                                    <li>共享充电宝</li>
+                                </a>
+                            </ul>
+                        </div>
+
+                    </li>
+                    <li class="fl">
+                        <a href="#">热门活动</a>
+                        <div class="line"></div>
+                        <div class="navContent">
+                            <ul>
+                                <a href="activty_page.html">
+                                    <li>活动详情</li>
+                                </a>
+                                <a href="activity1.html">
+                                    <li>活动类型</li>
+                                </a>
+                            </ul>
+                        </div>
+
+                    </li>
+                    <li class="fl">
+                        <a href="#">社区精选</a>
+                        <div class="line"></div>
+                        <div class="navContent">
+                            <ul>
+                                <a href="myname.html">
+                                    <li>我的信息</li>
+                                </a>
+                                <!--<li>社区规范</li>-->
+                                <a href="In_community.html">
+                                    <li>进入社区</li>
+                                </a>
+                            </ul>
+                        </div>
+
+                    </li>
+                    <li class="fl">
+                        <a href="#">关于我们</a>
+                        <div class="line"></div>
+                        <div class="navContent">
+                            <ul>
+                                <a href="page.html">
+                                    <li>公司简介</li>
+                                </a>
+                                <!-- <a href="page.html">
+                                     <li>发展历程</li>
+                                 </a>-->
+                                <a href="culture.html">
+                                    <li>企业文化</li>
+                                </a>
+                                <a href="contact.html">
+                                    <li>加入我们</li>
+                                </a>
+                            </ul>
+                        </div>
+
+                    </li>
+                    <li class="fl">
+                        <a href="#joinUs">问题反馈</a>
+                        <div class="line"></div>
+                        <div class="navContent">
+                            <ul>
+                                <a href="cooperation.html">
+                                    <li>商务合作</li>
+                                </a>
+                                <a href="information.html">
+                                    <li>问题咨询</li>
+                                </a>
+                            </ul>
+                        </div>
+
+                    </li>
+                    <li class="fl">
+                        <a href="#">用户中心</a>
+                        <div class="line"></div>
+                        <div class="navContent">
+                            <div class="userImg"><img src="static/imge/userImg.png" width="100%" alt=""></div>
+                            <div class="userState cursor"><p><a href="login.html">登录</a></p></div>
+                            <div class="userState cursor"><p><a href="register.html">注册</a></p></div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="main_image">
+        <img src="static/imge/activity-image/pc.jpg" alt="" width="100%" style="margin-top: -10px">
+    </div>
+
+    <div class="info competition">
+        <div class="detail">
+            <div class="detail-partial">
+                <h3 class="detail-title">
+                    <span class="text-linear">介绍</span>
+                </h3>
+                <div class="detail-desc">
+                    <div class="desc">年是什么呢？是归家的渴望、是阖家团圆的欣喜，疫情年下又多了一份不安，苏宁易购第六年联手索尼相机鼓励大家拿起相机和手机，一起记录身边的不一样的中国年吧！索尼相机和真我手机等丰厚奖品等你来抢～</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="handler">
+            <div class="state">
+                <p>距离截止还有<em>43</em>天</p>
+                <p>共<span>13762</span>件作品</p>
+            </div>
+
+            <div class="sponsor">
+                <a href="#" target="_blank">
+                    <img src="https://sf3-tccdn-tos.pstatp.com/obj/tuchong-avatar/ll_6734323_2" style="vertical-align: middle;">
+                </a>
+                <div class="intro">
+                    <p>
+                        主办方：
+                        <!-- 主办方： -->
+                        <a class="event-link" href="https://tuchong.com/6734323/">苏宁摄影俱乐部</a>
+                    </p>
+                </div>
+                <div class="share-group">
+                    <span>分享到</span>
+                    <div class="share-wechat qrcode-hover wechat-click">
+                        <i class="wechat-icon wechat-click"></i>
+                    </div>
+                    <div class="share-weibo weibo-click">
+                        <i class="weibo-icon "></i>
+                    </div>
+                </div>
+            </div>
+            <a class="publish-btn enable" href="/new-photo/?tag_id=928103">我要参加</a>
+        </div>
+    </div>
+    <!--活动详细介绍-->
+    <div class="play-by-play">
+        <div class="play-by-play_text">
+            <img src="static/imge/haibao.jpg" alt="" width="100%">
+            <p>这一年，我们共同经历了一场没有硝烟的战斗，</p> <p>这一年，我们彼此加油互相打气，</p> <p>这一年是不平凡的一年，</p>
+            <p>而我们的照片就是无文字的记录，</p> <p>回顾的过程中，彼时的心绪一一浮现。</p>
+            <img src="static/imge/activity-image/16070780247900373_200134353.JPG" alt="" width="800" class="play-by-play_img">
+            <p>颇可玩主：Stuartphoto</p>
+        </div>
+        <div class="play-by-play_text">
+            <div style="height: 50px"></div>
+            <p>这一年，我们共同经历了一场没有硝烟的战斗，</p> <p>这一年，我们彼此加油互相打气，</p> <p>这一年是不平凡的一年，</p>
+            <p>而我们的照片就是无文字的记录，</p> <p>回顾的过程中，彼时的心绪一一浮现。</p>
+            <img src="static/imge/activity-image/16070780247900373_200134353.JPG" alt="" width="800" class="play-by-play_img">
+            <p>颇可玩主：Stuartphoto</p>
+        </div>
+        <div class="play-by-play_detail">
+           <h2>【大赛简介】</h2>
+            <p>春节的起源蕴含着深邃的文化内涵，在传承发展中承载了丰厚的历史文化底蕴。
+                在春节期间，全国各地均有举行各种庆贺新春活动，带有浓郁的各地域特色。
+                这些活动以除旧布新、驱邪攘灾、拜神祭祖、纳福祈年为主要内容，形式丰富多彩，凝聚着中华传统文化精华。</p>
+            <p>苏宁易购已经连续五年联手索尼相机，为摄影爱好者提供镜头里的中国年摄影大赛平台，鼓励摄影师用镜头记录身边的中国年。
+                年是什么呢？是归家的渴望、是阖家团圆的欣喜，疫情年下又多了一份不安，让我们今年拿起相机和手机，一起记录身边的不一样的中国年吧!</p>
+        </div>
+        <div class="play-by-play_detail">
+            <h2>【大赛时间】</h2>
+            <p>征集期：2021年1月28日~2021年3月21日</p>
+            <p>评审期：2021年3月22日~2021年4月2日</p>
+            <p>公布期：2021年5月2日~2021年5月10日</p>
+        </div>
+        <div class="play-by-play_detail">
+            <h2>【奖品奖项】</h2>
+            <p>一等奖（1名）：索尼Alpha 7C 全画幅微单数码相机</p>
+            <p>二等奖（1名）：索尼Alpha 6400 半画幅微单数码相机</p>
+            <p>三等奖（2名）：索尼FE50mmF1.8全画幅标准定焦微单镜头</p>
+            <p>优秀奖（10名）：索尼X鬼灭之刃联名单肩包</p>
+            <img src="static/imge/activity-image/73850604.jpg" alt="" width="100%">
+        </div>
+        <div class="play-by-play_detail">
+            <h2>【作品要求】</h2>
+            <p>1、不限制拍摄器材，相机拍摄作品投稿至相机组，手机拍摄作品投稿至手机组；(欢迎大家使用索尼相机和realme手机拍摄哦）</p>
+            <p>2、参赛作品应注明标题、拍摄地点、时间、作品描述等基本信息；</p>
+            <p>3、每位摄影师可提供多张参赛作品，所有作品都将送审。但无论几张作品，一个摄影师只能对应一个获奖名额；</p>
+            <p>4、谢绝提供电脑创意和改变原始影像的作品（照片仅可作亮度、对比度、色度、饱和度等适度调整，不得做合成、添加、大幅度改变色彩等技术性处理）；</p>
+        </div>
+        <div class="play-by-play_detail">
+            <i style="color: red">注：此次活动最终解释权归本平台所有</i>
+        </div>
+    </div>
+    <!--作品-->
+    <div></div>
+    <!--页脚-->
+    <footer>
+        <div class="over-auto">
+            <div class="fl footer-fluid">
+                <p class="fluid-title letter-space"> 关于我们 </p>
+                <div class="fluid-content tuchong-desc"><br>
+                    科技推动出行智能方便 <br>
+                    在这里，发现基于共同兴趣的同好，鼓励原创和分享精神 <br>
+                    在这里，我们不需要重复购买,因为产品已经在街上可以共享
+                </div>
+            </div>
+
+            <div class="fl footer-fluid footer-download">
+                <p class="fluid-title letter-space"> 下载APP </p>
+                <div class="fluid-content">
+                    <img class="qrcode download" src="https://api.tuchong.com/qrcode?url=https://d.toutiao.com/kT8t/">
+                    <div class="qrcode-parallel">
+                        <a class="app-link" data-referer="official" target="_blank" title="点击下载iPhone客户端" href="#">
+                            iPhone版下载 </a>
+                        <a class="app-link" data-referer="official" title="点击下载Android客户端" href="#"> Android版下载 </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="fr footer-fluid text-center">
+                <p class="fluid-title"> 关注乐天 </p>
+
+                <div class="fluid-content">
+                    <div class="qrcode-parallel">
+                        <div class="link-logo wechat">
+                            <a href="#">
+                                <i class="icon-wechat"><img src="static/imge/activity-image/weibo.png" alt=""></i>
+                            </a>
+                            <a class="qrcode wechat"></a>
+                        </div>
+
+                        <div class="link-logo">
+                            <a href="#" target="_blank">
+                                <i class="icon-weibo"><img src="static/imge/activity-image/WeChat.png" alt=""></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="over-auto tuchong-detail">
+            <div class="footer-left">
+                <span>Copyright©2021 南京乐天科技有限公司</span>
+                <div class="slash-list">
+                    <a class="slash-item" href="#"><i>用户协议</i></a>
+                    <a class="slash-item" href="#"><i>隐私政策</i></a>
+                    <a class="switch-layout slash-item"><i>移动版</i></a>
+                    <a class="switch-layout slash-item"><i>电脑版</i></a>
+                </div>
+                <span style="margin-left: 50px">同一个世界，同一个梦想！</span>
+            </div>
+
+            <div class="footer-right slash-list">
+                <a class="slash-item" href="/"><i>帮助</i></a>
+                <a class="slash-item" href="/"><i>关于</i></a>
+                <a class="slash-item" href="/"><i>联系</i></a>
+                <a class="slash-item" href="/"><i>服务</i></a>
+                <a class="slash-item" href="contact.html"><i>加入我们</i></a>
+            </div>
+        </div>
+    </footer>
+</div>
+</body>
+</html>

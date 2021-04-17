@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>进入社区</title>
+    <link rel="stylesheet" href="static/css/initi.css">
+    <link rel="stylesheet" href="static/css/In_community.css">
+    <!-- 引入样式 -->
+    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+    <!-- 引入组件库 -->
+    <script src="https://unpkg.com/element-ui/lib/index.js"></script>
+    <script src="static/js/vue.js"></script>
+    <script src="static/js/jquery.js"></script>
+</head>
+<body>
+<div id="main">
+    <div class="community">
+        <div class="header">
+            <div style="height: 70px;background: #FFF">
+                <div class="logo fl">
+                    <img src="static/imge/logo.png" width="100%" alt="">
+                </div>
+                <div class="navbar fr">
+                    <ul>
+                        <li class="fl">
+                            <a href="#"> 首 页</a>
+                            <div class="line"></div>
+                            <div class="navContent"><br><br>Welcome to Rakuten Technology</div>
+                        </li>
+                        <li class="fl">
+                            <a href="#">产品分类</a>
+                            <div class="line"></div>
+                            <div class="navContent">
+                                <ul>
+                                    <a href="car-sharing.html">
+                                        <li>共享汽车</li>
+                                    </a>
+                                    <a href="bike-sharing.html">
+                                        <li>共享单车</li>
+                                    </a>
+                                    <a href="Charging.html">
+                                        <li>共享充电宝</li>
+                                    </a>
+                                </ul>
+                            </div>
+
+                        </li>
+                        <li class="fl">
+                            <a href="#">热门活动</a>
+                            <div class="line"></div>
+                            <div class="navContent">
+                                <ul>
+                                    <a href="activty_page.html">
+                                        <li>活动详情</li>
+                                    </a>
+                                    <a href="activity1.html">
+                                        <li>活动类型</li>
+                                    </a>
+                                </ul>
+                            </div>
+
+                        </li>
+                        <li class="fl">
+                            <a href="#">社区精选</a>
+                            <div class="line"></div>
+                            <div class="navContent">
+                                <ul>
+                                    <a href="myname.html">
+                                        <li>我的信息</li>
+                                    </a>
+                                    <!--<li>社区规范</li>-->
+                                    <a href="In_community.html">
+                                        <li>进入社区</li>
+                                    </a>
+                                </ul>
+                            </div>
+
+                        </li>
+                        <li class="fl">
+                            <a href="#">关于我们</a>
+                            <div class="line"></div>
+                            <div class="navContent">
+                                <ul>
+                                    <a href="page.html">
+                                        <li>公司简介</li>
+                                    </a>
+                                    <!-- <a href="page.html">
+                                         <li>发展历程</li>
+                                     </a>-->
+                                    <a href="culture.html">
+                                        <li>企业文化</li>
+                                    </a>
+                                    <a href="contact.html">
+                                        <li>加入我们</li>
+                                    </a>
+                                </ul>
+                            </div>
+
+                        </li>
+                        <li class="fl">
+                            <a href="#joinUs">问题反馈</a>
+                            <div class="line"></div>
+                            <div class="navContent">
+                                <ul>
+                                    <a href="cooperation.html">
+                                        <li>商务合作</li>
+                                    </a>
+                                    <a href="information.html">
+                                        <li>问题咨询</li>
+                                    </a>
+                                </ul>
+                            </div>
+
+                        </li>
+                        <li class="fl">
+                            <a href="#">用户中心</a>
+                            <div class="line"></div>
+                            <div class="navContent">
+                                <div class="userImg"><img src="static/imge/userImg.png" width="100%" alt=""></div>
+                                <div class="userState cursor"><p><a href="login.html">登录</a></p></div>
+                                <div class="userState cursor"><p><a href="register.html">注册</a></p></div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="swiper-slide">
+            <div class="wenz">
+                <h3>发现多E点的出行乐趣</h3>
+                <h4>发现更优惠的精彩活动</h4>
+            </div>
+        </div>
+
+        <div class="el-breadcrumb">
+            <el-breadcrumb separator-class="el-icon-arrow-right">
+                <el-breadcrumb-item :to="{ path: '/' }">进入社区</el-breadcrumb-item>
+                <el-breadcrumb-item><a href="Clock-in.html">打卡圣地</a></el-breadcrumb-item>
+                <el-breadcrumb-item><a href="posed.html">旅行摆拍</a></el-breadcrumb-item>
+                <el-breadcrumb-item><a href="boke.html">博客吧</a></el-breadcrumb-item>
+            </el-breadcrumb>
+        </div>
+
+        <div class="main w1200">
+            <div class="content">
+                <img src="static/imge/banner.7e193a4.jpg" alt="" width="100%" style="margin-top: -0.5px;margin-bottom: 20px">
+                <!-- 最新动态&与我相关动态_start -->
+                <div class="content_li">
+                    <div class="tiezi_menu menu_x">
+                        <div class="menu00">
+                            <span onclick="switchTag(JQ(this), 'dynamic', 4)">关注</span>
+                            <span class="active" onclick="switchTag(JQ(this), 'dynamic', -1)">最新动态</span></div>
+                    </div>
+                    <div id="dynamic_-1">
+                        <div class="tiezi_common tiezi_-1">
+                            <div class="common01">
+                                <h3><img src="static/imge/In_community/下载.png" width="38" height="22">&nbsp;<a href="#"
+                                                                                                               target="_blank">颁奖
+                                    | JDC人气王粉墨登场~加冕仪式，正式开始！</a>
+                                </h3>
+                            </div>
+                            <div class="common02">
+                                <div class="info">
+                                    <a href="#" target="_blank" class="xi2 z">
+                                        <img class="avatar" alt="大狮子"
+                                             src="https://jdc.huawei.com/uc_server/data/avatar/003/80/80/70_avatar_small.jpg"></a>
+                                    <a class="ethd-au" href="#" target="_blank">大狮子</a>
+                                    于2021-2-4&nbsp;&nbsp;发布：
+                                    <em><a style="margin-right:0" href="#" target="_blank"
+                                           class="mw350 ellipsis" title="活动">活动</a></em>
+                                    &nbsp;&nbsp;最后回复：<span title="2021-2-22 20:30"
+                                                           style="margin-left:0">昨天&nbsp;20:30</span>
+                                </div>
+                            </div>
+                            <div class="common03">
+                                <p><a href="thread-955800.html">锣鼓喧天登金科，
+                                    喜气洋洋拜名榜。
+                                    小伙们，JDC名人堂正式开堂啦~
+                                    上榜的人气王们请榜下留言
+                                    领取自己的金榜福利，兑换成功的记得来晒奖呀！
+                                    （原定奖品荣耀手环6NFC版和荣耀蓝牙音箱由于不可抗力原因下架，
+                                    故发 ...</a></p>
+                            </div>
+                        </div>
+                        <div class="tiezi_common tiezi_-1">
+                            <div class="common01">
+                                <h3><img src="static/imge/In_community/下载.png" width="38" height="22">&nbsp;<a
+                                        href="thread-957022.html" target="_blank">转：资本之外，区块链破圈正当时</a>
+                                </h3>
+                            </div>
+                            <div class="common02">
+                                <div class="info">
+                                    <a href="#" target="_blank" class="xi2 z">
+                                        <img class="avatar" alt="不一样"
+                                             src="https://jdc.huawei.com/uc_server/images/noavatar_small.gif">
+                                    </a>
+                                    <a class="ethd-au" href="profile?uid=3218093" target="_blank">不一样</a>
+                                    于2021-2-10&nbsp;&nbsp;发布：
+                                    <em><a style="margin-right:0" href="#" target="_blank"
+                                           class="mw350 ellipsis" title="金融行业圈">金融行业圈</a></em>
+                                    &nbsp;&nbsp;最后回复：<span title="2021-2-22 17:40"
+                                                           style="margin-left:0">昨天&nbsp;17:40</span>
+                                </div>
+                            </div>
+                            <div class="common03">
+                                <p><a href="#">当比特币的价格一路上涨，它的终极归宿便愈发清晰。归根到底，它只不过是区块链的一个应用场景，一味上涨的价格只会让它不接地气。由比特币的上涨窥探到区块链更多的发展方向，才是确保它可以长久发展的关键所在。一
+                                    ...</a></p>
+                            </div>
+                        </div>
+                        <div class="tiezi_common tiezi_-1">
+                            <div class="common01">
+                                <h3><img src="static/imge/In_community/下载.png" width="38" height="22">&nbsp;<a
+                                        href="#" target="_blank">【颁奖晒奖】兑换的nova8pro与年前已经收到！</a>
+                                </h3>
+                            </div>
+                            <div class="common02">
+                                <div class="info">
+                                    <a href="#" target="_blank">
+                                        <img class="avatar" alt="jianping"
+                                             src="https://jdc.huawei.com/uc_server/images/noavatar_small.gif">
+                                    </a>
+                                    <a class="ethd-au" href="#" target="_blank">jianping</a>
+                                    于<span title="2021-2-20" style="margin-left:0">3&nbsp;天前</span>&nbsp;&nbsp;发布：
+                                    <em><a style="margin-right:0" href="#" target="_blank"
+                                           class="mw350 ellipsis" title="活动">活动</a></em>
+                                    &nbsp;&nbsp;最后回复：<span title="2021-2-22 16:58"
+                                                           style="margin-left:0">昨天&nbsp;16:58</span>
+                                </div>
+                            </div>
+                            <div class="common03">
+                                <p><a href="thread-959032.html">使用真的好爽！</a></p>
+                            </div>
+                        </div>
+                        <div class="tiezi_common tiezi_-1">
+                            <div class="common01">
+                                <h3><img src="static/imge/In_community/下载.png" width="38" height="22">&nbsp;<a
+                                        href="#" target="_blank">关于JDC商城暂停心愿帖的公告</a>
+                                </h3>
+                            </div>
+                            <div class="common02">
+                                <div class="info">
+                                    <a href="#" target="_blank" class="xi2 z bigv-thread">
+                                        <img class="avatar" alt="兜圈"
+                                             src="https://jdc.huawei.com/uc_server/data/avatar/003/24/40/99_avatar_small.jpg">
+                                    </a>
+                                    <a class="ethd-au bigv-card" href="#" target="_blank">兜圈</a>
+                                    于2021-2-1&nbsp;&nbsp;发布：
+                                    <em><a style="margin-right:0" href="#" target="_blank"
+                                           class="mw350 ellipsis" title="站务专区">站务专区</a></em>
+                                    &nbsp;&nbsp;最后回复：<span title="2021-2-22 09:51"
+                                                           style="margin-left:0">昨天&nbsp;09:51</span>
+                                </div>
+                            </div>
+                            <div class="common03">
+                                <p><a href="#">关于JDC商城暂停心愿帖的公告
+                                    &nbsp;
+                                    &nbsp; &nbsp; &nbsp; &nbsp;因年近新春佳节，考虑到快递和国家规定休假时间，JDC商城从2021年2月1日起暂停发布每周心愿帖和每周上新的常规兑换任务。
+                                    &nbsp; &nbsp; &nbsp; &nbsp;根据兑换规则即日起在JDC商城兑换的 ...</a></p>
+                            </div>
+                        </div>
+                        <div class="tiezi_common tiezi_-1">
+                            <div class="common01">
+                                <h3><img src="static/imge/In_community/下载.png" width="38" height="22">&nbsp;<a
+                                        href="#" target="_blank">关于JDC商城暂停心愿帖的公告</a>
+                                </h3>
+                            </div>
+                            <div class="common02">
+                                <div class="info">
+                                    <a href="#" target="_blank" class="xi2 z bigv-thread">
+                                        <img class="avatar" alt="兜圈"
+                                             src="https://jdc.huawei.com/uc_server/data/avatar/003/24/40/99_avatar_small.jpg">
+                                    </a>
+                                    <a class="ethd-au bigv-card" href="#" target="_blank">兜圈</a>
+                                    于2021-2-1&nbsp;&nbsp;发布：
+                                    <em><a style="margin-right:0" href="#" target="_blank"
+                                           class="mw350 ellipsis" title="站务专区">站务专区</a></em>
+                                    &nbsp;&nbsp;最后回复：<span title="2021-2-22 09:51"
+                                                           style="margin-left:0">昨天&nbsp;09:51</span>
+                                </div>
+                            </div>
+                            <div class="common03">
+                                <p><a href="#">关于JDC商城暂停心愿帖的公告
+                                    &nbsp;
+                                    &nbsp; &nbsp; &nbsp; &nbsp;因年近新春佳节，考虑到快递和国家规定休假时间，JDC商城从2021年2月1日起暂停发布每周心愿帖和每周上新的常规兑换任务。
+                                    &nbsp; &nbsp; &nbsp; &nbsp;根据兑换规则即日起在JDC商城兑换的 ...</a></p>
+                            </div>
+                        </div>
+                        <div class="tiezi_common tiezi_-1">
+                            <div class="common01">
+                                <h3><img src="static/imge/In_community/下载.png" width="38" height="22">&nbsp;<a
+                                        href="#" target="_blank">暖心的贺卡 解忧去烦</a>
+                                </h3>
+                            </div>
+                            <div class="common02">
+                                <div class="info">
+                                    <a href="#" target="_blank" class="xi2 z">
+                                        <img class="avatar" alt="谷子下"
+                                             src="https://jdc.huawei.com/uc_server/data/avatar/003/20/07/89_avatar_small.jpg">
+                                    </a>
+                                    <a class="ethd-au" href="#" target="_blank">谷子下</a>
+                                    于2021-2-4&nbsp;&nbsp;发布：
+                                    <em><a style="margin-right:0" href="#" target="_blank"
+                                           class="mw350 ellipsis" title="站务专区">站务专区</a></em>
+                                    &nbsp;&nbsp;最后回复：<span title="2021-2-22 07:58"
+                                                           style="margin-left:0">昨天&nbsp;07:58</span>
+                                </div>
+                            </div>
+                            <div class="common03">
+                                <p><a href="#">收到一个邮政信封，是个明信片，华为JDC给的，还是亲手写的，看完一天的烦恼减轻了，原理每个人都会确实一些关心和体会
+                                    要是世界都这么有爱，有温暖，想想就厉害的不行了
+                                    多少年没有见过邮票，这么稀罕的都还有，温 ...</a></p>
+                            </div>
+                        </div>
+                        <div class="tiezi_common tiezi_-1">
+                            <div class="common01">
+                                <h3><img src="static/imge/In_community/下载.png" width="38" height="22">&nbsp;<a
+                                        href="#" target="_blank">暖心的贺卡 解忧去烦</a>
+                                </h3>
+                            </div>
+                            <div class="common02">
+                                <div class="info">
+                                    <a href="#" target="_blank" class="xi2 z">
+                                        <img class="avatar" alt="谷子下"
+                                             src="https://jdc.huawei.com/uc_server/data/avatar/003/20/07/89_avatar_small.jpg">
+                                    </a>
+                                    <a class="ethd-au" href="#" target="_blank">谷子下</a>
+                                    于2021-2-4&nbsp;&nbsp;发布：
+                                    <em><a style="margin-right:0" href="#" target="_blank"
+                                           class="mw350 ellipsis" title="站务专区">站务专区</a></em>
+                                    &nbsp;&nbsp;最后回复：<span title="2021-2-22 07:58"
+                                                           style="margin-left:0">昨天&nbsp;07:58</span>
+                                </div>
+                            </div>
+                            <div class="common03">
+                                <p><a href="#">收到一个邮政信封，是个明信片，华为JDC给的，还是亲手写的，看完一天的烦恼减轻了，原理每个人都会确实一些关心和体会
+                                    要是世界都这么有爱，有温暖，想想就厉害的不行了
+                                    多少年没有见过邮票，这么稀罕的都还有，温 ...</a></p>
+                            </div>
+                        </div>
+                        <div class="common03">
+                            <p><a href="thread-958888.html">大家好！商品兑换后两周内发货，本商品来自华为商城，更详细信息请点击https://www.vmall.com/product/549006501.html咨询也可以联系华为商城客服了解。
+                                注：本礼品暂时仅针对外部用户开放兑换，华为员工禁止兑换， ...</a></p>
+                        </div>
+                    </div>
+                    <div class="tiezi_common tiezi_-1">
+                        <div class="common01">
+                            <h3><img src="static/imge/In_community/下载.png" width="38" height="22">&nbsp;<a
+                                    href="#" target="_blank">暖心的贺卡 解忧去烦</a>
+                            </h3>
+                        </div>
+                        <div class="common02">
+                            <div class="info">
+                                <a href="#" target="_blank" class="xi2 z">
+                                    <img class="avatar" alt="谷子下"
+                                         src="https://jdc.huawei.com/uc_server/data/avatar/003/20/07/89_avatar_small.jpg">
+                                </a>
+                                <a class="ethd-au" href="#" target="_blank">谷子下</a>
+                                于2021-2-4&nbsp;&nbsp;发布：
+                                <em><a style="margin-right:0" href="#" target="_blank"
+                                       class="mw350 ellipsis" title="站务专区">站务专区</a></em>
+                                &nbsp;&nbsp;最后回复：<span title="2021-2-22 07:58"
+                                                       style="margin-left:0">昨天&nbsp;07:58</span>
+                            </div>
+                        </div>
+                        <div class="common03">
+                            <p><a href="#">收到一个邮政信封，是个明信片，华为JDC给的，还是亲手写的，看完一天的烦恼减轻了，原理每个人都会确实一些关心和体会
+                                要是世界都这么有爱，有温暖，想想就厉害的不行了
+                                多少年没有见过邮票，这么稀罕的都还有，温 ...</a></p>
+                        </div>
+                    </div>
+                    <div class="tiezi_common tiezi_-1">
+                        <div class="common01">
+                            <h3><img src="static/imge/In_community/下载.png" width="38" height="22">&nbsp;<a
+                                    href="#" target="_blank">复盘‖2020整合关键年：大刀阔斧造就下的广电“一网整合”！</a>
+                            </h3>
+                        </div>
+                        <div class="common02">
+                            <div class="info">
+                                <a href="#" target="_blank" class="xi2 z" mid="card_1639">
+                                    <img class="avatar" alt="user_3589361"
+                                         src="https://jdc.huawei.com/uc_server/images/noavatar_small.gif">
+                                </a>
+                                <a class="ethd-au" href="#" target="_blank">user_3589361</a>
+                                于<span title="2021-2-23" style="margin-left:0">4&nbsp;分钟前</span>&nbsp;&nbsp;发布：
+                                <em><a style="margin-right:0" href="#" target="_blank"
+                                       class="mw350 ellipsis" title="家庭网络SmartWiFi">家庭网络SmartWiFi</a></em>
+                                &nbsp;&nbsp;最后回复：<span title="2021-2-23 10:06" style="margin-left:0">4&nbsp;分钟前</span>
+                            </div>
+                        </div>
+                        <div class="common03">
+                            <p><a href="#">2020年的结束也意味着“十三五”已成为过去时，对全国有线电视网络而言，这一肩负“党政专网”使命的特殊行业开始迈入新的阶段。
+                                若依照2016年中宣、财政、广电三部门发布的《关于加快推进全国有线电视网络整合发展 ...</a></p>
+                        </div>
+                    </div>
+                    <div class="tiezi_common tiezi_-1">
+                        <div class="common01">
+                            <h3><img src="static/imge/In_community/下载.png" width="38" height="22">&nbsp;<a
+                                    href="#" target="_blank">复盘‖2020整合关键年：大刀阔斧造就下的广电“一网整合”！</a>
+                            </h3>
+                        </div>
+                        <div class="common02">
+                            <div class="info">
+                                <a href="#" target="_blank" class="xi2 z" mid="card_1639">
+                                    <img class="avatar" alt="user_3589361"
+                                         src="https://jdc.huawei.com/uc_server/images/noavatar_small.gif">
+                                </a>
+                                <a class="ethd-au" href="#" target="_blank">user_3589361</a>
+                                于<span title="2021-2-23" style="margin-left:0">4&nbsp;分钟前</span>&nbsp;&nbsp;发布：
+                                <em><a style="margin-right:0" href="#" target="_blank"
+                                       class="mw350 ellipsis" title="家庭网络SmartWiFi">家庭网络SmartWiFi</a></em>
+                                &nbsp;&nbsp;最后回复：<span title="2021-2-23 10:06" style="margin-left:0">4&nbsp;分钟前</span>
+                            </div>
+                        </div>
+                        <div class="common03">
+                            <p><a href="#">2020年的结束也意味着“十三五”已成为过去时，对全国有线电视网络而言，这一肩负“党政专网”使命的特殊行业开始迈入新的阶段。
+                                若依照2016年中宣、财政、广电三部门发布的《关于加快推进全国有线电视网络整合发展 ...</a></p>
+                        </div>
+                    </div>
+                    <div class="tiezi_common tiezi_-1">
+                        <div class="common01">
+                            <h3><img src="static/imge/In_community/下载.png" width="38" height="22">&nbsp;<a
+                                    href="#" target="_blank">今日热词：边缘计算 | 把世界呈现在用户眼前</a>
+                            </h3>
+                        </div>
+                        <div class="common02">
+                            <div class="info">
+                                <a href="#" target="_blank" class="xi2 z">
+                                    <img class="avatar" alt="大狮子"
+                                         src="https://jdc.huawei.com/uc_server/data/avatar/003/80/80/70_avatar_small.jpg">
+                                </a>
+                                <a class="ethd-au" href="#" target="_blank">大狮子</a>
+                                于2021-2-5&nbsp;&nbsp;发布：
+                                <em><a style="margin-right:0" href="#" target="_blank"
+                                       class="mw350 ellipsis" title="活动">活动</a></em>
+                                &nbsp;&nbsp;最后回复：<span title="2021-2-23 09:49" style="margin-left:0">21&nbsp;分钟前</span>
+                            </div>
+                        </div>
+                        <div class="common03">
+                            <p><a href="thread-955994.html">&nbsp; &nbsp; &nbsp; &nbsp;边缘计算，是指在靠近物或数据源头的一侧，采用网络、计算、存储、应用核心能力为一体的开放平台，就近提供最近端服务。其应用程序在边缘侧发起，产生更快的网络服务响应，满足行业在实时业务、应用智能
+                                ...</a></p>
+                        </div>
+                    </div>
+                    <div class="tiezi_common tiezi_-1">
+                        <div class="common01">
+                            <h3><img src="static/imge/In_community/下载.png" width="38" height="22">&nbsp;<a
+                                    href="#" target="_blank">今日热词：边缘计算 | 把世界呈现在用户眼前</a>
+                            </h3>
+                        </div>
+                        <div class="common02">
+                            <div class="info">
+                                <a href="#" target="_blank" class="xi2 z">
+                                    <img class="avatar" alt="大狮子"
+                                         src="https://jdc.huawei.com/uc_server/data/avatar/003/80/80/70_avatar_small.jpg">
+                                </a>
+                                <a class="ethd-au" href="#" target="_blank">大狮子</a>
+                                于2021-2-5&nbsp;&nbsp;发布：
+                                <em><a style="margin-right:0" href="#" target="_blank"
+                                       class="mw350 ellipsis" title="活动">活动</a></em>
+                                &nbsp;&nbsp;最后回复：<span title="2021-2-23 09:49" style="margin-left:0">21&nbsp;分钟前</span>
+                            </div>
+                        </div>
+                        <div class="common03">
+                            <p><a href="thread-955994.html">&nbsp; &nbsp; &nbsp; &nbsp;边缘计算，是指在靠近物或数据源头的一侧，采用网络、计算、存储、应用核心能力为一体的开放平台，就近提供最近端服务。其应用程序在边缘侧发起，产生更快的网络服务响应，满足行业在实时业务、应用智能
+                                ...</a></p>
+                        </div>
+                    </div>
+                    <div class="tiezi_common tiezi_-1">
+                        <div class="common01">
+                            <h3><img src="static/imge/In_community/下载.png" width="38" height="22">&nbsp;<a
+                                    href="#" target="_blank">暖心的贺卡 解忧去烦</a>
+                            </h3>
+                        </div>
+                        <div class="common02">
+                            <div class="info">
+                                <a href="#" target="_blank" class="xi2 z">
+                                    <img class="avatar" alt="谷子下"
+                                         src="https://jdc.huawei.com/uc_server/data/avatar/003/20/07/89_avatar_small.jpg">
+                                </a>
+                                <a class="ethd-au" href="#" target="_blank">谷子下</a>
+                                于2021-2-4&nbsp;&nbsp;发布：
+                                <em><a style="margin-right:0" href="#" target="_blank"
+                                       class="mw350 ellipsis" title="站务专区">站务专区</a></em>
+                                &nbsp;&nbsp;最后回复：<span title="2021-2-22 07:58"
+                                                       style="margin-left:0">昨天&nbsp;07:58</span>
+                            </div>
+                        </div>
+                        <div class="common03">
+                            <p><a href="#">收到一个邮政信封，是个明信片，华为JDC给的，还是亲手写的，看完一天的烦恼减轻了，原理每个人都会确实一些关心和体会
+                                要是世界都这么有爱，有温暖，想想就厉害的不行了
+                                多少年没有见过邮票，这么稀罕的都还有，温 ...</a></p>
+                        </div>
+                    </div>
+                    <div class="tiezi_common tiezi_-1">
+                        <div class="common01">
+                            <h3><img src="static/imge/In_community/下载.png" width="38" height="22">&nbsp;<a
+                                    href="#" target="_blank">今日热词：边缘计算 | 把世界呈现在用户眼前</a>
+                            </h3>
+                        </div>
+                        <div class="common02">
+                            <div class="info">
+                                <a href="#" target="_blank" class="xi2 z">
+                                    <img class="avatar" alt="大狮子"
+                                         src="https://jdc.huawei.com/uc_server/data/avatar/003/80/80/70_avatar_small.jpg">
+                                </a>
+                                <a class="ethd-au" href="#" target="_blank">大狮子</a>
+                                于2021-2-5&nbsp;&nbsp;发布：
+                                <em><a style="margin-right:0" href="#" target="_blank"
+                                       class="mw350 ellipsis" title="活动">活动</a></em>
+                                &nbsp;&nbsp;最后回复：<span title="2021-2-23 09:49" style="margin-left:0">21&nbsp;分钟前</span>
+                            </div>
+                        </div>
+                        <div class="common03">
+                            <p><a href="thread-955994.html">&nbsp; &nbsp; &nbsp; &nbsp;边缘计算，是指在靠近物或数据源头的一侧，采用网络、计算、存储、应用核心能力为一体的开放平台，就近提供最近端服务。其应用程序在边缘侧发起，产生更快的网络服务响应，满足行业在实时业务、应用智能
+                                ...</a></p>
+                        </div>
+                    </div>
+                    <a href="#" class="load-more load_-1">点击获取更多精彩内容</a>
+                </div>
+            </div>
+            <!--最新动态&与我相关动态_end-->
+
+            <div class="sidebar">
+                <div class="qiandao">
+                    <a href="#" class="qiandao_a"><i></i><span>签到</span></a>
+                    <a href="#" class="qiandao_b"><i></i><span>身份验证</span></a>
+                </div>
+                <!--表单-->
+                <table width="320" border="0" cellspacing="0" cellpadding="0" class="my_entrance">
+                    <tbody>
+                    <tr>
+                        <td><a href="#" class="entrance_a">
+                            <i></i><br>任务</a>
+                        </td>
+                        <td><a href="#" class="entrance_b"><i></i><br>
+                            勋章</a></td>
+                        <td><a href="#" class="entrance_w">
+                            <i></i>
+                            <br>
+                            微信绑定</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="#" class="entrance_d"><i></i><br>
+                            私信 (<strong>0</strong>)</a></td>
+                        <td><a href="#" class="entrance_e"><i></i><br>
+                            提醒 (<strong>5</strong>)</a></td>
+                        <td><a href="#" class="entrance_f"><i></i><br>
+                            积分</a></td>
+                    </tr>
+                    </tbody>
+                </table>
+                <!--社区公告-->
+                <div class="pane news">
+                    <div class="title">
+                        <h2>社区公告</h2><a href="#" class="more">更多&gt;</a>
+                    </div>
+                    <div class="neirong">
+                        <ul>
+                            <li><i class="el-icon-paperclip"></i>&nbsp;<a href="#" title="【9/10/11月版主工资公示】工资提升的秘密原来这么简单" target="_blank">【9/10/11月版主工资公示】工资提升的秘密原来这么简单</a></li>
+                            <li><i class="el-icon-paperclip"></i>&nbsp;<a href="#" title="积分豆不够？原创激励，干货激励进行中.." target="_blank">积分不够？原创激励，干货激励进行中..</a></li>
+                            <li><i class="el-icon-paperclip"></i>&nbsp;<a href="#" title="关于加强问鼎帖管理的公告" target="_blank">关于加强问鼎帖管理的公告</a></li>
+                            <li><i class="el-icon-paperclip"></i>&nbsp;<a href="#" title="社区友善言论管理制度" target="_blank">社区友善言论管理制度</a></li>
+                            <li><i class="el-icon-paperclip"></i>&nbsp;<a href="#" title="用户管理规定【新】" target="_blank">用户管理规定【新】</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <!--阅读活跃专家-->
+                <div class="pane expert">
+                    <div class="title">月度活跃专家</div>
+                    <div class="neirong">
+                        <div class="group_li pangming_01">
+                            <a href="#" class="group_logo">
+                                <img class="avatar" alt="大韩"
+                                     src="https://jdc.huawei.com/uc_server/data/avatar/000/11/46/19_avatar_small.jpg"></a>
+                            <div class="group_text ellipsis"><a href="#" class="name">大韩</a><span
+                                    title="站点解决方案">站点解决方案</span>
+                                <br>发回帖数: 92　　活跃天数: 13
+                            </div>
+                        </div>
+                        <div class="group_li pangming_01">
+                            <a href="#" class="group_logo" c="1"><img class="avatar" alt="你是我的玛雅"
+                                                                      src="https://jdc.huawei.com/uc_server/images/noavatar_small.gif"></a>
+                            <div class="group_text ellipsis"><a href="#" class="name">你是我的玛雅</a><span
+                                    title=""></span>
+                                <br>发回帖数: 88　　活跃天数: 7
+                            </div>
+                        </div>
+                        <div class="group_li pangming_01">
+                            <a href="#" class="group_logo"><img class="avatar" alt="大号不倒翁"
+                                                                src="https://jdc.huawei.com/uc_server/images/noavatar_small.gif"></a>
+                            <div class="group_text ellipsis"><a href="#" class="name">大号不倒翁</a><span
+                                    title=""></span>
+                                <br>发回帖数: 82　　活跃天数: 5
+                            </div>
+                        </div>
+                        <div class="group_li pangming_01">
+                            <a href="profile?uid=25127" class="group_logo"><img class="avatar" alt="阿旺"
+                                                                                src="https://jdc.huawei.com/uc_server/images/noavatar_small.gif">
+                            </a>
+                            <div class="group_text ellipsis"><a href="#" class="name">阿旺</a><span
+                                    title="通信用电池">通信用电池</span>
+                                <br>发回帖数: 69　　活跃天数: 13
+                            </div>
+                        </div>
+                        <div class="group_li pangming_01">
+                            <a href="profile?uid=25127" class="group_logo"><img class="avatar" alt="阿旺"
+                                                                                src="https://jdc.huawei.com/uc_server/images/noavatar_small.gif">
+                            </a>
+                            <div class="group_text ellipsis"><a href="#" class="name">阿旺</a><span
+                                    title="通信用电池">通信用电池</span>
+                                <br>发回帖数: 69　　活跃天数: 13
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--商城-->
+                <div class="pane mall_new">
+                    <div class="title">
+                        <h2>商城动态</h2>
+                    </div>
+                    <div class="neirong">
+                        <ul>
+                            <li><i class="el-icon-paperclip"></i>&nbsp;新增地点<a href="#" class="cp">比亚迪（宋）杭州万达广场</a></li>
+                            <li><i class="el-icon-paperclip"></i>&nbsp;新增地点<a href="#" class="cp">怪兽充电站【小龙坎站】...</a></li>
+                            <li><i class="el-icon-paperclip"></i>&nbsp;新增地点<a href="#" class="cp">小电充电宝【外婆家站】</a></li>
+                            <li><i class="el-icon-paperclip"></i>&nbsp;新增地点<a href="#" class="cp">比亚迪（宋）南京新街口万达广场</a></li>
+                            <li><i class="el-icon-paperclip"></i>&nbsp;新增地点<a href="#" class="cp">小电充电宝【外婆家站】</a></li>
+                            <li><i class="el-icon-paperclip"></i>&nbsp;<a href="#">大道至简</a> 使用积分兑换了 <a href="#" class="cp">哈罗单车免费骑行七天卡</a></li>
+                            <li><i class="el-icon-paperclip"></i>&nbsp;<a href="#">TEA1122</a> 兑换了 <a href="#" class="cp">奥迪A6系列免费试驾时间2小时...</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="pane news">
+                    <div class="title">
+                        <h2>友情链接</h2>
+                    </div>
+                    <div class="neirong">
+                        <ul>
+                            <li><a href="#">哈罗单车</a></li>
+                            <li><a href="#">ofo小黄车</a></li>
+                            <li><a href="#">长安汽车</a></li>
+                            <li><a href="#">上海大众</a></li>
+                            <li><a href="#">美团单车</a></li>
+                            <li><a href="#">哈罗单车</a></li>
+                            <li><a href="#">ofo小黄车</a></li>
+                            <li><a href="#">长安汽车</a></li>
+                            <li><a href="#">上海大众</a></li>
+                            <li><a href="#">美团单车</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="over-auto">
+            <div class="fl footer-fluid">
+                <p class="fluid-title letter-space"> 关于我们 </p>
+                <div class="fluid-content tuchong-desc"><br>
+                    科技推动出行智能方便 <br>
+                    在这里，发现基于共同兴趣的同好，鼓励原创和分享精神 <br>
+                    在这里，我们不需要重复购买,因为产品已经在街上可以共享
+                </div>
+            </div>
+
+            <div class="fl footer-fluid footer-download">
+                <p class="fluid-title letter-space"> 下载APP </p>
+                <div class="fluid-content">
+                    <img class="qrcode download" src="https://api.tuchong.com/qrcode?url=https://d.toutiao.com/kT8t/">
+                    <div class="qrcode-parallel">
+                        <a class="app-link" data-referer="official" target="_blank" title="点击下载iPhone客户端" href="#">
+                            iPhone版下载 </a>
+                        <a class="app-link" data-referer="official" title="点击下载Android客户端" href="#"> Android版下载 </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="fr footer-fluid text-center">
+                <p class="fluid-title"> 关注乐天 </p>
+
+                <div class="fluid-content">
+                    <div class="qrcode-parallel">
+                        <div class="link-logo wechat">
+                            <a href="#">
+                                <i class="icon-wechat"><img src="static/imge/activity-image/weibo.png" alt=""></i>
+                            </a>
+                            <a class="qrcode wechat"></a>
+                        </div>
+
+                        <div class="link-logo">
+                            <a href="#" target="_blank">
+                                <i class="icon-weibo"><img src="static/imge/activity-image/WeChat.png" alt=""></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="over-auto tuchong-detail">
+            <div class="footer-left">
+                <span>Copyright©2021 南京乐天科技有限公司</span>
+                <div class="slash-list">
+                    <a class="slash-item" href="#"><i>用户协议</i></a>
+                    <a class="slash-item" href="#"><i>隐私政策</i></a>
+                    <a class="switch-layout slash-item"><i>移动版</i></a>
+                    <a class="switch-layout slash-item"><i>电脑版</i></a>
+                </div>
+                <span style="margin-left: 50px">同一个世界，同一个梦想！</span>
+            </div>
+
+            <div class="footer-right slash-list">
+                <a class="slash-item" href="/"><i>帮助</i></a>
+                <a class="slash-item" href="/"><i>关于</i></a>
+                <a class="slash-item" href="/"><i>联系</i></a>
+                <a class="slash-item" href="/"><i>服务</i></a>
+                <a class="slash-item" href="contact.html"><i>加入我们</i></a>
+            </div>
+        </div>
+    </footer>
+</div>
+</body>
+</html>

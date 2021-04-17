@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>共享汽车</title>
+    <link rel="stylesheet" href="static/css/initi.css">
+    <link rel="stylesheet" href="static/css/head-footer.css">
+    <style type="text/css">
+        .main {
+            background: url("static/imge/car/VCG21642925051.jpg") fixed;
+            background-size: 100% 100%;
+            min-width: 1344px;
+            max-width: 1600px;
+            margin: auto;
+            width: 100%;
+        }
+        .content .head {
+            height: 500px;
+            position: relative;
+            background: rgba(0, 0, 0, .4);
+        }
+
+        .content {
+            height: 1800px;
+        }
+
+        .title {
+            /*background: #999999;*/
+            color: white;
+            width: 400px;
+            height: 80px;
+            position: absolute;
+            left: 140px;
+            top: 200px;
+        }
+
+        .title h1 {
+            font-size: 30px;
+        }
+
+        .title h3 {
+            line-height: 60px;
+            padding-left: 50px;
+        }
+
+        .square {
+            position: absolute;
+            right: 300px;
+            top: 240px;
+        }
+
+        .square1 {
+            height: 80px;
+            width: 80px;
+            margin-left: 200px;
+            background: rgba(0, 222, 180, .2);
+        }
+
+        .square2 {
+            height: 80px;
+            width: 80px;
+            margin-left: 200px;
+            background: rgba(0, 222, 180, .4);
+            transform: translate(20px, -40px);
+        }
+
+        .index-content-wrap {
+            width: 100%;
+            min-height: 500px;
+            background: #f4f3f4;
+        }
+
+        .index-middle-wrap {
+            width: 1200px;
+            margin: 0 auto;
+            min-height: 500px;
+            box-sizing: border-box;
+            padding-top: 40px;
+        }
+
+        /* .index-module-top {
+             overflow-y: hidden;
+         }*/
+        .index-middle-subtitle {
+            padding-left: 20px;
+            font-size: 28px;
+            color: #222;
+            border-left: 4px solid #1cc200;
+        }
+
+        .index-look-more {
+            height: 24px;
+            cursor: pointer;
+            transition: all .2s linear;
+        }
+
+        .index-look-more-alink {
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+        .index-look-more-alink:hover {
+            color: #000;
+        }
+
+        .fr {
+            float: right;
+        }
+
+        .index-middle-content {
+            width: 100%;
+            min-height: 400px;
+            margin-top: 30px;
+        }
+
+        .index-middle-content-left, .index-middle-content-left > .index-alink, .index-middle-content-left > .index-alink > img {
+            display: block;
+            width: 250px;
+            height: 400px;
+        }
+
+        .index-look-more-title, .index-middle-content-left {
+            transition: all .2s linear;
+        }
+
+        .index-middle-content-right {
+            width: calc(100% - 250px);
+            margin-top: 10px;
+        }
+
+        .fl {
+            float: left;
+        }
+
+        .index-middle-content-right > li {
+            margin: 0 0 20px 30px;
+            background: #fff;
+            transition: all .2s linear;
+        }
+
+        .index-middle-content-right > li {
+            display: block;
+            width: 286px;
+            height: 400px;
+        }
+
+        .index-middle-content-right > li:hover {
+            box-shadow: 0 4px 12px 0 rgb(0 0 0 / 15%);
+        }
+
+        .index-middle-content-right > li {
+            display: block;
+            width: 286px;
+            height: 400px;
+        }
+
+        .index-middle-content-right .index-car-cover-box {
+            height: 180px;
+            overflow: hidden;
+            padding: 20px;
+        }
+
+        .index-middle-content-right .index-car-cover {
+            width: 100%;
+        }
+
+        .index-middle-content-right .index-car-name {
+            margin-left: 20px;
+            font-size: 17px;
+            font-weight: 600;
+            color: #222;
+            margin-top: 30px;
+        }
+
+        .index-middle-content-right .index-car-fullname {
+            margin-left: 20px;
+            margin-right: 20px;
+            margin-top: 15px;
+            font-weight: 100;
+            font-size: 14px;
+            color: #222;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+
+        .index-middle-content-right .index-payment {
+            display: inline-block;
+            margin-left: 20px;
+            margin-top: 20px;
+            font-size: 24px;
+            color: red;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+
+        .index-middle-content-right .monthly-installment-payment {
+            display: block;
+            margin-left: 20px;
+            margin-top: 20px;
+            font-size: 14px;
+            color: #1cc200;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+    </style>
+    <script src="static/js/jquery.js"></script>
+</head>
+<body>
+<div class="car main">
+    <div class="header">
+        <div style="height: 70px;background: #FFF">
+            <div class="logo fl">
+                <img src="static/imge/logo.png" width="100%" alt="">
+            </div>
+            <div class="navbar fr">
+                <ul>
+                    <li class="fl">
+                        <a href="#"> 首 页</a>
+                        <div class="line"></div>
+                        <div class="navContent"><br><br>Welcome to Rakuten Technology</div>
+                    </li>
+                    <li class="fl">
+                        <a href="#">产品分类</a>
+                        <div class="line"></div>
+                        <div class="navContent">
+                            <ul>
+                                <a href="car-sharing.html">
+                                    <li>共享汽车</li>
+                                </a>
+                                <a href="bike-sharing.html">
+                                    <li>共享单车</li>
+                                </a>
+                                <a href="Charging.html">
+                                    <li>共享充电宝</li>
+                                </a>
+                            </ul>
+                        </div>
+
+                    </li>
+                    <li class="fl">
+                        <a href="#">热门活动</a>
+                        <div class="line"></div>
+                        <div class="navContent">
+                            <ul>
+                                <a href="activty_page.html">
+                                    <li>活动详情</li>
+                                </a>
+                                <a href="activity1.html">
+                                    <li>活动类型</li>
+                                </a>
+                            </ul>
+                        </div>
+
+                    </li>
+                    <li class="fl">
+                        <a href="#">社区精选</a>
+                        <div class="line"></div>
+                        <div class="navContent">
+                            <ul>
+                                <a href="myname.html">
+                                    <li>我的信息</li>
+                                </a>
+                                <!--<li>社区规范</li>-->
+                                <a href="In_community.html">
+                                    <li>进入社区</li>
+                                </a>
+                            </ul>
+                        </div>
+
+                    </li>
+                    <li class="fl">
+                        <a href="#">关于我们</a>
+                        <div class="line"></div>
+                        <div class="navContent">
+                            <ul>
+                                <a href="page.html">
+                                    <li>公司简介</li>
+                                </a>
+                                <!-- <a href="page.html">
+                                     <li>发展历程</li>
+                                 </a>-->
+                                <a href="culture.html">
+                                    <li>企业文化</li>
+                                </a>
+                                <a href="contact.html">
+                                    <li>加入我们</li>
+                                </a>
+                            </ul>
+                        </div>
+
+                    </li>
+                    <li class="fl">
+                        <a href="#joinUs">问题反馈</a>
+                        <div class="line"></div>
+                        <div class="navContent">
+                            <ul>
+                                <a href="cooperation.html">
+                                    <li>商务合作</li>
+                                </a>
+                                <a href="information.html">
+                                    <li>问题咨询</li>
+                                </a>
+                            </ul>
+                        </div>
+
+                    </li>
+                    <li class="fl">
+                        <a href="#">用户中心</a>
+                        <div class="line"></div>
+                        <div class="navContent">
+                            <div class="userImg"><img src="static/imge/userImg.png" width="100%" alt=""></div>
+                            <div class="userState cursor"><p><a href="login.html">登录</a></p></div>
+                            <div class="userState cursor"><p><a href="register.html">注册</a></p></div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="content">
+        <div class="head">
+<!--            <div class="back"><a href="index.html">回到主页>>></a></div>-->
+            <div class="title">
+                <h1>“关于车辆出行”</h1>
+                <h3>你所不知道的“秘密”，我们更加专业</h3>
+            </div>
+            <div class="square">
+                <div class="square1"></div>
+                <div class="square2"></div>
+            </div>
+        </div>
+        <div class="index-content-wrap">
+            <div class="index-middle-wrap">
+                <div class="index-module-top">
+                    <h3 class="index-middle-subtitle fl PingFangSC-M">超低首付</h3>
+                    <p class="fr index-look-more">
+                        <a href="#" class="index-look-more-alink">
+                          <span class="index-look-more-title PingFangSC-R">
+                             查看全部
+                          </span>
+                        </a>
+                    </p>
+                </div>
+                <div class="index-middle-content">
+                    <div class="index-middle-content-left index-middle-content-left1 fl">
+                        <a href="#" class="index-alink">
+                            <img src="static/imge/car/index-left-2.png" alt="">
+                        </a>
+                    </div>
+                    <ul id="w0" class="index-middle-content-right fl">
+                        <li class="fl"><a href="#" class="index-alink">
+                            <div class="index-car-cover-box">
+                                <img src="https://apinew.evcoming.com/sharego//vehiclemodelimgs/web/2224c3b5-7255-42b6-ad5d-6c47ee0ff44c.png"
+                                     alt="车图片" class="index-car-cover">
+                            </div>
+                            <p class="index-car-name PingFangSC-M">吉利汽车 帝豪GSE 领尚型</p>
+                            <p class="index-car-fullname PingFangSC-M">3厢/5座/电动车/353公里</p>
+                            <span class="index-payment PingFangSC-M">12.58万元</span>
+                            <span class="monthly-installment-payment PingFangSC-R">首付0元 <span>月租金4488元/36期</span></span>
+                        </a></li>
+                        <li class="fl"><a href="#" class="index-alink">
+                            <div class="index-car-cover-box">
+                                <img src="https://apinew.evcoming.com/sharego//vehiclemodelimgs/web/f419e4ad-6303-461b-b3ea-402aeb5ced9a.png"
+                                     alt="车图片" class="index-car-cover">
+                            </div>
+                            <p class="index-car-name PingFangSC-M">北汽新能源 EC180</p>
+                            <p class="index-car-fullname PingFangSC-M">2厢/4座/电动车/150公里</p>
+                            <span class="index-payment PingFangSC-M">4.98万元</span>
+                            <span class="monthly-installment-payment PingFangSC-R">首付0元 <span>月租金1850元/36期</span></span>
+                        </a></li>
+                        <li class="fl"><a href="#" class="index-alink">
+                            <div class="index-car-cover-box">
+                                <img src="https://apinew.evcoming.com/sharego//vehiclemodelimgs/web/5d4c67be-fbfb-4e94-a27f-b3eb8fee572f.png"
+                                     alt="车图片" class="index-car-cover">
+                            </div>
+                            <p class="index-car-name PingFangSC-M">奇瑞 小蚂蚁eQ1</p>
+                            <p class="index-car-fullname PingFangSC-M">2厢/4座/电动车/300公里</p>
+                            <span class="index-payment PingFangSC-M">6.58万元</span>
+                            <span class="monthly-installment-payment PingFangSC-R">首付0元 <span>月租金2288元/36期</span></span>
+                        </a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="index-middle-wrap">
+                <div class="index-module-top">
+                    <h3 class="index-middle-subtitle fl PingFangSC-M">超低月租金</h3>
+                    <p class="fr index-look-more">
+                        <a href="#" class="index-look-more-alink">
+                          <span class="index-look-more-title PingFangSC-R">
+                             查看全部
+                          </span>
+                        </a>
+                    </p>
+                </div>
+                <div class="index-middle-content">
+                    <div class="index-middle-content-left index-middle-content-left1 fl">
+                        <a href="#" class="index-alink">
+                            <img src="static/imge/car/index-left-2.png" alt="">
+                        </a>
+                    </div>
+                    <ul class="index-middle-content-right fl">
+                        <li class="fl"><a href="#" class="index-alink">
+                            <div class="index-car-cover-box">
+                                <img src="https://apinew.evcoming.com/sharego//vehiclemodelimgs/web/2224c3b5-7255-42b6-ad5d-6c47ee0ff44c.png"
+                                     alt="车图片" class="index-car-cover">
+                            </div>
+                            <p class="index-car-name PingFangSC-M">吉利汽车 帝豪GSE 领尚型</p>
+                            <p class="index-car-fullname PingFangSC-M">3厢/5座/电动车/353公里</p>
+                            <span class="index-payment PingFangSC-M">12.58万元</span>
+                            <span class="monthly-installment-payment PingFangSC-R">首付0元 <span>月租金4488元/36期</span></span>
+                        </a></li>
+                        <li class="fl"><a href="#" class="index-alink">
+                            <div class="index-car-cover-box">
+                                <img src="https://apinew.evcoming.com/sharego//vehiclemodelimgs/web/f419e4ad-6303-461b-b3ea-402aeb5ced9a.png"
+                                     alt="车图片" class="index-car-cover">
+                            </div>
+                            <p class="index-car-name PingFangSC-M">北汽新能源 EC180</p>
+                            <p class="index-car-fullname PingFangSC-M">2厢/4座/电动车/150公里</p>
+                            <span class="index-payment PingFangSC-M">4.98万元</span>
+                            <span class="monthly-installment-payment PingFangSC-R">首付0元 <span>月租金1850元/36期</span></span>
+                        </a></li>
+                        <li class="fl"><a href="#" class="index-alink">
+                            <div class="index-car-cover-box">
+                                <img src="https://apinew.evcoming.com/sharego//vehiclemodelimgs/web/5d4c67be-fbfb-4e94-a27f-b3eb8fee572f.png"
+                                     alt="车图片" class="index-car-cover">
+                            </div>
+                            <p class="index-car-name PingFangSC-M">奇瑞 小蚂蚁eQ1</p>
+                            <p class="index-car-fullname PingFangSC-M">2厢/4座/电动车/300公里</p>
+                            <span class="index-payment PingFangSC-M">6.58万元</span>
+                            <span class="monthly-installment-payment PingFangSC-R">首付0元 <span>月租金2288元/36期</span></span>
+                        </a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="index-middle-wrap">
+                <div class="index-module-top">
+                    <h3 class="index-middle-subtitle fl PingFangSC-M">码上租车</h3>
+                </div>
+                <div class="index-middle-content">
+                    <div class="index-middle-content-left index-middle-content-left1 fl">
+                        <a href="#" class="index-alinks">
+                            <img src="static/imge/car/xlg-zz-step.png" alt="" style="padding: 50px">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="over-auto">
+            <div class="fl footer-fluid">
+                <p class="fluid-title letter-space"> 关于我们 </p>
+                <div class="fluid-content tuchong-desc"><br>
+                    科技推动出行智能方便 <br>
+                    在这里，发现基于共同兴趣的同好，鼓励原创和分享精神 <br>
+                    在这里，我们不需要重复购买,因为产品已经在街上可以共享
+                </div>
+            </div>
+
+            <div class="fl footer-fluid footer-download">
+                <p class="fluid-title letter-space"> 下载APP </p>
+                <div class="fluid-content">
+                    <img class="qrcode download" src="https://api.tuchong.com/qrcode?url=https://d.toutiao.com/kT8t/">
+                    <div class="qrcode-parallel">
+                        <a class="app-link" data-referer="official" target="_blank" title="点击下载iPhone客户端" href="#">
+                            iPhone版下载 </a>
+                        <a class="app-link" data-referer="official" title="点击下载Android客户端" href="#"> Android版下载 </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="fr footer-fluid text-center">
+                <p class="fluid-title"> 关注乐天 </p>
+
+                <div class="fluid-content">
+                    <div class="qrcode-parallel">
+                        <div class="link-logo wechat">
+                            <a href="#">
+                                <i class="icon-wechat"><img src="static/imge/activity-image/weibo.png" alt=""></i>
+                            </a>
+                            <a class="qrcode wechat"></a>
+                        </div>
+
+                        <div class="link-logo">
+                            <a href="#" target="_blank">
+                                <i class="icon-weibo"><img src="static/imge/activity-image/WeChat.png" alt=""></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="over-auto tuchong-detail">
+            <div class="footer-left">
+                <span>Copyright©2021 南京乐天科技有限公司</span>
+                <div class="slash-list">
+                    <a class="slash-item" href="#"><i>用户协议</i></a>
+                    <a class="slash-item" href="#"><i>隐私政策</i></a>
+                    <a class="switch-layout slash-item"><i>移动版</i></a>
+                    <a class="switch-layout slash-item"><i>电脑版</i></a>
+                </div>
+                <span style="margin-left: 50px">同一个世界，同一个梦想！</span>
+            </div>
+
+            <div class="footer-right slash-list">
+                <a class="slash-item" href="/"><i>帮助</i></a>
+                <a class="slash-item" href="/"><i>关于</i></a>
+                <a class="slash-item" href="/"><i>联系</i></a>
+                <a class="slash-item" href="/"><i>服务</i></a>
+                <a class="slash-item" href="contact.html"><i>加入我们</i></a>
+            </div>
+        </div>
+    </footer>
+</div>
+</body>
+<script>
+    $(document).scroll(function () {
+        var scroH = parseInt($(document).scrollTop());
+        if (scroH === 0) {
+            $(".title,.square").fadeIn();
+        } else {
+            $(".title,.square").fadeOut();
+        }
+
+    });
+</script>
+</html>

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="static/css/initi.css">
+    <script src="static/js/jquery.js"></script>
+    <style>
+        html{height: 100%}
+        body{
+            background: url("static/imge/loginBg.png") no-repeat;
+            background-size: cover;
+            height: 100%;
+        }
+        .login_main{
+            height: 100%;
+            background: rgba(255,255,255,.6);
+        }
+        .content{
+            position: relative;
+            top: 140px;
+            text-align: center;
+            /*background: #999999;*/
+            max-width: 600px;
+            min-height:400px ;
+            margin:auto;
+            border: 1px solid #eee;
+            border-radius: 14px;
+            box-shadow: 2px 2px 7px #414141;
+            background: rgba(255,255,255,.4);
+        }
+        .content h1{
+            text-align: center;
+            color: black;
+            padding-top: 40px;
+            padding-bottom: 20px;
+            margin-bottom: 20px;
+            border-bottom: 1px solid lightblue;
+        }
+        .content table{
+            height: 180px;
+            width: 320px;
+            font-size: 16px;
+        }
+        .content input[type="text"],.content input[type="password"]{
+            height: 30px;
+            width: 220px;
+            font-size: 14px;
+            padding-left: 20px;
+            border-bottom: 1px solid rgba(0,0,0,.2);
+            background: rgba(0,0,0,0);
+        }
+        .content button{
+            height: 38px;
+            background: lightblue;
+            width: 240px;
+            border-radius: 5px;
+            font-size: 14px;
+            margin-top: 20px;
+        }
+        .info{
+            height: 30px;
+            width: 600px;
+            line-height: 30px;
+            text-align: center;
+            font-size: 16px;
+            color: white;
+            border-radius: 6px;
+            border: 1px solid #3d72b4;
+            background: rgba(137, 196, 244, .5);
+            position: absolute;
+            top: -60px;
+            left: 30%;
+            /*display: none;*/
+        }
+        #getYan{
+            font-size: 12px;
+            border: 1px solid black;
+            display:inline-block;
+            height: 24px;width:120px;
+            line-height: 24px;
+            user-select: none
+        }
+    </style>
+
+</head>
+<body>
+<div class="login_main">
+    <div class="info">提示内容</div>
+    <div class="content">
+        <h1>注册</h1>
+        <table style="margin: auto" >
+            <tr>
+                <td>用户名:</td>
+                <td><input type="text" id="username" placeholder="请输入手机号/邮箱"></td>
+            </tr>
+            <tr>
+                <td>密码:</td>
+                <td><input type="password" id="passwd" placeholder="请设置密码"></td>
+            </tr>
+            <tr>
+                <td>确认密码:</td>
+                <td><input type="password" id="passwdAg" placeholder="请确认密码"></td>
+            </tr>
+            <tr>
+                <td>验证码:</td>
+                <td><input type="text" style="width: 100px;" id="yanzheng" placeholder="输入验证码" readonly>
+                    <span id="getYan" class="cursor" style="">获取短信/邮箱验证码</span>
+                </td>
+            </tr>
+        </table>
+        <button class="cursor" style="color: white"> 立即注册 </button>
+    </div>
+</div>
+</body>
+<script>
+    $(document).ready(function () {
+        var account={
+            "123":"123"
+        }
+        $(".content button").click(function () {
+            $(".info").stop(false,true)
+            $(".info").animate({top:"20px"},300,function () {
+                $(this).fadeOut(1000,function () {
+                    $(this).css({"top":"-60px","display":"block"})
+                });
+            })
+
+            var userName=$("#username").val()
+            var passWord=$("#passwd").val()
+            var passwordAgin=$("#passwdAg").val()
+            var yanzhen = $("#yanzheng").val()
+            if (userName===""||passWord===""||passwordAgin===""||yanzhen==""){
+                $(".info").html("不能输入空的内容！")
+            }else if (userName.length<11){
+                $(".info").html("用户名应该大于11位数")
+            } else if (passwordAgin!==passWord){
+                $(".info").html("两次输入的密码不同！")
+            }else{
+                $(".info").html("注册成功！")
+
+            }
+        })
+        $("#getYan").click(function () {
+            $("#yanzheng").val(parseInt(Math.random()*9000)+1000)
+        })
+    })
+</script>
+</html>

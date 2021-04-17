@@ -1,0 +1,266 @@
+.main {
+    min-width: 1344px;
+    max-width: 1600px;
+    margin: auto;
+    width: 100%;
+}
+
+.line {
+    transition: .5s;
+    width: 0;
+    height: 1px;
+    background: red;
+    margin: auto;
+}
+
+.header {
+    height: 70px;
+    background: #fff;
+    box-shadow: 0 4px 7px rgba(0, 0, 0, .1);
+    position: relative;
+    z-index: 4;
+
+}
+
+.logo {
+    width: 180px;
+    height: 70px;
+    margin-left: 20px;
+    /*background: black;*/
+    /*border: 1px solid #EEE;*/
+    /*float: left;*/
+}
+
+.navbar {
+    /*background: black;*/
+    height: 70px;
+    width: auto;
+    margin-right: 60px;
+    /*float: left;*/
+}
+
+.navbar li {
+    /*position: relative;*/
+    width: 120px;
+    /*background: #414141;*/
+    height: 70px;
+    text-align: center;
+    font-size: 18px;
+}
+
+.navContent {
+    padding-top: 10px;
+    min-height: 100px;
+    background: rgba(255, 255, 255, .4);
+    /*background: red;*/
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: -40px;
+    /*display: none;*/
+    transition: .5s;
+    z-index: -1;
+    cursor: default;
+}
+
+.navContent ul {
+    margin-right: 36px;
+}
+
+.navContent ul li {
+    /*background: red;*/
+    float: right;
+    color: white;
+    font-size: 14px;
+    height: 40px;
+    margin-top: 20px;
+    margin-right: 10px;
+    line-height: 40px;
+    border-radius: 50px;
+    transition: .5s;
+    border: 1px solid rgba(0, 0, 0, .2);
+    /*margin: auto;*/
+}
+
+.navContent ul li:hover {
+    border: 1px solid #ccc;
+    color: #aaa;
+    background: rgba(255, 255, 255, .5);
+    font-weight: bold;
+
+}
+
+.navbar li:hover {
+    cursor: pointer;
+}
+
+.navbar li:hover .line {
+    width: 70%;
+}
+
+.navbar li:hover .navContent {
+    /*display: block;*/
+    top: 70px;
+}
+
+.navbar li > a {
+    color: black;
+    display: block;
+    height: 30px;
+    line-height: 40px;
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+.userImg {
+    height: 40px;
+    width: 40px;
+    position: absolute;
+    right: 240px;
+    top: 10px;
+    border: 1px solid #fff;
+    padding: 20px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.userState {
+    position: absolute;
+    right: 20px;
+    border: 1px solid #FFF;
+    /*background: blue;*/
+    height: 40px;
+    width: 180px;
+}
+
+.userState a {
+    display: block;
+    color: white;
+    line-height: 40px;
+}
+
+.userState a:hover {
+    background: rgba(255, 255, 255, .8);
+    color: #555;
+}
+
+.userState:first-child {
+    top: 0;
+}
+
+.userState:last-child {
+    top: 60px;
+}
+
+/*页脚*/
+footer {
+    padding: 20px 40px;
+    margin: 0 auto;
+    clear: both;
+    color: #f9f9f9;
+    font-size: 12px;
+    background-color: #222;
+    margin-top: 100px;
+}
+
+.over-auto {
+    overflow: auto;
+}
+
+footer .footer-fluid {
+    margin-bottom: 32px;
+}
+
+.fl {
+    float: left;
+}
+
+footer .letter-space {
+    letter-spacing: 10px;
+}
+
+footer .fluid-title {
+    font-size: 14px;
+    color: #c99a05;
+    margin-bottom: 10px;
+}
+
+footer .tuchong-desc {
+    margin-right: 70px;
+    line-height: 1.67;
+}
+
+footer .fluid-content {
+    max-width: 342px;
+}
+
+footer .qrcode {
+    width: 80px;
+    height: 80px;
+    display: inline-block;
+    vertical-align: middle;
+    background-size: 100% 100%;
+    margin-right: 10px;
+}
+
+footer .qrcode-parallel {
+    margin-top: 20px;
+    display: inline-block;
+    vertical-align: middle;
+    text-align: center;
+}
+
+footer .qrcode-parallel .icon-wechat img {
+    width: 30px;
+    height: 30px;
+    margin-top: -60px;
+}
+
+footer .qrcode-parallel .icon-weibo img {
+    width: 30px;
+    height: 30px;
+    margin-top: -160px;
+}
+
+footer .app-link {
+    padding: 6px 24px;
+    border: 1px solid #f9f9f9;
+    margin-bottom: 10px;
+    display: block;
+}
+
+footer .over-auto a:hover {
+    color: white;
+}
+
+footer .footer-fluid {
+    margin-bottom: 32px;
+}
+
+footer .fluid-content {
+    max-width: 342px;
+}
+
+footer .footer-left {
+    float: left;
+}
+
+footer .slash-list {
+    display: inline-block;
+    margin-left: 30px;
+}
+
+footer .footer-right {
+    float: right;
+}
+
+footer .slash-list .slash-item:before {
+    color: #85888a;
+    text-decoration: none;
+}
+
+.slash-list .slash-item:before {
+    content: '/';
+    font-size: 12px;
+    margin: 0 5px;
+}

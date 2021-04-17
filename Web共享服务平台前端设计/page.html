@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>公司简介</title>
+    <link rel="stylesheet" href="static/css/initi.css">
+    <link rel="stylesheet" href="static/css/head-footer.css">
+    <script src="static/js/jquery.js"></script>
+    <style>
+        .main{
+            background: url("static/imge/loginBg.jpg") fixed;
+            min-width: 1344px;
+            max-width: 1600px;
+            margin: auto;
+            width: 100%;
+
+        }
+        .content .head{
+            height: 300px;
+            position: relative;
+            background: rgba(0,0,0,.4);
+        }
+        .content{
+            height: 1000px;
+        }
+        .center{
+            height: 700px;
+            background: #fff;
+        }
+        .back a{
+            /*color: white;*/
+            position: absolute;
+            top: 20px;
+            left: 30px;
+        }
+        .title{
+            /*background: #999999;*/
+            color: white;
+            width: 400px;
+            height: 80px;
+            position: absolute;
+            left: 140px;
+            top: 100px;
+        }
+        .title h1{
+            font-size: 30px;
+        }
+        .title h3{
+            line-height: 60px;
+            padding-left: 50px;
+        }
+        .square{
+            position: absolute;
+            right: 300px;
+            top: 140px;
+        }
+        .square1{
+            height: 80px;
+            width: 80px;
+            margin-left: 200px;
+            background: rgba(0,222,180,.2);
+        }
+        .square2{
+            height: 80px;
+            width: 80px;
+            margin-left: 200px;
+            background: rgba(0,222,180,.4);
+            transform: translate(20px,-40px);
+        }
+
+        .center .top{
+            padding-top: 50px;
+            padding-left: 30px;
+        }
+        .center .info{
+            /*background: green;*/
+            height: 600px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            padding-top: 30px;
+        }
+        .center .infos{
+            color: white;
+            background: url("static/imge/about1.jpg") no-repeat;
+            background-size: cover;
+            cursor: pointer;
+            width: 300px;
+            height: 500px;
+            overflow: hidden;
+            border: 10px solid #EEE;
+            box-shadow: 2px 2px #CCC;
+        }
+        .infoText{
+            position: relative;
+            bottom: -500px;
+            padding: 30px 20px;
+            width: 260px;
+            height: 410px;
+            transition: .5s;
+            line-height: 30px;
+        }
+        .center .infos:hover .infoText{
+            background: rgba(0,0,0,.3);
+            bottom: 0;
+        }
+        /*.footer{*/
+        /*    background: #414141;*/
+        /*    height: 200px;*/
+        /*    margin-top: 30px;*/
+        /*}*/
+    </style>
+</head>
+<body>
+<div class="main">
+    <div class="content">
+        <div class="head">
+            <div class="back"><a href="index.html">回到主页>>></a></div>
+            <div class="title">
+                <h1>“关于我们”</h1>
+                <h3>你所不知道的“秘密”</h3>
+            </div>
+            <div class="square">
+                <div class="square1"></div>
+                <div class="square2"></div>
+            </div>
+        </div>
+        <div class="center">
+            <div class="top">
+                <span style="display: inline-block">
+                    <div style="height: 5px;width: 10px;background: #999999;"></div>
+                    <div style="height: 10px;width: 10px;background: #eee;"> </div>
+                </span>
+                <span style="font-size: 18px;padding-bottom: 5px;">企业概况</span>
+            </div>
+            <div class="info">
+                <div class="infos"><div class="infoText">
+                    <h1>公司简介</h1>
+                    <p>小灵狗出行顺应不同人群的需求，推出长短租产品——月租、季租、年租；以租代购产品——整租、整租plus；</p>
+                    <p>二手车等出行产品，配套可定制的保姆式服务，实现了比打车更便宜、比买车更省心、比传统租车更便捷的大众日常出行。</p>
+                    <p>目前，小灵狗出行已在宁波、杭州、南京、南通、苏州、青岛、长沙、武汉、昆明、西双版纳、厦门、泉州、兰州、天津、海口等80余个城市，</p>
+                    <p>拥有800多家直营/加盟门店，累计投入运营9.8万台新能源汽车。在2018年北京车展上荣获中国首个“出行领创奖”，在2020年汽车出行创新论坛上荣获“最具创新力新出行企业奖”，得到行业高度认可。</p>
+                </div></div>
+                <div class="infos"><div class="infoText">
+                    <h1>公司简介</h1>
+                    <p>我们于1997年成立，已成为主要国际保健及医疗器械公司的可靠OEM制造商，并与该等公司维系逾10年稳定关系。OEM客户委托我们按其规格制造医疗器械，并以其自有品牌名称推广及销售</p>
+                    <p>我们于1997年成立，已成为主要国际保健及医疗器械公司的可靠OEM制造商，并与该等公司维系逾10年稳定关系。OEM客户委托我们按其规格制造医疗器械，并以其自有品牌名称推广及销售</p>
+                    <p>我们于1997年成立，已成为主要国际保健及医疗器械公司的可靠OEM制造商，并与该等公司维系逾10年稳定关系。OEM客户委托我们按其规格制造医疗器械，并以其自有品牌名称推广及销售</p>
+                </div></div>
+                <div class="infos"><div class="infoText">
+                <h1>公司简介</h1>
+                <p>我们于1997年成立，已成为主要国际保健及医疗器械公司的可靠OEM制造商，并与该等公司维系逾10年稳定关系。OEM客户委托我们按其规格制造医疗器械，并以其自有品牌名称推广及销售</p>
+                <p>我们于1997年成立，已成为主要国际保健及医疗器械公司的可靠OEM制造商，并与该等公司维系逾10年稳定关系。OEM客户委托我们按其规格制造医疗器械，并以其自有品牌名称推广及销售</p>
+                <p>我们于1997年成立，已成为主要国际保健及医疗器械公司的可靠OEM制造商，并与该等公司维系逾10年稳定关系。OEM客户委托我们按其规格制造医疗器械，并以其自有品牌名称推广及销售</p>
+            </div></div>
+                <div class="infos"><div class="infoText">
+                    <h1>公司简介</h1>
+                    <p>我们于1997年成立，已成为主要国际保健及医疗器械公司的可靠OEM制造商，并与该等公司维系逾10年稳定关系。OEM客户委托我们按其规格制造医疗器械，并以其自有品牌名称推广及销售</p>
+                    <p>我们于1997年成立，已成为主要国际保健及医疗器械公司的可靠OEM制造商，并与该等公司维系逾10年稳定关系。OEM客户委托我们按其规格制造医疗器械，并以其自有品牌名称推广及销售</p>
+                    <p>我们于1997年成立，已成为主要国际保健及医疗器械公司的可靠OEM制造商，并与该等公司维系逾10年稳定关系。OEM客户委托我们按其规格制造医疗器械，并以其自有品牌名称推广及销售</p>
+                </div></div>
+            </div>
+        </div>
+        <footer>
+            <div class="over-auto">
+                <div class="fl footer-fluid">
+                    <p class="fluid-title letter-space"> 关于我们 </p>
+                    <div class="fluid-content tuchong-desc"><br>
+                        科技推动出行智能方便 <br>
+                        在这里，发现基于共同兴趣的同好，鼓励原创和分享精神 <br>
+                        在这里，我们不需要重复购买,因为产品已经在街上可以共享
+                    </div>
+                </div>
+
+                <div class="fl footer-fluid footer-download">
+                    <p class="fluid-title letter-space"> 下载APP </p>
+                    <div class="fluid-content">
+                        <img class="qrcode download" src="https://api.tuchong.com/qrcode?url=https://d.toutiao.com/kT8t/">
+                        <div class="qrcode-parallel">
+                            <a class="app-link" data-referer="official" target="_blank" title="点击下载iPhone客户端" href="#">
+                                iPhone版下载 </a>
+                            <a class="app-link" data-referer="official" title="点击下载Android客户端" href="#"> Android版下载 </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="fr footer-fluid text-center">
+                    <p class="fluid-title"> 关注乐天 </p>
+
+                    <div class="fluid-content">
+                        <div class="qrcode-parallel">
+                            <div class="link-logo wechat">
+                                <a href="#">
+                                    <i class="icon-wechat"><img src="static/imge/activity-image/weibo.png" alt=""></i>
+                                </a>
+                                <a class="qrcode wechat"></a>
+                            </div>
+
+                            <div class="link-logo">
+                                <a href="#" target="_blank">
+                                    <i class="icon-weibo"><img src="static/imge/activity-image/WeChat.png" alt=""></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="over-auto tuchong-detail">
+                <div class="footer-left">
+                    <span>Copyright©2021 南京乐天科技有限公司</span>
+                    <div class="slash-list">
+                        <a class="slash-item" href="#"><i>用户协议</i></a>
+                        <a class="slash-item" href="#"><i>隐私政策</i></a>
+                        <a class="switch-layout slash-item"><i>移动版</i></a>
+                        <a class="switch-layout slash-item"><i>电脑版</i></a>
+                    </div>
+                    <span style="margin-left: 50px">同一个世界，同一个梦想！</span>
+                </div>
+
+                <div class="footer-right slash-list">
+                    <a class="slash-item" href="/"><i>帮助</i></a>
+                    <a class="slash-item" href="/"><i>关于</i></a>
+                    <a class="slash-item" href="/"><i>联系</i></a>
+                    <a class="slash-item" href="/"><i>服务</i></a>
+                    <a class="slash-item" href="contact.html"><i>加入我们</i></a>
+                </div>
+            </div>
+        </footer>
+    </div>
+</div>
+</body>
+<script>
+    $(document).scroll(function() {
+        var scroH = parseInt($(document).scrollTop());
+        if (scroH===0){
+            $(".title,.square").fadeIn();
+        }else {
+            $(".title,.square").fadeOut();
+        }
+
+    });
+</script>
+</html>

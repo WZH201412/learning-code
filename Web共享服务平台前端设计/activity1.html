@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>热门活动</title>
+    <link rel="stylesheet" href="static/css/initi.css">
+    <link rel="stylesheet" href="static/css/head-footer.css">
+    <script src="static/js/jquery.js"></script>
+    <script src="static/js/lbt.js"></script>
+    <script src="static/js/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+</head>
+<style type="text/css">
+    #divs2 {
+        height: 500px;
+        border: 1px solid hsla(0,0%,100%,0.27);
+        border-radius: 5px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+    .secondary-nav {
+        line-height: 28px;
+        position: relative;
+        padding: 20px 0;
+    }
+    .secondary-nav .switch-type {
+        margin: 0 20px;
+        color: #85888A;
+    }
+    .container .content-title {
+        margin: 0;
+        font-size: 16px;
+    }
+    .secondary-nav .nav-list {
+        overflow: auto;
+    }
+    ul, li, p {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+    }
+    a {
+        text-decoration: none;
+        cursor: pointer;
+        color: inherit;
+    }
+    .secondary-nav li {
+        font-size: 16px;
+        float: left;
+    }
+    .secondary-nav li.active .switch-type {
+        color: #000;
+    }
+    .secondary-nav li:first-child .switch-type {
+        margin-left: 0;
+    }
+    .secondary-nav .switch-type {
+        margin: 0 20px;
+        color: #85888A;
+    }
+
+    .secondary-nav .events-joinBtn {
+        float: right;
+        letter-spacing: 0;
+    }
+    .secondary-nav li {
+        font-size: 16px;
+        float: left;
+    }
+    .secondary-nav .events-joinBtn a {
+        border: 1px solid #C99A05;
+        color: #C99A05;
+        display: inline-block;
+        padding: 0 17px;
+        line-height: 28px;
+    }
+    /**/
+    .container{
+        padding: 20px;
+        margin-left: 50px;
+        margin-right: 50px;
+    }
+    .PageList-wrapper{
+        margin-left: 135px;
+    }
+    .event-item {
+        display: inline-block;
+        margin-top: 40px;
+        margin-right: 15px;
+        width: 352px;
+        border: 1px solid #eee;
+        cursor: pointer;
+        position: relative;
+        vertical-align: middle;
+    }
+    .even-item-img{
+        position: relative;
+        display: block;
+        height: 196px;
+        width: 100%;
+        background-size: cover;
+        background-position: center;
+    }
+    .event-item .event-desc .head .event-title {
+        font-size: 18px;
+        line-height: 1;
+        font-weight: 500;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+    .event-item .event-desc .head .event-prize {
+        padding: 8px 0;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+    .event-item .event-desc {
+        width: 100%;
+        color: #222;
+        background: #fff;
+        font-size: 14px;
+    }
+    .event-item .event-desc .head {
+        padding: 16px 20px 8px;
+        border-bottom: 1px solid #f0f0f0;
+    }
+    .event-item .event-desc .head .icon {
+        display: inline-block;
+        width: 12px;
+        height: 13px;
+        background-image: url(static/imge/activity-image/奖杯.png);
+        background-size: 100% 100%;
+        vertical-align: -1px;
+        margin-right: 6px;
+    }
+    .event-item .event-desc .footer {
+        height: 58px;
+        line-height: 65px;
+        padding: 0 20px;
+        font-size: 12px;
+    }
+    .event-item .event-desc .footer .share-group .share-wechat .wechat-icon {
+        width: 20px;
+        height: 20px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: block;
+        background-image: url(static/imge/activity-image/WeChat.png);
+    }
+    .event-item .event-desc .footer .share-group .share-wechat {
+        vertical-align: middle;
+        display: inline-block;
+        position: relative;
+        margin-left: 6px;
+    }
+    .event-item .event-desc .footer .share-group .share-weibo .weibo-icon {
+        width: 20px;
+        height: 20px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: block;
+        background-image: url(static/imge/activity-image/weibo.png);
+    }
+    .event-item .event-desc .footer .share-group .share-weibo {
+        vertical-align: middle;
+        display: inline-block;
+        position: relative;
+        margin-left: 6px;
+    }
+    .event-item .event-desc .footer .share-group {
+        vertical-align: top;
+        display: inline-block;
+    }
+    .share-group span{
+        color: gray;
+    }
+    /*使用伪类元素设置右边线*/
+    .event-item .event-desc .footer .share-group span::after {
+        content: "";
+        display: inline-block;
+        border-right: 1px solid;
+        /* border-color: gray; */
+        margin-right: 1px;
+        margin-left: 4px;
+        width: 6px;
+        height: 13px;
+        vertical-align: middle;
+    }
+    .event-item .event-desc .footer .image-text {
+        color: gray;
+        margin-left: 28px;
+    }
+    .event-item .event-desc .footer .active {
+        color: #fff;
+        border: 1px solid #c99a05;
+        background-color: #c99a05;
+    }
+    .event-item .event-desc .footer .btn {
+        width: 80px;
+        line-height: 30px;
+        height: 30px;
+        margin-top: 16px;
+        margin-right: 0;
+    }
+    .btn {
+        cursor: pointer;
+        float: right;
+        font-size: 14px;
+        text-align: center;
+    }
+</style>
+<body>
+<div class="main">
+    <div class="header">
+        <div style="height: 70px;background: #FFF">
+            <div class="logo fl">
+                <img src="static/imge/logo.png" width="100%" alt="">
+            </div>
+            <div class="navbar fr">
+                <ul>
+                    <li class="fl">
+                        <a href="#"> 首 页</a>
+                        <div class="line"></div>
+                        <div class="navContent"><br><br>Welcome to Rakuten Technology</div>
+                    </li>
+                    <li class="fl">
+                        <a href="#">产品分类</a>
+                        <div class="line"></div>
+                        <div class="navContent">
+                            <ul>
+                                <a href="car-sharing.html">
+                                    <li>共享汽车</li>
+                                </a>
+                                <a href="bike-sharing.html">
+                                    <li>共享单车</li>
+                                </a>
+                                <a href="Charging.html">
+                                    <li>共享充电宝</li>
+                                </a>
+                            </ul>
+                        </div>
+
+                    </li>
+                    <li class="fl">
+                        <a href="#">热门活动</a>
+                        <div class="line"></div>
+                        <div class="navContent">
+                            <ul>
+                                <a href="activty_page.html">
+                                    <li>活动详情</li>
+                                </a>
+                                <a href="activity1.html">
+                                    <li>活动类型</li>
+                                </a>
+                            </ul>
+                        </div>
+
+                    </li>
+                    <li class="fl">
+                        <a href="#">社区精选</a>
+                        <div class="line"></div>
+                        <div class="navContent">
+                            <ul>
+                                <a href="myname.html">
+                                    <li>我的信息</li>
+                                </a>
+                                <!--<li>社区规范</li>-->
+                                <a href="In_community.html">
+                                    <li>进入社区</li>
+                                </a>
+                            </ul>
+                        </div>
+
+                    </li>
+                    <li class="fl">
+                        <a href="#">关于我们</a>
+                        <div class="line"></div>
+                        <div class="navContent">
+                            <ul>
+                                <a href="page.html">
+                                    <li>公司简介</li>
+                                </a>
+                                <!-- <a href="page.html">
+                                     <li>发展历程</li>
+                                 </a>-->
+                                <a href="culture.html">
+                                    <li>企业文化</li>
+                                </a>
+                                <a href="contact.html">
+                                    <li>加入我们</li>
+                                </a>
+                            </ul>
+                        </div>
+
+                    </li>
+                    <li class="fl">
+                        <a href="#joinUs">问题反馈</a>
+                        <div class="line"></div>
+                        <div class="navContent">
+                            <ul>
+                                <a href="cooperation.html">
+                                    <li>商务合作</li>
+                                </a>
+                                <a href="information.html">
+                                    <li>问题咨询</li>
+                                </a>
+                            </ul>
+                        </div>
+
+                    </li>
+                    <li class="fl">
+                        <a href="#">用户中心</a>
+                        <div class="line"></div>
+                        <div class="navContent">
+                            <div class="userImg"><img src="static/imge/userImg.png" width="100%" alt=""></div>
+                            <div class="userState cursor"><p><a href="login.html">登录</a></p></div>
+                            <div class="userState cursor"><p><a href="register.html">注册</a></p></div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div id="divs2"></div>
+
+    <!--内容-->
+    <div class="container">
+        <!--头部活动-->
+        <div style="padding-top: 0px;">
+            <nav class="secondary-nav" style="position: relative; top: 20px; left: 0px; z-index: 3;">
+                <ul class="nav-list content-title">
+                    <li class="active"><a class="switch-type" href="#" data-type="open">进 行 中</a>/</li>
+                    <li class=""><a class="switch-type" href="#" data-type="closed">已 结 束</a></li>
+                    <li class="events-joinBtn"><a>我要发布活动</a></li>
+                </ul>
+            </nav>
+        </div>
+        <!--图图片活动-->
+        <!--第一行-->
+        <div class="PageList-wrapper">
+            <li class="event-item">
+                <div>
+                    <div class="event-link">
+                        <img class="even-item-img" src="https://s1.tuchong.com/event-banners/887183/pc.jpg?1" alt="">
+                    </div>
+                    <div class="event-desc">
+                        <div class="head">
+                            <p class="event-title">苏宁易购第六届“镜头里的中国年”摄影大赛</p>
+                            <p class="event-prize"><i class="icon"></i>索尼全画幅微单+真我系列手机</p>
+                        </div>
+                        <div class="footer">
+                            <p>
+                            </p><div class="share-group">
+                            <span style="color: gray">分享到</span>
+                            <div class="share-wechat qrcode-hover wechat-click">
+                                <i class="wechat-icon wechat-click"></i>
+                            </div>
+                            <div class="share-weibo weibo-click">
+                                <i class="weibo-icon weibo-click"></i>
+                            </div>
+                        </div>
+                            <span class="image-text">
+                                    已参赛 11182
+                            </span>
+                            <span class="btn active"><a href="activty_page.html">立即参加</a></span>
+                            <p></p>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="event-item">
+                <div>
+                    <div class="event-link">
+                        <img class="even-item-img" src="https://s1.tuchong.com/event-banners/887183/pc.jpg?1" alt="">
+                    </div>
+                    <div class="event-desc">
+                        <div class="head">
+                            <p class="event-title">苏宁易购第六届“镜头里的中国年”摄影大赛</p>
+                            <p class="event-prize"><i class="icon"></i>索尼全画幅微单+真我系列手机</p>
+                        </div>
+                        <div class="footer">
+                            <p>
+                            </p><div class="share-group">
+                            <span>分享到</span>
+                            <div class="share-wechat qrcode-hover wechat-click">
+                                <i class="wechat-icon wechat-click"></i>
+                            </div>
+                            <div class="share-weibo weibo-click">
+                                <i class="weibo-icon weibo-click"></i>
+                            </div>
+                        </div>
+                            <span class="image-text">
+                                    已参赛 11182
+                            </span>
+                            <span class="btn active" href="#">立即参加</span>
+                            <p></p>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="event-item">
+                <div>
+                    <div class="event-link">
+                        <img class="even-item-img" src="https://s1.tuchong.com/event-banners/887183/pc.jpg?1" alt="">
+                    </div>
+                    <div class="event-desc">
+                        <div class="head">
+                            <p class="event-title">苏宁易购第六届“镜头里的中国年”摄影大赛</p>
+                            <p class="event-prize"><i class="icon"></i>索尼全画幅微单+真我系列手机</p>
+                        </div>
+                        <div class="footer">
+                            <p>
+                            </p><div class="share-group">
+                            <span>分享到</span>
+                            <div class="share-wechat qrcode-hover wechat-click">
+                                <i class="wechat-icon wechat-click"></i>
+                            </div>
+                            <div class="share-weibo weibo-click">
+                                <i class="weibo-icon weibo-click"></i>
+                            </div>
+                        </div>
+                            <span class="image-text">
+                                    已参赛 11182
+                            </span>
+                            <span class="btn active" href="#">立即参加</span>
+                            <p></p>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </div>
+        <!--第二行-->
+        <div class="PageList-wrapper" style="margin-top: 25px">
+            <li class="event-item">
+                <div>
+                    <div class="event-link">
+                        <img class="even-item-img" src="https://s1.tuchong.com/event-banners/887183/pc.jpg?1" alt="">
+                    </div>
+                    <div class="event-desc">
+                        <div class="head">
+                            <p class="event-title">苏宁易购第六届“镜头里的中国年”摄影大赛</p>
+                            <p class="event-prize"><i class="icon"></i>索尼全画幅微单+真我系列手机</p>
+                        </div>
+                        <div class="footer">
+                            <p>
+                            </p><div class="share-group">
+                            <span>分享到</span>
+                            <div class="share-wechat qrcode-hover wechat-click">
+                                <i class="wechat-icon wechat-click"></i>
+                            </div>
+                            <div class="share-weibo weibo-click">
+                                <i class="weibo-icon weibo-click"></i>
+                            </div>
+                        </div>
+                            <span class="image-text">
+                                    已参赛 11182
+                            </span>
+                            <span class="btn active" href="#">立即参加</span>
+                            <p></p>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="event-item">
+                <div>
+                    <div class="event-link">
+                        <img class="even-item-img" src="https://s1.tuchong.com/event-banners/887183/pc.jpg?1" alt="">
+                    </div>
+                    <div class="event-desc">
+                        <div class="head">
+                            <p class="event-title">苏宁易购第六届“镜头里的中国年”摄影大赛</p>
+                            <p class="event-prize"><i class="icon"></i>索尼全画幅微单+真我系列手机</p>
+                        </div>
+                        <div class="footer">
+                            <p>
+                            </p><div class="share-group">
+                            <span>分享到</span>
+                            <div class="share-wechat qrcode-hover wechat-click">
+                                <i class="wechat-icon wechat-click"></i>
+                            </div>
+                            <div class="share-weibo weibo-click">
+                                <i class="weibo-icon weibo-click"></i>
+                            </div>
+                        </div>
+                            <span class="image-text">
+                                    已参赛 11182
+                            </span>
+                            <span class="btn active" href="#">立即参加</span>
+                            <p></p>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="event-item">
+                <div>
+                    <div class="event-link">
+                        <img class="even-item-img" src="https://s1.tuchong.com/event-banners/887183/pc.jpg?1" alt="">
+                    </div>
+                    <div class="event-desc">
+                        <div class="head">
+                            <p class="event-title">苏宁易购第六届“镜头里的中国年”摄影大赛</p>
+                            <p class="event-prize"><i class="icon"></i>索尼全画幅微单+真我系列手机</p>
+                        </div>
+                        <div class="footer">
+                            <p>
+                            </p><div class="share-group">
+                            <span>分享到</span>
+                            <div class="share-wechat qrcode-hover wechat-click">
+                                <i class="wechat-icon wechat-click"></i>
+                            </div>
+                            <div class="share-weibo weibo-click">
+                                <i class="weibo-icon weibo-click"></i>
+                            </div>
+                        </div>
+                            <span class="image-text">
+                                    已参赛 11182
+                            </span>
+                            <span class="btn active" href="#">立即参加</span>
+                            <p></p>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </div>
+        <!--第三行-->
+        <div class="PageList-wrapper" style="margin-top: 25px">
+            <li class="event-item">
+                <div>
+                    <div class="event-link">
+                        <img class="even-item-img" src="https://s1.tuchong.com/event-banners/887183/pc.jpg?1" alt="">
+                    </div>
+                    <div class="event-desc">
+                        <div class="head">
+                            <p class="event-title">苏宁易购第六届“镜头里的中国年”摄影大赛</p>
+                            <p class="event-prize"><i class="icon"></i>索尼全画幅微单+真我系列手机</p>
+                        </div>
+                        <div class="footer">
+                            <p>
+                            </p><div class="share-group">
+                            <span>分享到</span>
+                            <div class="share-wechat qrcode-hover wechat-click">
+                                <i class="wechat-icon wechat-click"></i>
+                            </div>
+                            <div class="share-weibo weibo-click">
+                                <i class="weibo-icon weibo-click"></i>
+                            </div>
+                        </div>
+                            <span class="image-text">
+                                    已参赛 11182
+                            </span>
+                            <span class="btn active" href="#">立即参加</span>
+                            <p></p>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="event-item">
+                <div>
+                    <div class="event-link">
+                        <img class="even-item-img" src="https://s1.tuchong.com/event-banners/887183/pc.jpg?1" alt="">
+                    </div>
+                    <div class="event-desc">
+                        <div class="head">
+                            <p class="event-title">苏宁易购第六届“镜头里的中国年”摄影大赛</p>
+                            <p class="event-prize"><i class="icon"></i>索尼全画幅微单+真我系列手机</p>
+                        </div>
+                        <div class="footer">
+                            <p>
+                            </p><div class="share-group">
+                            <span>分享到</span>
+                            <div class="share-wechat qrcode-hover wechat-click">
+                                <i class="wechat-icon wechat-click"></i>
+                            </div>
+                            <div class="share-weibo weibo-click">
+                                <i class="weibo-icon weibo-click"></i>
+                            </div>
+                        </div>
+                            <span class="image-text">
+                                    已参赛 11182
+                            </span>
+                            <span class="btn active" href="#">立即参加</span>
+                            <p></p>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="event-item">
+                <div>
+                    <div class="event-link">
+                        <img class="even-item-img" src="https://s1.tuchong.com/event-banners/887183/pc.jpg?1" alt="">
+                    </div>
+                    <div class="event-desc">
+                        <div class="head">
+                            <p class="event-title">苏宁易购第六届“镜头里的中国年”摄影大赛</p>
+                            <p class="event-prize"><i class="icon"></i>索尼全画幅微单+真我系列手机</p>
+                        </div>
+                        <div class="footer">
+                            <p>
+                            </p><div class="share-group">
+                            <span>分享到</span>
+                            <div class="share-wechat qrcode-hover wechat-click">
+                                <i class="wechat-icon wechat-click"></i>
+                            </div>
+                            <div class="share-weibo weibo-click">
+                                <i class="weibo-icon weibo-click"></i>
+                            </div>
+                        </div>
+                            <span class="image-text">
+                                    已参赛 11182
+                            </span>
+                            <span class="btn active" href="#">立即参加</span>
+                            <p></p>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </div>
+    </div>
+    <footer>
+        <div class="over-auto">
+            <div class="fl footer-fluid">
+                <p class="fluid-title letter-space"> 关于我们 </p>
+                <div class="fluid-content tuchong-desc"><br>
+                    科技推动出行智能方便 <br>
+                    在这里，发现基于共同兴趣的同好，鼓励原创和分享精神 <br>
+                    在这里，我们不需要重复购买,因为产品已经在街上可以共享
+                </div>
+            </div>
+
+            <div class="fl footer-fluid footer-download">
+                <p class="fluid-title letter-space"> 下载APP </p>
+                <div class="fluid-content">
+                    <img class="qrcode download" src="https://api.tuchong.com/qrcode?url=https://d.toutiao.com/kT8t/">
+                    <div class="qrcode-parallel">
+                        <a class="app-link" data-referer="official" target="_blank" title="点击下载iPhone客户端" href="#">
+                            iPhone版下载 </a>
+                        <a class="app-link" data-referer="official" title="点击下载Android客户端" href="#"> Android版下载 </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="fr footer-fluid text-center">
+                <p class="fluid-title"> 关注乐天 </p>
+
+                <div class="fluid-content">
+                    <div class="qrcode-parallel">
+                        <div class="link-logo wechat">
+                            <a href="#">
+                                <i class="icon-wechat"><img src="static/imge/activity-image/weibo.png" alt=""></i>
+                            </a>
+                            <a class="qrcode wechat"></a>
+                        </div>
+
+                        <div class="link-logo">
+                            <a href="#" target="_blank">
+                                <i class="icon-weibo"><img src="static/imge/activity-image/WeChat.png" alt=""></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="over-auto tuchong-detail">
+            <div class="footer-left">
+                <span>Copyright©2021 南京乐天科技有限公司</span>
+                <div class="slash-list">
+                    <a class="slash-item" href="#"><i>用户协议</i></a>
+                    <a class="slash-item" href="#"><i>隐私政策</i></a>
+                    <a class="switch-layout slash-item"><i>移动版</i></a>
+                    <a class="switch-layout slash-item"><i>电脑版</i></a>
+                </div>
+                <span style="margin-left: 50px">同一个世界，同一个梦想！</span>
+            </div>
+
+            <div class="footer-right slash-list">
+                <a class="slash-item" href="/"><i>帮助</i></a>
+                <a class="slash-item" href="/"><i>关于</i></a>
+                <a class="slash-item" href="/"><i>联系</i></a>
+                <a class="slash-item" href="/"><i>服务</i></a>
+                <a class="slash-item" href="contact.html"><i>加入我们</i></a>
+            </div>
+        </div>
+    </footer>
+</div>
+</body>
+<script>
+    $(document).scroll(function () {
+        var scroH = parseInt($(document).scrollTop());  //滚动高度
+        var viewH = $(window).height();  //可见高度
+        var contentH = $(document).height();  //内容高度
+
+        console.log(scroH)
+        if (scroH < 300 && scroH > 200) {
+            $(".wares,.haibao").hide();
+            // $(".ware").animate({opacity:"1"},1000)
+        }
+        if (scroH >= 300) {
+            $(".wares,.haibao").fadeIn(1000);
+            // $(".ware").animate({left:"100px"},1000)
+        }
+    });
+    var imgs = ["static/imge/activity-image/pc.jpg",
+        "static/imge/activity-image/pc.jpg",
+        "static/imge/activity-image/pc.jpg",
+        "static/imge/activity-image/pc.jpg"]
+    var hrefs = ["#1", "#2", "#3", "#4"]
+    var lbt = lbimg("divs2", imgs,hrefs,3000).start()
+</script>
+
+</html>

@@ -1,0 +1,144 @@
+*{
+	margin: 0 auto;
+}
+.back a{
+	position: absolute;
+	top: 20px;
+	left: 30px;
+}
+.head{
+	height: 140px;
+	/*border: 1px solid #ccc;*/
+}
+.head h2{
+	font-size: 28px;
+	color: #01ced6;
+	text-align: center;
+	line-height:5;
+	cursor: default;
+}
+.event{
+	width: 1100px;
+	height: 230px;
+}
+.event-text{
+	height: 230px;
+	width: 700px;
+	float: left;
+	/*background: #01CED6;*/
+}
+.event-text h4{
+	font-weight: normal;
+    margin: 10px;
+    cursor: default;
+    color:rgb(51, 51, 51);
+	display:block;
+	font-family:"Microsoft Yahei", Arial;
+	font-size:16px;
+	font-weight:400;
+	height:28px;
+	line-height:28px;
+}
+.event-text p{
+	padding: 15px 0 0 0;
+	margin: 10px;
+	color: #666;
+    cursor: default;
+    height:14px;
+    font-size:14px;
+	line-height:26px;
+}
+.event-pic{
+	height: 230px;
+	width: 400px;
+	float: left;
+	/*background: #9ACFEA;*/
+}
+.event-pic img{
+	margin: 20px;
+}
+#item{
+	height: 910px;
+	width: 1100px;
+	/*border: 1px solid #ccc;*/
+	margin-top: 40px;
+}
+.item{
+	height: 910px;
+	width: 1100px;
+	overflow: hidden;
+	position: relative;
+	display: none;
+}
+
+.item.active {
+	display: block;
+}
+.list{
+	height: 910px;
+	width: 1100px;
+	/*background: #F2DEDE;	*/
+}
+.list1{
+	height: 150px;
+	width: 1100px;
+	border-bottom: 1px dashed #ccc;
+}
+.list1-left{
+	height:150px;
+	width: 200px;
+	/*border: 1px solid #ccc;*/
+	float: left;
+}
+.list1-right{
+	height:150px;
+	width: 900px;
+	/*border: 1px solid #ccc;*/
+	float: left;
+}
+
+.beijing{
+	margin-left: 70px;
+	margin-top: 30px;
+	text-align: center;
+	height: 85px;
+	width: 85px;
+	background: #f2f2f2;
+}
+.beijing h2{
+	line-height: 50px;
+}
+.list1-right h4{
+	margin: 18px;
+	font-size: 16px;
+    color: #333;
+    font-weight: normal;
+    line-height: 30px;
+    cursor: default;
+}
+.list1-right p{
+	margin: 18px;
+	font-size: 14px;
+    color: #666;
+    line-height: 24px;
+    cursor: default;
+}
+.button{
+	height: 40px;
+	width: 300px;
+	margin-top: 30px;
+}
+.button button{
+	height: 30px;
+	width: 70px;
+	background: #fff;
+	outline: none;
+	border-style: solid;
+	border-radius: 18px;
+
+}
+.button button:hover{
+	background: rgb(1, 206, 214);
+	color: #fff;
+	border: none;
+}

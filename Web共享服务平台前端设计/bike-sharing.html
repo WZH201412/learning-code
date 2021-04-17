@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>共享单车</title>
+    <link rel="stylesheet" href="static/css/initi.css">
+    <link rel="stylesheet" href="static/css/head-footer.css">
+</head>
+<style type="text/css">
+    .head-img-region .copyright-contextmenu img {
+        margin-top: -1px;
+    }
+
+    .head-img-region .head-img {
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        display: block;
+        height: 580px;
+    }
+
+    .container {
+        width: 1200px;
+        margin: 0 auto;
+    }
+
+    .container .row {
+        padding-top: 120px;
+    }
+
+    section {
+        display: block;
+    }
+
+    .container .row > .title {
+        color: #333;
+        font-size: 40px;
+        line-height: 56px;
+        font-weight: 500;
+        margin: 0;
+        margin-bottom: 40px;
+    }
+
+    .row > .title {
+        font-family: PingFangSC-Medium, PingFang SC;
+    }
+
+    .container .row .introduce {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    .container .row .introduce .introduce-item {
+        width: 285px;
+        height: 400px;
+        padding: 40px 33px 0;
+        box-sizing: border-box;
+        margin-bottom: 20px;
+        background: #f5f8fb;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .container .row .introduce .introduce-item > div {
+        padding-left: 7px;
+    }
+
+    .container .row .introduce .introduce-item .title {
+        color: #333;
+        line-height: 40px;
+        font-size: 24px;
+        margin-bottom: 15px;
+        font-weight: 500;
+        font-family: PingFangSC-Medium, PingFangSC, "Microsoft YaHei";
+    }
+
+    .container .row .introduce .introduce-item p {
+        text-align: left;
+    }
+
+    .container .row .introduce .introduce-item .des {
+        color: #999;
+        font-size: 16px;
+        line-height: 26px;
+        font-weight: 400;
+        font-family: PingFangSC-Regular, PingFangSC, "Microsoft YaHei";
+    }
+
+    .container .row .introduce .introduce-item:nth-of-type(1) img {
+        position: relative;
+        top: -15px;
+    }
+
+    .container .row .introduce .introduce-item img {
+        margin-top: 20px;
+        transition: all .3s ease;
+        display: block;
+        width: 221px;
+        height: 200px;
+    }
+
+    .container .row .introduce .introduce-item img:hover {
+        transform: scale(1.2);
+    }
+
+    .container .service-biz {
+        margin-top: -20px;
+        width: 100%;
+        cursor: pointer;
+    }
+    .container .row .grides {
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-flex-flow: row wrap;
+        -ms-flex-flow: row wrap;
+        flex-flow: row wrap;
+    }
+    .container .row .grides .items:nth-of-type(-n+3) {
+        border-bottom: 1px solid #e5e5e5;
+    }
+    .container .row .grides .items {
+        box-sizing: border-box;
+        width: 400px;
+        height: 350px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        border-right: 1px solid #e5e5e5;
+    }
+    /*图片*/
+    .container .row .grides .items>div {
+        height: 220px;
+        width: 100%;
+        margin-left: 100px;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+    }
+    .container .row .grides .items>p {
+        font-size: 24px;
+        font-weight: 400;
+        color: #333;
+        line-height: 33px;
+        margin-bottom: 5px;
+    }
+    .btn {
+        background-color: #5bc0de; /* Green */
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        height: 50px;
+        border-radius: 4px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+    }
+</style>
+<body>
+<div class="main">
+    <div class="header">
+        <div style="height: 70px;background: #FFF">
+            <div class="logo fl">
+                <img src="static/imge/logo.png" width="100%" alt="">
+            </div>
+            <div class="navbar fr">
+                <ul>
+                    <li class="fl">
+                        <a href="#"> 首 页</a>
+                        <div class="line"></div>
+                        <div class="navContent"><br><br>Welcome to Rakuten Technology</div>
+                    </li>
+                    <li class="fl">
+                        <a href="#">产品分类</a>
+                        <div class="line"></div>
+                        <div class="navContent">
+                            <ul>
+                                <a href="car-sharing.html">
+                                    <li>共享汽车</li>
+                                </a>
+                                <a href="bike-sharing.html">
+                                    <li>共享单车</li>
+                                </a>
+                                <a href="Charging.html">
+                                    <li>共享充电宝</li>
+                                </a>
+                            </ul>
+                        </div>
+
+                    </li>
+                    <li class="fl">
+                        <a href="#">热门活动</a>
+                        <div class="line"></div>
+                        <div class="navContent">
+                            <ul>
+                                <a href="activty_page.html">
+                                    <li>活动详情</li>
+                                </a>
+                                <a href="activity1.html">
+                                    <li>活动类型</li>
+                                </a>
+                            </ul>
+                        </div>
+
+                    </li>
+                    <li class="fl">
+                        <a href="#">社区精选</a>
+                        <div class="line"></div>
+                        <div class="navContent">
+                            <ul>
+                                <a href="myname.html">
+                                    <li>我的信息</li>
+                                </a>
+                                <!--<li>社区规范</li>-->
+                                <a href="In_community.html">
+                                    <li>进入社区</li>
+                                </a>
+                            </ul>
+                        </div>
+
+                    </li>
+                    <li class="fl">
+                        <a href="#">关于我们</a>
+                        <div class="line"></div>
+                        <div class="navContent">
+                            <ul>
+                                <a href="page.html">
+                                    <li>公司简介</li>
+                                </a>
+                                <!-- <a href="page.html">
+                                     <li>发展历程</li>
+                                 </a>-->
+                                <a href="culture.html">
+                                    <li>企业文化</li>
+                                </a>
+                                <a href="contact.html">
+                                    <li>加入我们</li>
+                                </a>
+                            </ul>
+                        </div>
+
+                    </li>
+                    <li class="fl">
+                        <a href="#joinUs">问题反馈</a>
+                        <div class="line"></div>
+                        <div class="navContent">
+                            <ul>
+                                <a href="cooperation.html">
+                                    <li>商务合作</li>
+                                </a>
+                                <a href="information.html">
+                                    <li>问题咨询</li>
+                                </a>
+                            </ul>
+                        </div>
+
+                    </li>
+                    <li class="fl">
+                        <a href="#">用户中心</a>
+                        <div class="line"></div>
+                        <div class="navContent">
+                            <div class="userImg"><img src="static/imge/userImg.png" width="100%" alt=""></div>
+                            <div class="userState cursor"><p><a href="login.html">登录</a></p></div>
+                            <div class="userState cursor"><p><a href="register.html">注册</a></p></div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="head-img-region">
+        <div class="head-img copyright-contextmenu"
+             style="background-image: url(static/imge/bike/download.png)">
+        </div>
+    </div>
+
+    <div class="container">
+        <!--单车运营-->
+        <section class="row">
+            <h2 class="title">单车运营</h2>
+            <div class="grides">
+                <div class="items">
+                    <div style="margin-top: 140px;margin-bottom: 10px">
+                        <img src="static/imge/bike/beck6.png">
+                    </div>
+                    <div style="width: 400px;height: 200px">
+                        <a href="#">
+                            <span style="font-size: 20px;color: black">上海市<img src="static/imge/bike/map.gif" height="80" width="80" alt=""></span>
+                            <button class="btn" title="预约骑行">预约骑行</button>
+                        </a>
+                    </div>
+                </div>
+                <div class="items">
+                    <div style="margin-top: 140px;margin-bottom: 10px">
+                        <img src="static/imge/bike/beck6.png">
+                    </div>
+                    <div style="width: 400px;height: 200px">
+                        <a href="#">
+                            <span style="font-size: 20px;color: black">上海市<img src="static/imge/bike/map.gif" height="80" width="80" alt=""></span>
+                            <button class="btn" title="预约骑行">预约骑行</button>
+                        </a>
+                    </div>
+                </div>
+                <div class="items">
+                    <div style="margin-top: 140px;margin-bottom: 10px">
+                        <img src="static/imge/bike/beck6.png">
+                    </div>
+                    <div style="width: 400px;height: 200px">
+                        <a href="#">
+                            <span style="font-size: 20px;color: black">上海市<img src="static/imge/bike/map.gif" height="80" width="80" alt=""></span>
+                            <button class="btn" title="预约骑行">预约骑行</button>
+                        </a>
+                    </div>
+                </div>
+                <div class="items">
+                    <div style="margin-top: 140px;margin-bottom: 10px">
+                        <img src="static/imge/bike/beck6.png">
+                    </div>
+                    <div style="width: 400px;height: 200px">
+                        <a href="#">
+                            <span style="font-size: 20px;color: black">上海市<img src="static/imge/bike/map.gif" height="80" width="80" alt=""></span>
+                            <button class="btn" title="预约骑行">预约骑行</button>
+                        </a>
+                    </div>
+                </div>
+                <div class="items">
+                    <div style="margin-top: 140px;margin-bottom: 10px">
+                        <img src="static/imge/bike/beck6.png">
+                    </div>
+                    <div style="width: 400px;height: 200px">
+                        <a href="#">
+                            <span style="font-size: 20px;color: black">上海市<img src="static/imge/bike/map.gif" height="80" width="80" alt=""></span>
+                            <button class="btn" title="预约骑行">预约骑行</button>
+                        </a>
+                    </div>
+                </div>
+                <!--<div class="items">
+                    <div style="margin-top: 140px;margin-bottom: 10px">
+                        <img src="static/imge/bike/beck6.png">
+                    </div>
+                    <div style="width: 400px;height: 200px">
+                        <a href="#">
+                            <span style="font-size: 20px;color: black">上海市<img src="static/imge/bike/map.gif" height="80" width="80" alt=""></span>
+                            <button class="btn" title="预约骑行">预约骑行</button>
+                        </a>
+                    </div>
+                </div>-->
+            </div>
+        </section>
+
+        <section class="row">
+            <img class="service-biz" src="static/imge/bike/bike__service__join.jpg" alt="">
+        </section>
+
+        <section class="row"><h2 class="title">产品介绍</h2>
+            <div class="introduce">
+                <div class="introduce-item">
+                    <div><p class="title">高精度传感器</p>
+                        <p class="des">脚踏助力，限速20km/h，无刷永磁电机传动转化效率＞86%，感知路况和骑行状态，对应匹配辅助动力</p></div>
+                    <img src="static/imge/bike/ebike__product--1.svg" alt="高精度传感器">
+                </div>
+                <div class="introduce-item">
+                    <div><p class="title">智能中控系统</p>
+                        <p class="des">MTK高集成度芯片，电量显示系统，行业首创语音提示，实时定位与通信轨迹追踪</p></div>
+                    <img src="static/imge/bike/ebike__product--2.svg" alt="智能中控系统">
+                </div>
+                <div class="introduce-item">
+                    <div><p class="title">安全制动</p>
+                        <p class="des">FOC矢量控制器，智能断电刹把，制动距离:干态2m，湿态&lt;10m</p></div>
+                    <img src="static/imge/bike/ebike__product--3.svg" alt="安全制动">
+                </div>
+                <div class="introduce-item">
+                    <div><p class="title">NFC电子智能锁</p>
+                        <p class="des">APP全自动解锁，后台实时监控，震动检测，智能报警</p></div>
+                    <img src="static/imge/bike/ebike__product--4.svg" alt="NFC电子智能锁">
+                </div>
+                <div class="introduce-item">
+                    <div><p class="title">科技防护装备</p>
+                        <p class="des">自诊断功能，防破坏系统，IPX7防水等级</p></div>
+                    <img src="static/imge/bike/ebike__product--5.svg" alt="科技防护装备">
+                </div>
+                <div class="introduce-item">
+                    <div><p class="title">轻量化车身</p>
+                        <p class="des">航空级6061铝合金车架，整车重量27kg</p></div>
+                    <img src="static/imge/bike/ebike__product--6.svg" alt="轻量化车身">
+                </div>
+                <div class="introduce-item">
+                    <div><p class="title">精工制作</p>
+                        <p class="des">抗老化车体，防晒、防氧化烤漆，免维护实心轮胎</p></div>
+                    <img src="static/imge/bike/ebike__product--7.svg" alt="精工制作">
+                </div>
+                <div class="introduce-item">
+                    <div><p class="title">智能电池管理系统</p>
+                        <p class="des">进口18650动力锂电电芯，性能实时上报，全生命周期管理</p></div>
+                    <img src="static/imge/bike/ebike__product--8.svg" alt="智能电池管理系统">
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <footer>
+        <div class="over-auto">
+            <div class="fl footer-fluid">
+                <p class="fluid-title letter-space"> 关于我们 </p>
+                <div class="fluid-content tuchong-desc"><br>
+                    科技推动出行智能方便 <br>
+                    在这里，发现基于共同兴趣的同好，鼓励原创和分享精神 <br>
+                    在这里，我们不需要重复购买,因为产品已经在街上可以共享
+                </div>
+            </div>
+
+            <div class="fl footer-fluid footer-download">
+                <p class="fluid-title letter-space"> 下载APP </p>
+                <div class="fluid-content">
+                    <img class="qrcode download" src="https://api.tuchong.com/qrcode?url=https://d.toutiao.com/kT8t/">
+                    <div class="qrcode-parallel">
+                        <a class="app-link" data-referer="official" target="_blank" title="点击下载iPhone客户端" href="#">
+                            iPhone版下载 </a>
+                        <a class="app-link" data-referer="official" title="点击下载Android客户端" href="#"> Android版下载 </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="fr footer-fluid text-center">
+                <p class="fluid-title"> 关注乐天 </p>
+
+                <div class="fluid-content">
+                    <div class="qrcode-parallel">
+                        <div class="link-logo wechat">
+                            <a href="#">
+                                <i class="icon-wechat"><img src="static/imge/activity-image/weibo.png" alt=""></i>
+                            </a>
+                            <a class="qrcode wechat"></a>
+                        </div>
+
+                        <div class="link-logo">
+                            <a href="#" target="_blank">
+                                <i class="icon-weibo"><img src="static/imge/activity-image/WeChat.png" alt=""></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="over-auto tuchong-detail">
+            <div class="footer-left">
+                <span>Copyright©2021 南京乐天科技有限公司</span>
+                <div class="slash-list">
+                    <a class="slash-item" href="#"><i>用户协议</i></a>
+                    <a class="slash-item" href="#"><i>隐私政策</i></a>
+                    <a class="switch-layout slash-item"><i>移动版</i></a>
+                    <a class="switch-layout slash-item"><i>电脑版</i></a>
+                </div>
+                <span style="margin-left: 50px">同一个世界，同一个梦想！</span>
+            </div>
+
+            <div class="footer-right slash-list">
+                <a class="slash-item" href="/"><i>帮助</i></a>
+                <a class="slash-item" href="/"><i>关于</i></a>
+                <a class="slash-item" href="/"><i>联系</i></a>
+                <a class="slash-item" href="/"><i>服务</i></a>
+                <a class="slash-item" href="contact.html"><i>加入我们</i></a>
+            </div>
+        </div>
+    </footer>
+</div>
+</body>
+</html>

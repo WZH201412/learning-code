@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>充电宝</title>
+    <link rel="stylesheet" href="static/css/initi.css">
+    <link rel="stylesheet" href="static/css/head-footer.css">
+    <script src="static/js/jquery.js"></script>
+    <style>
+        .pages-product section {
+            text-align: center;
+            color: #FFFFFF;
+            background-color: #000000;
+        }
+
+        .pages-product section .panel1 {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            /*min-height: 100vh;*/
+            padding: 80px 20px;
+        }
+
+        .pages-product section .panel1 .title {
+            font-size: 48px;
+        }
+
+        .pages-product section .panel1 .subtitle {
+            font-size: 24px;
+            margin-top: 40px;
+        }
+
+        .pages-product section .panel1 .thirdtitle {
+            font-size: 14px;
+            margin-top: 28px;
+        }
+
+        .pages-product section .panel1 > video {
+            width: 50%;
+            object-fit: cover;
+        }
+
+        video::-webkit-media-controls {
+            display: none !important;
+        }
+
+        .pages-product section .line {
+            height: 10px;
+            width: 100%;
+            background-color: #1B1B1B;
+        }
+
+        .pages-product section .panel2 {
+            color: #FFFFFF;
+            padding: 70px 20px 10px;
+        }
+        .pages-product section .panel2 .box ul.left > li.active::after {
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            content: '';
+            width: 16px;
+            height: 16px;
+            background-color: #26C441;
+            border-radius: 100%;
+        }
+        .pages-product section .panel2 .title {
+            font-size: 38px;
+        }
+        .pages-product section .panel2 .box {
+            padding: 100px;
+            /*margin-top: 40px;*/
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+        .pages-product section .panel2 .box ul.left {
+            /*width: 33.33%;*/
+            padding-left: 60px;
+        }
+        .pages-product section .panel2 .box ul.left > li.active {
+            position: relative;
+        }
+         .pages-product section .panel2 .box ul.left > li {
+             text-align: left;
+             padding: 15px 0 15px 30px;
+             font-size: 20px;
+             color: #FFFFFF;
+         }
+        .pages-product section .panel2 .box .li-ani {
+            width: 33.33%;
+        }
+        .pages-product section .panel2 .box .li-ani img {
+            width: 211px;
+            padding-left: 250px;
+            margin: 0 auto;
+        }
+         img {
+             display: block;
+         }
+        .pages-product section .panel2 .box .right {
+            width: 33.33%;
+            padding-left: 40px;
+            padding-top: 15px;
+            background-color: #000000;
+        }
+        .pages-product .swiper-v-wrapper {
+            position: relative;
+            width: 100%;
+            /*transition-property: left, top, -webkit-transform;*/
+            /*transition-property: transform, left, top;*/
+            transition-property: transform, left, top, -webkit-transform;
+            transition-duration: 0s;
+            transform: translateZ(0);
+            transition-timing-function: ease;
+            box-sizing: content-box;
+        }
+        .pages-product section .panel2 .box .right .swiper-v-panel {
+            background-color: #000000;
+        }
+        .swiper-container .swiper-v-panel, .swiper-container{
+            position: relative;
+            height: 100%;
+            overflow: hidden;
+        }
+        .pages-product section .panel2 .box .right .swiper-v-panel .li-notice {
+            text-align: left;
+        }
+        .pages-product section .panel2 .box .right .swiper-v-panel .li-notice > p {
+            display: block;
+            padding-bottom: 34px;
+            border-bottom: 1px dashed #D8D8D8;
+            font-size: 20px;
+        }
+        .pages-product section .panel2 .box .right .swiper-v-panel .li-notice > div {
+            padding-top: 23px;
+        }
+        .pages-product section .panel2 .box .right .swiper-v-panel .li-notice > div p {
+            font-size: 18px;
+        }
+        .pages-product section .panel2 .box .right .swiper-v-panel .li-notice > ul {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+        .pages-product section .panel2 .box .right .swiper-v-panel .li-notice > ul > li {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            width: 33.33%;
+            height: 110px;
+            text-align: center;
+        }
+        .pages-product section .panel2 .box .right .swiper-v-panel .li-notice > ul > li > img {
+            margin: 0 auto;
+        }
+         img {
+             display: block;
+         }
+
+        .pages-product section .panel2 .box .right .swiper-v-panel .li-notice > ul > li > p {
+            color: #FFFFFF;
+            padding-top: 10px;
+            font-size: 14px;
+        }
+        .pages-product section .panel5 {
+            background-color: #FFFFFF;
+            padding: 93px 0 10px;
+        }
+    </style>
+</head>
+<body>
+<div class="main">
+    <div class="header">
+        <div style="height: 70px;background: #FFF">
+            <div class="logo fl">
+                <img src="static/imge/logo.png" width="100%" alt="">
+            </div>
+            <div class="navbar fr">
+                <ul>
+                    <li class="fl">
+                        <a href="#"> 首 页</a>
+                        <div class="line"></div>
+                        <div class="navContent"><br><br>Welcome to Rakuten Technology</div>
+                    </li>
+                    <li class="fl">
+                        <a href="#">产品分类</a>
+                        <div class="line"></div>
+                        <div class="navContent">
+                            <ul>
+                                <a href="car-sharing.html">
+                                    <li>共享汽车</li>
+                                </a>
+                                <a href="bike-sharing.html">
+                                    <li>共享单车</li>
+                                </a>
+                                <a href="Charging.html">
+                                    <li>共享充电宝</li>
+                                </a>
+                            </ul>
+                        </div>
+
+                    </li>
+                    <li class="fl">
+                        <a href="#">热门活动</a>
+                        <div class="line"></div>
+                        <div class="navContent">
+                            <ul>
+                                <a href="activty_page.html">
+                                    <li>活动详情</li>
+                                </a>
+                                <a href="activity1.html">
+                                    <li>活动类型</li>
+                                </a>
+                            </ul>
+                        </div>
+
+                    </li>
+                    <li class="fl">
+                        <a href="#">社区精选</a>
+                        <div class="line"></div>
+                        <div class="navContent">
+                            <ul>
+                                <a href="myname.html">
+                                    <li>我的信息</li>
+                                </a>
+                                <!--<li>社区规范</li>-->
+                                <a href="In_community.html">
+                                    <li>进入社区</li>
+                                </a>
+                            </ul>
+                        </div>
+
+                    </li>
+                    <li class="fl">
+                        <a href="#">关于我们</a>
+                        <div class="line"></div>
+                        <div class="navContent">
+                            <ul>
+                                <a href="page.html">
+                                    <li>公司简介</li>
+                                </a>
+                                <!-- <a href="page.html">
+                                     <li>发展历程</li>
+                                 </a>-->
+                                <a href="culture.html">
+                                    <li>企业文化</li>
+                                </a>
+                                <a href="contact.html">
+                                    <li>加入我们</li>
+                                </a>
+                            </ul>
+                        </div>
+
+                    </li>
+                    <li class="fl">
+                        <a href="#joinUs">问题反馈</a>
+                        <div class="line"></div>
+                        <div class="navContent">
+                            <ul>
+                                <a href="cooperation.html">
+                                    <li>商务合作</li>
+                                </a>
+                                <a href="information.html">
+                                    <li>问题咨询</li>
+                                </a>
+                            </ul>
+                        </div>
+
+                    </li>
+                    <li class="fl">
+                        <a href="#">用户中心</a>
+                        <div class="line"></div>
+                        <div class="navContent">
+                            <div class="userImg"><img src="static/imge/userImg.png" width="100%" alt=""></div>
+                            <div class="userState cursor"><p><a href="login.html">登录</a></p></div>
+                            <div class="userState cursor"><p><a href="register.html">注册</a></p></div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="pages-product">
+        <section>
+            <div class="container panel1"><p class="title">小电充电宝</p>
+                <p class="subtitle">5000mAh采用高智能锂电池充电管理IC，采用智能微电脑控制技术加多重保护电路</p>
+                <p class="thirdtitle">高效率输出，高容量锂电芯储能</p>
+                <video controls autoplay="autoplay" muted="true">
+                    <source type="video/mp4" src="static/imge/Charging/site-device.mp4">
+                </video>
+            </div>
+            <div class="line"></div>
+            <div class="container panel2"><p class="title">产品优势</p>
+                <div class="box">
+                    <ul class="left">
+                        <li class="active">双输出</li>
+                        <li class="active">随借随还</li>
+                        <li class="">实时查看</li>
+                        <li class="">安全可靠</li>
+                        <li class="">智能电流</li>
+                        <li class="">7重保护</li>
+                        <li class="">异地归还</li>
+                    </ul>
+                    <div class="li-ani hidden-xs"><img src="static/imge/Charging/225w_542h_0A2681545710243.gif"></div>
+                    <div class="swiper-container swiper-v-container right">
+                        <div class="swiper-wrapper swiper-v-wrapper">
+                            <div style="overflow-y: hidden;">
+                                <div class="react-swipeable-view-container"
+                                     style="height: 220px; flex-direction: column; transition: transform 0.35s cubic-bezier(0.15, 0.3, 0.25, 1) 0s; direction: ltr; display: flex; will-change: transform; transform: translate(0px, 0%);">
+                                    <div aria-hidden="false" data-swipeable="true"
+                                         style="width: 100%; flex-shrink: 0; overflow: auto;">
+                                        <div style="min-height: 220px; color: rgb(255, 255, 255);">
+                                            <div class="swiper-panel swiper-v-panel">
+                                                <div class="li-notice"><p>三合一线输出</p>
+                                                    <div><p>USE接口输出</p></div>
+                                                    <ul>
+                                                        <li><img
+                                                                src="static/imge/Charging/70w_70h_5BA751553429312.png"
+                                                                style="width: 35px;">
+                                                            <p>三线合一</p></li>
+                                                        <li><img
+                                                                src="static/imge/Charging/50w_74h_0D6221553429357.png"
+                                                                style="width: 25px;">
+                                                            <p>USB接口</p></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div aria-hidden="true" data-swipeable="true"
+                                         style="width: 100%; flex-shrink: 0; overflow: auto;">
+                                        <div style="min-height: 220px; color: rgb(255, 255, 255);">
+                                            <div class="swiper-panel swiper-v-panel">
+                                                <div class="li-notice"><p>随借随还</p>
+                                                    <div><p>插入即归还</p></div>
+                                                    <ul>
+                                                        <li><img
+                                                                src="//img3.dian.so/lhc/2019/03/24/72w_72h_4B2531553429429.png"
+                                                                style="width: 36px;">
+                                                            <p>插入即归还</p></li>
+                                                        <li><img
+                                                                src="//img3.dian.so/lhc/2019/03/24/80w_72h_FF58A1553429598.png"
+                                                                style="width: 40px;">
+                                                            <p>不需要扫码</p></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div aria-hidden="true" data-swipeable="true"
+                                         style="width: 100%; flex-shrink: 0; overflow: auto;">
+                                        <div style="min-height: 220px; color: rgb(255, 255, 255);">
+                                            <div class="swiper-panel swiper-v-panel">
+                                                <div class="li-notice"><p>产品借出使用时</p>
+                                                    <div><p>实时查看使用时间、查看费用</p></div>
+                                                    <ul>
+                                                        <li><img
+                                                                src="//img3.dian.so/lhc/2019/03/24/80w_80h_ED6D71553429647.png"
+                                                                style="width: 36px;">
+                                                            <p>使用时间</p></li>
+                                                        <li><img
+                                                                src="//img3.dian.so/lhc/2019/03/24/80w_80h_7550D1553429783.png"
+                                                                style="width: 36px;">
+                                                            <p>使用费用</p></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div aria-hidden="true" data-swipeable="true"
+                                         style="width: 100%; flex-shrink: 0; overflow: auto;">
+                                        <div style="min-height: 220px; color: rgb(255, 255, 255);">
+                                            <div class="swiper-panel swiper-v-panel">
+                                                <div class="li-notice"><p>安全可靠</p>
+                                                    <div><p>通过了国家CCC、CQC安规认证、</p>
+                                                        <p>以及欧盟CE等认证</p></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div aria-hidden="true" data-swipeable="true"
+                                         style="width: 100%; flex-shrink: 0; overflow: auto;">
+                                        <div style="min-height: 220px; color: rgb(255, 255, 255);">
+                                            <div class="swiper-panel swiper-v-panel">
+                                                <div class="li-notice"><p>智能电流</p>
+                                                    <div><p>MCU自动识别手机类型</p>
+                                                        <p>智能匹配最佳充电电流</p></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div aria-hidden="true" data-swipeable="true"
+                                         style="width: 100%; flex-shrink: 0; overflow: auto;">
+                                        <div style="min-height: 220px; color: rgb(255, 255, 255);">
+                                            <div class="swiper-panel swiper-v-panel">
+                                                <div class="li-notice"><p>7重保护</p>
+                                                    <div><p>MCU自动识别手机类型</p>
+                                                        <p>智能匹配最佳充电电流</p></div>
+                                                    <ul>
+                                                        <li><img
+                                                                src="//img3.dian.so/lhc/2019/03/24/82w_82h_194F81553429838.png"
+                                                                style="width: 37px;">
+                                                            <p>过充过放</p></li>
+                                                        <li><img
+                                                                src="//img3.dian.so/lhc/2019/03/24/80w_80h_229021553429873.png"
+                                                                style="width: 37px;">
+                                                            <p>过热</p></li>
+                                                        <li><img
+                                                                src="//img3.dian.so/lhc/2019/03/24/80w_80h_502181553429931.png"
+                                                                style="width: 37px;">
+                                                            <p>短路</p></li>
+                                                        <li><img
+                                                                src="//img3.dian.so/lhc/2019/03/24/80w_80h_94E8A1553430016.png"
+                                                                style="width: 37px;">
+                                                            <p>过电流</p></li>
+                                                        <li><img
+                                                                src="//img3.dian.so/lhc/2019/03/24/80w_80h_6A86F1553430062.png"
+                                                                style="width: 37px;">
+                                                            <p>过功率</p></li>
+                                                        <li><img
+                                                                src="//img3.dian.so/lhc/2019/03/24/80w_80h_5A1881553430123.png"
+                                                                style="width: 37px;">
+                                                            <p>过电压</p></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div aria-hidden="true" data-swipeable="true"
+                                         style="width: 100%; flex-shrink: 0; overflow: auto;">
+                                        <div style="min-height: 220px; color: rgb(255, 255, 255);">
+                                            <div class="swiper-panel swiper-v-panel">
+                                                <div class="li-notice"><p>异地归还</p>
+                                                    <div><p>支持异地归还，无出差充电烦恼</p></div>
+                                                    <ul>
+                                                        <li><img
+                                                                src="//img3.dian.so/lhc/2019/03/24/92w_76h_B005E1553430779.png"
+                                                                style="width: 46px;">
+                                                            <p>异地归还</p></li>
+                                                        <li><img
+                                                                src="//img3.dian.so/lhc/2019/03/24/82w_70h_4C9401553430916.png"
+                                                                style="width: 46px;">
+                                                            <p>出差方便</p></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="panel5">
+                <div class="container" style="margin-left: 180px">
+                    <img src="static/imge/Charging/C1545709932.png">
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <div class="over-auto">
+            <div class="fl footer-fluid">
+                <p class="fluid-title letter-space"> 关于我们 </p>
+                <div class="fluid-content tuchong-desc"><br>
+                    科技推动出行智能方便 <br>
+                    在这里，发现基于共同兴趣的同好，鼓励原创和分享精神 <br>
+                    在这里，我们不需要重复购买,因为产品已经在街上可以共享
+                </div>
+            </div>
+
+            <div class="fl footer-fluid footer-download">
+                <p class="fluid-title letter-space"> 下载APP </p>
+                <div class="fluid-content">
+                    <img class="qrcode download" src="https://api.tuchong.com/qrcode?url=https://d.toutiao.com/kT8t/">
+                    <div class="qrcode-parallel">
+                        <a class="app-link" data-referer="official" target="_blank" title="点击下载iPhone客户端" href="#">
+                            iPhone版下载 </a>
+                        <a class="app-link" data-referer="official" title="点击下载Android客户端" href="#"> Android版下载 </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="fr footer-fluid text-center">
+                <p class="fluid-title"> 关注乐天 </p>
+
+                <div class="fluid-content">
+                    <div class="qrcode-parallel">
+                        <div class="link-logo wechat" style="margin-top: 40px">
+                            <a href="#">
+                                <i class="icon-wechat"><img src="static/imge/activity-image/weibo.png" alt=""></i>
+                            </a>
+                        </div>
+
+                        <div class="link-logo">
+                            <a href="#" target="_blank" >
+                                <i class="icon-weibo" ><img src="static/imge/activity-image/WeChat.png" alt=""style="margin-top:-28px;margin-left: 35px"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="over-auto tuchong-detail">
+            <div class="footer-left">
+                <span>Copyright©2021 南京乐天科技有限公司</span>
+                <div class="slash-list">
+                    <a class="slash-item" href="#"><i>用户协议</i></a>
+                    <a class="slash-item" href="#"><i>隐私政策</i></a>
+                    <a class="switch-layout slash-item"><i>移动版</i></a>
+                    <a class="switch-layout slash-item"><i>电脑版</i></a>
+                </div>
+                <span style="margin-left: 50px">同一个世界，同一个梦想！</span>
+            </div>
+
+            <div class="footer-right slash-list">
+                <a class="slash-item" href="/"><i>帮助</i></a>
+                <a class="slash-item" href="/"><i>关于</i></a>
+                <a class="slash-item" href="/"><i>联系</i></a>
+                <a class="slash-item" href="/"><i>服务</i></a>
+                <a class="slash-item" href="contact.html"><i>加入我们</i></a>
+            </div>
+        </div>
+    </footer>
+</div>
+</body>
+</html>

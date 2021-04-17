@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>个人信息</title>
+    <link rel="stylesheet" href="static/css/initi.css">
+    <link rel="stylesheet" href="static/css/head-footer.css">
+    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+
+</head>
+<style type="text/css">
+     .main .cursors{
+        height: 700px;
+    }
+    .app-box{
+        margin-top: 20px;
+        float: right;
+        padding-right: 80px;
+        height: 500px;
+        width: 30%;
+    }
+    .main .main-img img{
+        margin-top: -10px;
+        width: 100%;
+    }
+    .main .xinXi{
+        margin-top: 20px;
+        margin-left: 80px;
+        display: block;
+        float: left;
+        width: 50%;
+        border: 1px solid #DEDEDE;
+        padding: 20px;
+        height: 650px;
+    }
+    .xin-in1 p{
+        font-size: 16px;
+        font-family: 微软雅黑;
+        padding-bottom: 10px;
+        font-weight: bold;
+    }
+    .xin-in1 .xin-in1-1{
+        height: 200px;
+        padding: 40px;
+        font-size: 16px;
+        line-height: 40px;
+        margin-left: 50px;
+    }
+    .xin-in1 .xin-in1-1 .li-type{
+
+    }
+     .line-dashed {
+         height: 1px;
+         border-top: 1px dashed #DEDEDE;
+         margin: 15px 0;
+     }
+</style>
+<body>
+<div class="main">
+    <div class="header">
+        <div style="height: 70px;background: #FFF">
+            <div class="logo fl">
+                <img src="static/imge/logo.png" width="100%" alt="">
+            </div>
+            <div class="navbar fr">
+                <ul>
+                    <li class="fl">
+                        <a href="#"> 首 页</a>
+                        <div class="line"></div>
+                        <div class="navContent"><br><br>Welcome to Rakuten Technology</div>
+                    </li>
+                    <li class="fl">
+                        <a href="#">产品分类</a>
+                        <div class="line"></div>
+                        <div class="navContent">
+                            <ul>
+                                <a href="car-sharing.html">
+                                    <li>共享汽车</li>
+                                </a>
+                                <a href="bike-sharing.html">
+                                    <li>共享单车</li>
+                                </a>
+                                <a href="Charging.html">
+                                    <li>共享充电宝</li>
+                                </a>
+                            </ul>
+                        </div>
+
+                    </li>
+                    <li class="fl">
+                        <a href="#">热门活动</a>
+                        <div class="line"></div>
+                        <div class="navContent">
+                            <ul>
+                                <a href="activty_page.html">
+                                    <li>活动详情</li>
+                                </a>
+                                <a href="activity1.html">
+                                    <li>活动类型</li>
+                                </a>
+                            </ul>
+                        </div>
+
+                    </li>
+                    <li class="fl">
+                        <a href="#">社区精选</a>
+                        <div class="line"></div>
+                        <div class="navContent">
+                            <ul>
+                                <a href="myname.html">
+                                    <li>我的信息</li>
+                                </a>
+                                <!--<li>社区规范</li>-->
+                                <a href="In_community.html">
+                                    <li>进入社区</li>
+                                </a>
+                            </ul>
+                        </div>
+
+                    </li>
+                    <li class="fl">
+                        <a href="#">关于我们</a>
+                        <div class="line"></div>
+                        <div class="navContent">
+                            <ul>
+                                <a href="page.html">
+                                    <li>公司简介</li>
+                                </a>
+                                <!-- <a href="page.html">
+                                     <li>发展历程</li>
+                                 </a>-->
+                                <a href="culture.html">
+                                    <li>企业文化</li>
+                                </a>
+                                <a href="contact.html">
+                                    <li>加入我们</li>
+                                </a>
+                            </ul>
+                        </div>
+
+                    </li>
+                    <li class="fl">
+                        <a href="#joinUs">问题反馈</a>
+                        <div class="line"></div>
+                        <div class="navContent">
+                            <ul>
+                                <a href="cooperation.html">
+                                    <li>商务合作</li>
+                                </a>
+                                <a href="information.html">
+                                    <li>问题咨询</li>
+                                </a>
+                            </ul>
+                        </div>
+
+                    </li>
+                    <li class="fl">
+                        <a href="#">用户中心</a>
+                        <div class="line"></div>
+                        <div class="navContent">
+                            <div class="userImg"><img src="static/imge/userImg.png" width="100%" alt=""></div>
+                            <div class="userState cursor"><p><a href="login.html">登录</a></p></div>
+                            <div class="userState cursor"><p><a href="register.html">注册</a></p></div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="main-img">
+        <img src="static/imge/banner.7e193a4.jpg" alt="">
+    </div>
+    <div class="cursors">
+        <div class="xinXi">
+            <div class="xin-in1">
+                <p>基本信息</p>
+                <div class="xin-in1-1">
+                    <img src="static/imge/userImg.png" alt="" width="200" height="200" style="float: right">
+                    <ul>
+                        <li>姓名：<span>张三</span></li>
+                        <li>性别：<span>张三</span></li>
+                        <li>注册账号：<span>张三</span></li>
+                        <li class="li-type">个性标签：
+                            <el-tag
+                                    v-for="tag in tags"
+                                    :key="tag.name"
+                                    closable
+                                    :type="tag.type">
+                                {{tag.name}}
+                            </el-tag></li>
+                    </ul>
+                </div>
+                <div class="line-dashed"></div>
+            </div>
+            <div class="xin-in1">
+                <p>联系方式</p>
+                <div class="xin-in1-1">
+                    <ul>
+                        <li>邮箱：<span>张三</span></li>
+                        <li>手机号码：<span>张三</span></li>
+                        <li>地址：<span>张三</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="app-box">
+            <el-form :model="ruleForm" :rules="rules" ref="ruleForm" label-width="100px" class="demo-ruleForm">
+                <el-form-item label="活动名称" prop="name">
+                    <el-input v-model="ruleForm.name"></el-input>
+                </el-form-item>
+                <el-form-item label="活动区域" prop="region">
+                    <el-select v-model="ruleForm.region" placeholder="请选择活动区域">
+                        <el-option label="南京市万达广场" value="shanghai"></el-option>
+                        <el-option label="上海市迪士尼" value="beijing"></el-option>
+                    </el-select>
+                </el-form-item>
+                <el-form-item label="活动时间" required>
+                    <el-col :span="11">
+                        <el-form-item prop="date1">
+                            <el-date-picker type="date" placeholder="选择日期" v-model="ruleForm.date1" style="width: 100%;"></el-date-picker>
+                        </el-form-item>
+                    </el-col>
+                    <el-col class="lines" :span="2">&nbsp;&nbsp;&nbsp;--</el-col>
+                    <el-col :span="11">
+                        <el-form-item prop="date2">
+                            <el-time-picker placeholder="选择时间" v-model="ruleForm.date2" style="width: 100%;"></el-time-picker>
+                        </el-form-item>
+                    </el-col>
+                </el-form-item>
+                <el-form-item label="即时申请" prop="delivery">
+                    <el-switch v-model="ruleForm.delivery"></el-switch>
+                </el-form-item>
+                <el-form-item label="活动性质" prop="type">
+                    <el-checkbox-group v-model="ruleForm.type">
+                        <el-checkbox label="美食/餐厅线上活动" name="type"></el-checkbox>
+                        <el-checkbox label="地推活动" name="type"></el-checkbox>
+                        <el-checkbox label="线下主题活动" name="type"></el-checkbox>
+                        <el-checkbox label="单纯品牌曝光" name="type"></el-checkbox>
+                    </el-checkbox-group>
+                </el-form-item>
+                <el-form-item label="特殊资源" prop="resource">
+                    <el-radio-group v-model="ruleForm.resource">
+                        <el-radio label="线上品牌商赞助"></el-radio>
+                        <el-radio label="线下场地免费"></el-radio>
+                    </el-radio-group>
+                </el-form-item>
+                <el-form-item label="活动形式" prop="desc">
+                    <el-input type="textarea" v-model="ruleForm.desc"></el-input>
+                </el-form-item>
+                <el-form-item>
+                    <el-button type="primary" @click="submitForm('ruleForm')">立即创建</el-button>
+                    <el-button @click="resetForm('ruleForm')">重置</el-button>
+                </el-form-item>
+            </el-form>
+        </div>
+    </div>
+
+    <footer>
+        <div class="over-auto">
+            <div class="fl footer-fluid">
+                <p class="fluid-title letter-space"> 关于我们 </p>
+                <div class="fluid-content tuchong-desc"><br>
+                    科技推动出行智能方便 <br>
+                    在这里，发现基于共同兴趣的同好，鼓励原创和分享精神 <br>
+                    在这里，我们不需要重复购买,因为产品已经在街上可以共享
+                </div>
+            </div>
+
+            <div class="fl footer-fluid footer-download">
+                <p class="fluid-title letter-space"> 下载APP </p>
+                <div class="fluid-content">
+                    <img class="qrcode download" src="https://api.tuchong.com/qrcode?url=https://d.toutiao.com/kT8t/">
+                    <div class="qrcode-parallel">
+                        <a class="app-link" data-referer="official" target="_blank" title="点击下载iPhone客户端" href="#">
+                            iPhone版下载 </a>
+                        <a class="app-link" data-referer="official" title="点击下载Android客户端" href="#"> Android版下载 </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="fr footer-fluid text-center">
+                <p class="fluid-title"> 关注乐天 </p>
+
+                <div class="fluid-content">
+                    <div class="qrcode-parallel">
+                        <div class="link-logo wechat">
+                            <a href="#">
+                                <i class="icon-wechat"><img src="static/imge/activity-image/weibo.png" alt=""></i>
+                            </a>
+                            <a class="qrcode wechat"></a>
+                        </div>
+
+                        <div class="link-logo">
+                            <a href="#" target="_blank">
+                                <i class="icon-weibo"><img src="static/imge/activity-image/WeChat.png" alt=""></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="over-auto tuchong-detail">
+            <div class="footer-left">
+                <span>Copyright©2021 南京乐天科技有限公司</span>
+                <div class="slash-list">
+                    <a class="slash-item" href="#"><i>用户协议</i></a>
+                    <a class="slash-item" href="#"><i>隐私政策</i></a>
+                    <a class="switch-layout slash-item"><i>移动版</i></a>
+                    <a class="switch-layout slash-item"><i>电脑版</i></a>
+                </div>
+                <span style="margin-left: 50px">同一个世界，同一个梦想！</span>
+            </div>
+
+            <div class="footer-right slash-list">
+                <a class="slash-item" href="/"><i>帮助</i></a>
+                <a class="slash-item" href="/"><i>关于</i></a>
+                <a class="slash-item" href="/"><i>联系</i></a>
+                <a class="slash-item" href="/"><i>服务</i></a>
+                <a class="slash-item" href="contact.html"><i>加入我们</i></a>
+            </div>
+        </div>
+    </footer>
+</div>
+</body>
+<script src="https://unpkg.com/vue/dist/vue.js"></script>
+<!-- import JavaScript -->
+<script src="https://unpkg.com/element-ui/lib/index.js"></script>
+<script>
+    new Vue({
+        el:'.li-type',
+        data:function () {
+            return{
+                tags: [
+                    { name: 'IT民工', type: '' },
+                    { name: '穷游党', type: 'success' },
+                    { name: '上班族', type: 'info' },
+                    { name: '夜猫子', type: 'warning' }
+                ]
+            }
+        }
+    })
+</script>
+<script>
+    new Vue({
+        el: '.app-box',
+        data: function() {
+            return {
+                ruleForm: {
+                    name: '',
+                    region: '',
+                    date1: '',
+                    date2: '',
+                    delivery: false,
+                    type: [],
+                    resource: '',
+                    desc: ''
+                },
+                rules: {
+                    name: [
+                        { required: true, message: '请输入活动名称', trigger: 'blur' },
+                        { min: 3, max: 5, message: '长度在 3 到 5 个字符', trigger: 'blur' }
+                    ],
+                    region: [
+                        { required: true, message: '请选择活动区域', trigger: 'change' }
+                    ],
+                    date1: [
+                        { type: 'date', required: true, message: '请选择日期', trigger: 'change' }
+                    ],
+                    date2: [
+                        { type: 'date', required: true, message: '请选择时间', trigger: 'change' }
+                    ],
+                    type: [
+                        { type: 'array', required: true, message: '请至少选择一个活动性质', trigger: 'change' }
+                    ],
+                    resource: [
+                        { required: true, message: '请选择活动资源', trigger: 'change' }
+                    ],
+                    desc: [
+                        { required: true, message: '请填写活动形式', trigger: 'blur' }
+                    ]
+                }
+
+            };
+        },
+        methods: {
+            submitForm(formName) {
+                this.$refs[formName].validate((valid) => {
+                    if (valid) {
+                        alert('恭喜您 创建成功!');
+                    } else {
+                        console.log('error submit!!');
+                        return false;
+                    }
+                });
+            },
+            resetForm(formName) {
+                this.$refs[formName].resetFields();
+            }
+        }
+    })
+</script>
+</html>

@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>企业文化</title>
+    <link rel="stylesheet" href="static/css/initi.css">
+    <link rel="stylesheet" href="static/css/head-footer.css">
+</head>
+<style type="text/css">
+    .main .leftkv img{
+        margin-top: -1px;
+    }
+    .main .leftkv .copy.white {
+        color: #FFFFFF;
+    }
+    .main .leftkv .copy {
+        display: block;
+        margin-left: 150px;
+        margin-top: -300px;
+        text-align: left;
+    }
+    .main .leftkv .copy .kv-title {
+        margin-bottom: 20px;
+        font-size: 38px;
+        font-weight: bold;
+    }
+    .main .leftkv .copy p {
+        margin: 0px 0 10px 0!important;
+        font-size: 17px;
+        font-weight: bold;
+        line-height: 22px;
+    }
+    .container-global{
+        padding: 100px;
+        margin-top: 200px;
+    }
+    .society-box {
+        overflow: hidden;
+        width: 90%;
+        margin: 0 auto;
+        padding-bottom: 30px;
+    }
+    .society-logo {
+        float: left;
+        width: 15%;
+        padding-right: 22px;
+    }
+    .society-right{
+        margin-top: 100px;
+    }
+    .t40 {
+        padding-top: 40px;
+    }
+    .society-title {
+        text-align: left;
+        font-size: 30px;
+    }
+    .society-copy {
+        text-align: left;
+        width: 100%;
+        margin: 30px auto;
+    }
+    .section {
+        text-align: left;
+        overflow: hidden;
+    }
+
+
+    .main .new-view .media {
+        margin: 0;
+    }
+    .media, .media-body {
+        zoom: 1;
+    }
+    .new-view .media-left, .new-view .media-right, #main .new-view .media-body {
+        width: 50%;
+        vertical-align: middle;
+        position: relative;
+        overflow: hidden;
+    }
+    .main .new-view .media-left {
+        float: left;
+        padding: 0;
+    }
+    .media-left, .media-right, .media-body {
+        display: table-cell;
+    }
+    .main .new-view .media img {
+        margin-left: 65px;
+        width: 100%;
+    }
+    .main .new-view .media-body.on-right {
+        font-size: 16px;
+        line-height: 24px;
+        padding: 19% 5% 0 8%;
+    }
+    .main .new-view .media-body .title {
+        font-size: 18px;
+        line-height: 25px;
+    }
+    .main .new-view .media-body .title {
+        font-weight: bold;
+        text-align: left;
+        font-size: 20px;
+        line-height: 30px;
+    }
+    .btn-black {
+        display: inline-block;
+        width: 170px;
+        height: 39px;
+        line-height: 37px;
+        border: 1px solid #000;
+        color: #000;
+        text-align: center;
+    }
+    .wares{
+        width: 80%;
+        min-width: 1200px;
+        margin: 20px auto 0;
+        /*background: #CCC;*/
+        display: flex;
+        flex-direction:row;
+        justify-content: space-around;
+    }
+    .ware{
+        height: 350px;
+        width: 280px;
+        cursor: pointer;
+       /* !*background: #b61d1d;*!
+        border: 1px solid lightblue;
+        border-radius: 5px;
+        box-shadow: 2px 2px 3px rgba(0,0,0,.2);*/
+    }
+    .ware>.img{
+        background: #aaa;
+        margin:20px auto;
+        height: 200px;
+        width: 90%;
+        border-radius: 5px;
+        overflow: hidden;
+    }
+    .ware img{
+        margin-top: -1px;
+        transition: 1s;
+    }
+    .ware:hover img{
+        transform: scale(1.2);
+    }
+    .ware>.name{
+        border-bottom: 1px solid #000 ;
+        margin: 0 20px;
+        color: black;
+        font-size: 18px;
+        font-weight: bolder;
+        text-align: center;
+        padding-bottom: 10px;
+    }
+    .ware>.price{
+        text-align: center;
+        color: black;
+        font-size: 16px;
+        margin-top: 20px;
+        font-family: "SimSun", "宋体", "Arial Narrow";
+    }
+</style>
+<body>
+<div class="main">
+    <div class="header">
+        <div style="height: 70px;background: #FFF">
+            <div class="logo fl">
+                <img src="static/imge/logo.png" width="100%" alt="">
+            </div>
+            <div class="navbar fr">
+                <ul>
+                    <li class="fl">
+                        <a href="#"> 首 页</a>
+                        <div class="line"></div>
+                        <div class="navContent"><br><br>Welcome to Rakuten Technology</div>
+                    </li>
+                    <li class="fl">
+                        <a href="#">产品分类</a>
+                        <div class="line"></div>
+                        <div class="navContent">
+                            <ul>
+                                <a href="car-sharing.html">
+                                    <li>共享汽车</li>
+                                </a>
+                                <a href="bike-sharing.html">
+                                    <li>共享单车</li>
+                                </a>
+                                <a href="Charging.html">
+                                    <li>共享充电宝</li>
+                                </a>
+                            </ul>
+                        </div>
+
+                    </li>
+                    <li class="fl">
+                        <a href="#">热门活动</a>
+                        <div class="line"></div>
+                        <div class="navContent">
+                            <ul>
+                                <a href="activty_page.html">
+                                    <li>活动详情</li>
+                                </a>
+                                <a href="activity1.html">
+                                    <li>活动类型</li>
+                                </a>
+                            </ul>
+                        </div>
+
+                    </li>
+                    <li class="fl">
+                        <a href="#">社区精选</a>
+                        <div class="line"></div>
+                        <div class="navContent">
+                            <ul>
+                                <a href="myname.html">
+                                    <li>我的信息</li>
+                                </a>
+                                <!--<li>社区规范</li>-->
+                                <a href="In_community.html">
+                                    <li>进入社区</li>
+                                </a>
+                            </ul>
+                        </div>
+
+                    </li>
+                    <li class="fl">
+                        <a href="#">关于我们</a>
+                        <div class="line"></div>
+                        <div class="navContent">
+                            <ul>
+                                <a href="page.html">
+                                    <li>公司简介</li>
+                                </a>
+                                <!-- <a href="page.html">
+                                     <li>发展历程</li>
+                                 </a>-->
+                                <a href="culture.html">
+                                    <li>企业文化</li>
+                                </a>
+                                <a href="contact.html">
+                                    <li>加入我们</li>
+                                </a>
+                            </ul>
+                        </div>
+
+                    </li>
+                    <li class="fl">
+                        <a href="#joinUs">问题反馈</a>
+                        <div class="line"></div>
+                        <div class="navContent">
+                            <ul>
+                                <a href="cooperation.html">
+                                    <li>商务合作</li>
+                                </a>
+                                <a href="information.html">
+                                    <li>问题咨询</li>
+                                </a>
+                            </ul>
+                        </div>
+
+                    </li>
+                    <li class="fl">
+                        <a href="#">用户中心</a>
+                        <div class="line"></div>
+                        <div class="navContent">
+                            <div class="userImg"><img src="static/imge/userImg.png" width="100%" alt=""></div>
+                            <div class="userState cursor"><p><a href="login.html">登录</a></p></div>
+                            <div class="userState cursor"><p><a href="register.html">注册</a></p></div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="leftkv">
+        <img src="static/imge/culture/society-kv-pc01.jpg" width="100%" alt="">
+        <div class="copy white">
+            <div class="kv-title">企业文化</div>
+            <p>我们以新为器，为社会进步蓄力；<br>
+                用心关怀，呵护如你我般的群体之众</p>
+        </div>
+    </div>
+
+    <div class="container-global">
+        <div class="society-box">
+            <div class="society-logo">
+                <img src="static/imge/culture/society-logo.jpg">
+            </div>
+            <div class="society-right">
+                <div class="society-title t40">大爱精诚</div>
+                <div class="society-copy">比亚迪精诚服务大爱精诚，致力于联合有爱心的顾客、经销商、机构和媒体，关注中国医疗援助的相关计划，包括低医疗服务水平地区、特殊疾病群体的援助计划等，
+                    积极促进更为全面、更为公平的医疗服务水平在全国各个地区和各类群体中得到普遍提升。</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="plus">
+        <div class="wares">
+            <div class="ware">
+                <div class="img"><img src="static/imge/halou.jpg" width="100%" height="100%" alt=""></div>
+                <div class="name">99公益日，我们在行动</div>
+                <div class="price">2019-12-02</div>
+            </div>
+            <div class="ware">
+                <div class="img"><img src="static/imge/pc-global.png" width="100%" alt="" height="100%"></div>
+                <div class="name">99公益日，我们在行动</div>
+                <div class="price">2019-12-02</div>
+            </div>
+            <div class="ware">
+                <div class="img"><img src="static/imge/pc21.png" width="100%" height="100%" alt=""></div>
+                <div class="name">99公益日，我们在行动</div>
+                <div class="price">2019-12-02</div>
+            </div>
+            <div class="ware">
+                <div class="img"><img src="static/imge/2.jpg" width="100%" height="100%" alt=""></div>
+                <div class="name">99公益日，我们在行动</div>
+                <div class="price">2019-12-02</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="new-view" style="padding: 100px;">
+        <div class="media section">
+            <div class="media-left">
+                <img src="static/imge/culture/view-m01.jpg" class="pc">
+            </div>
+            <div class="media-body on-right">
+                <div class="title">慈善基金会</div>
+                <div class="classP"><div>弘扬中华民族扶贫济困的传统美德, 倡导企业公民责任, 为建设和谐社会尽一份心力</div>
+                </div>
+                <a href="#"class="btn-black btn-style-lg" target="_blank" style="background-position: 97px 19px, 136px 12px;">了解详情 >></a>
+            </div>
+
+        </div>
+        <div class="media section">
+            <div class="media-left">
+                <img src="static/imge/culture/view-m01.jpg" class="pc">
+            </div>
+            <div class="media-body on-right">
+                <div class="title">慈善基金会</div>
+                <div class="classP"><div>弘扬中华民族扶贫济困的传统美德, 倡导企业公民责任, 为建设和谐社会尽一份心力</div>
+                </div>
+                <a href="#"class="btn-black btn-style-lg" target="_blank" style="background-position: 97px 19px, 136px 12px;">了解详情 >></a>
+            </div>
+
+        </div>
+    </div>
+
+    <footer>
+        <div class="over-auto">
+            <div class="fl footer-fluid">
+                <p class="fluid-title letter-space"> 关于我们 </p>
+                <div class="fluid-content tuchong-desc"><br>
+                    科技推动出行智能方便 <br>
+                    在这里，发现基于共同兴趣的同好，鼓励原创和分享精神 <br>
+                    在这里，我们不需要重复购买,因为产品已经在街上可以共享
+                </div>
+            </div>
+
+            <div class="fl footer-fluid footer-download">
+                <p class="fluid-title letter-space"> 下载APP </p>
+                <div class="fluid-content">
+                    <img class="qrcode download" src="https://api.tuchong.com/qrcode?url=https://d.toutiao.com/kT8t/">
+                    <div class="qrcode-parallel">
+                        <a class="app-link" data-referer="official" target="_blank" title="点击下载iPhone客户端" href="#">
+                            iPhone版下载 </a>
+                        <a class="app-link" data-referer="official" title="点击下载Android客户端" href="#"> Android版下载 </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="fr footer-fluid text-center">
+                <p class="fluid-title"> 关注乐天 </p>
+
+                <div class="fluid-content">
+                    <div class="qrcode-parallel">
+                        <div class="link-logo wechat">
+                            <a href="#">
+                                <i class="icon-wechat"><img src="static/imge/activity-image/weibo.png" alt=""></i>
+                            </a>
+                            <a class="qrcode wechat"></a>
+                        </div>
+
+                        <div class="link-logo">
+                            <a href="#" target="_blank">
+                                <i class="icon-weibo"><img src="static/imge/activity-image/WeChat.png" alt=""></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="over-auto tuchong-detail">
+            <div class="footer-left">
+                <span>Copyright©2021 南京乐天科技有限公司</span>
+                <div class="slash-list">
+                    <a class="slash-item" href="#"><i>用户协议</i></a>
+                    <a class="slash-item" href="#"><i>隐私政策</i></a>
+                    <a class="switch-layout slash-item"><i>移动版</i></a>
+                    <a class="switch-layout slash-item"><i>电脑版</i></a>
+                </div>
+                <span style="margin-left: 50px">同一个世界，同一个梦想！</span>
+            </div>
+
+            <div class="footer-right slash-list">
+                <a class="slash-item" href="/"><i>帮助</i></a>
+                <a class="slash-item" href="/"><i>关于</i></a>
+                <a class="slash-item" href="/"><i>联系</i></a>
+                <a class="slash-item" href="/"><i>服务</i></a>
+                <a class="slash-item" href="contact.html"><i>加入我们</i></a>
+            </div>
+        </div>
+    </footer>
+</div>
+</body>
+</html>

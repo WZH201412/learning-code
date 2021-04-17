@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="221px" height="200px" viewBox="0 0 221 200" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 55.2 (78181) - https://sketchapp.com -->
+    <title>pic_haluoyewu_haluozhuliche_chanpinjieshao_zhinengdianchi</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="0%" y1="49.9946995%" x2="100%" y2="49.9946995%" id="linearGradient-1">
+            <stop stop-color="#00C1F8" offset="0%"></stop>
+            <stop stop-color="#0274EE" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="0%" y1="50.0121921%" x2="100%" y2="50.0121921%" id="linearGradient-2">
+            <stop stop-color="#00C1F8" offset="0%"></stop>
+            <stop stop-color="#0274EE" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="0%" y1="50%" x2="100%" y2="50%" id="linearGradient-3">
+            <stop stop-color="#00C1F8" offset="0%"></stop>
+            <stop stop-color="#0274EE" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="0%" y1="50%" x2="100%" y2="50%" id="linearGradient-4">
+            <stop stop-color="#00C1F8" offset="0%"></stop>
+            <stop stop-color="#0274EE" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="0%" y1="50%" x2="100%" y2="50%" id="linearGradient-5">
+            <stop stop-color="#00C1F8" offset="0%"></stop>
+            <stop stop-color="#0274EE" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="39.4147234%" y1="1.11103584%" x2="51.303155%" y2="55.8015847%" id="linearGradient-6">
+            <stop stop-color="#00C1F8" offset="0%"></stop>
+            <stop stop-color="#0274EE" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="ui升级" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="哈啰助力车" transform="translate(-698.000000, -3162.000000)" fill-rule="nonzero">
+            <g id="资源-43" transform="translate(698.000000, 3162.000000)">
+                <g id="编组" transform="translate(36.000000, 17.000000)">
+                    <polygon id="路径" fill="url(#linearGradient-1)" points="91.86 95.06 79.1 87.64 133.4 0.73 146.16 8.15"></polygon>
+                    <polygon id="路径" fill="url(#linearGradient-2)" points="25.61 140.69 12.85 133.28 71.05 99.68 83.81 107.09"></polygon>
+                    <polygon id="路径" fill="url(#linearGradient-3)" points="85.55 108.09 71.05 99.68 55.12 63.71 67.87 71.12"></polygon>
+                    <polygon id="路径" fill="url(#linearGradient-4)" points="13.55 159.36 0.8 151.94 52.62 58.1 65.38 65.51"></polygon>
+                    <path d="M91.86,95.06 L146.16,8.15 L154.52,14.26 L93.44,113.26 L13.55,159.36 L65.38,65.51 L56.87,46.38 L65.98,36.88 L91.86,95.06 Z M38,133.54 L83.82,107.09 L69.82,75.37 L38,133.54 L38,133.54 Z" id="形状" fill="#3ECEFF"></path>
+                    <polygon id="路径" fill="url(#linearGradient-5)" points="65.38 65.51 52.62 58.1 44.11 38.97 56.87 46.38"></polygon>
+                    <polygon id="路径" fill="url(#linearGradient-6)" points="56.87 46.38 44.11 38.97 53.23 29.46 65.98 36.88"></polygon>
+                </g>
+                <circle id="椭圆形" fill="#3CDBE1" cx="206.83" cy="73.03" r="5.79"></circle>
+                <circle id="椭圆形" fill="#3CDBE1" opacity="0.25" cx="11.79" cy="37.83" r="5.79"></circle>
+                <circle id="椭圆形" fill="#3CDBE1" opacity="0.25" cx="168.3" cy="100.23" r="4.07"></circle>
+                <circle id="椭圆形" fill="#3CDBE1" opacity="0.25" cx="20.5" cy="127.89" r="4.07"></circle>
+                <circle id="椭圆形" fill="#3CDBE1" cx="40.92" cy="79.79" r="4.07"></circle>
+                <circle id="椭圆形" fill="#3CDBE1" cx="96.9" cy="168.73" r="4.07"></circle>
+                <circle id="椭圆形" fill="#3CDBE1" opacity="0.25" cx="126.78" cy="9.07" r="4.07"></circle>
+            </g>
+        </g>
+    </g>
+</svg>

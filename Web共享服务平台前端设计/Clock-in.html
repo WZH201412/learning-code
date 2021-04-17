@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>打卡</title>
+    <link rel="stylesheet" href="static/css/initi.css">
+    <link rel="stylesheet" href="static/css/head-footer.css">
+</head>
+<style type="text/css">
+    .main .main-head {
+        margin: 0 auto;
+        height: 210px;
+        background: #7b856f;
+    }
+
+    .main-head img {
+        margin-top: -1px;
+        width: 50%;
+    }
+
+    .main-head .left-text {
+        position: absolute;
+        height: 100px;
+        font-size: 14px;
+        line-height: 30px;
+        margin-top: -150px;
+        background: #000;
+        opacity: 0.7;
+    }
+
+    .left-text h2, .left-text p {
+        color: white;
+        margin: 10px 25px 10px 25px;
+    }
+
+    .main-head .right .tit, .entit, .countbox {
+        color: white;
+        font-size: 14px;
+        margin-left: 800px;
+        line-height: 30px;
+    }
+
+    .right .sum {
+        color: #2aabd2;
+    }
+
+    .b_hotcity .hd {
+        line-height: 40px;
+        border-bottom: 1px solid #e0e0e0;
+    }
+
+    .b_hotcity .hd .more {
+        float: right;
+        display: inline;
+    }
+
+    .qn_main_box a {
+        color: #0069ca;
+    }
+
+    .b_hotcity .hd .tit {
+        font-size: 20px;
+        font-family: "microsoft yahei";
+        color: #1badb6;
+    }
+
+    .main .main-boby {
+        margin-top: 230px;
+        /*height: 1000px;*/
+    }
+
+    .hd, .ct {
+        width: 1000px;
+        margin: 0 auto;
+        clear: both;
+    }
+
+    .b_hotcity .ct .list_item {
+        margin-top: 20px;
+        position: relative;
+        margin-left: -32px;
+    }
+
+    .b_hotcity .ct .list_item .item {
+        width: 312px;
+        height: 349px;
+        margin-left: 32px;
+        padding-bottom: 2px;
+        float: left;
+        display: inline;
+    }
+
+    .b_crumbs, .item {
+        position: relative;
+    }
+
+    .b_hotcity .ct .list_item .item .itembox {
+        border: #fff 1px solid;
+    }
+
+    .b_hotcity .ct .list_item .item .itembox .imgbox {
+        position: relative;
+        height: 230px;
+        overflow: hidden;
+    }
+
+    .b_hotcity .ct .list_item .item .itembox .imgbox .imglink {
+        cursor: pointer;
+    }
+
+    .b_hotcity .ct .list_item .item .itembox .imgbox .titbox {
+        position: absolute;
+        bottom: 4px;
+        left: 0;
+        height: 40px;
+        width: 295px;
+        color: #fff;
+        padding-left: 15px;
+        z-index: 100;
+    }
+
+    .b_hotcity .ct .list_item .item .itembox .imgbox .titboxbg {
+        background: url(//source.qunarzz.com/site/images/zhuanti/140219/img_bg_02.png) 0 0 no-repeat;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        height: 50px;
+        width: 310px;
+        z-index: 50;
+    }
+
+    .qn_main_box a {
+        color: #0069ca;
+    }
+
+    .b_hotcity .ct .list_item .item .itembox .desbox {
+        padding: 10px;
+        line-height: 20px;
+        background-color: #fafafa;
+        border: #eee 1px solid;
+        border-top: 0 none;
+    }
+
+    .tit {
+        font-size: 20px;
+    }
+
+
+
+    .b_qa {
+        margin: 20px 0 8px 0;
+        padding-bottom: 22px;
+    }
+    .b_qa .hd {
+        line-height: 36px;
+        border-bottom: #e0e0e0 1px solid;
+    }
+    .qn_main_box a {
+        color: #0069ca;
+    }
+    .b_qa .hd .tagbox {
+        position: relative;
+        float: right;
+        display: inline;
+        padding-top: 6px;
+    }
+    .b_qa .hd .tit {
+        font-size: 20px;
+        font-family: "microsoft yahei";
+        color: #1badb6;
+    }
+    .b_qa .ct {
+        margin-top: 20px;
+        display: flex;
+        overflow: hidden;
+    }
+    .b_qa .ct .qn_item {
+        margin-right: 36px;
+        flex: 1;
+    }
+    .b_qa .ct .qn_item .qn_tit a {
+        font-size: 20px;
+        font-family: "microsoft yahei";
+        color: #656565;
+    }
+    .b_qa .ct .qn_item .qn_nums {
+        margin-top: 8px;
+        color: #999;
+    }
+    .b_qa .ct .qn_item .qn_nums .views {
+        padding-right: 18px;
+    }
+    .b_qa .ct .qn_item .qn_answers {
+        margin-top: 18px;
+    }
+    .b_qa .ct .qn_item .qn_info {
+        margin-top: 25px;
+    }
+    .b_qa .ct .qn_item .qn_info .user_image {
+        width: 40px;
+        height: 40px;
+        margin-right: 18px;
+        border-radius: 50%;
+    }
+    .b_qa .ct .qn_item .qn_info .user_name {
+        padding-right: 18px;
+        font-size: 14px;
+        color: #1a1a1a;
+    }
+    .b_qa .ct .qn_item .qn_info .time {
+        font-size: 12px;
+        color: #999;
+    }
+
+</style>
+<body>
+<div class="main">
+    <div class="header">
+        <div style="height: 70px;background: #FFF">
+            <div class="logo fl">
+                <img src="static/imge/logo.png" width="100%" alt="">
+            </div>
+            <div class="navbar fr">
+                <ul>
+                    <li class="fl">
+                        <a href="#"> 首 页</a>
+                        <div class="line"></div>
+                        <div class="navContent"><br><br>Welcome to Rakuten Technology</div>
+                    </li>
+                    <li class="fl">
+                        <a href="#">产品分类</a>
+                        <div class="line"></div>
+                        <div class="navContent">
+                            <ul>
+                                <a href="car-sharing.html">
+                                    <li>共享汽车</li>
+                                </a>
+                                <a href="bike-sharing.html">
+                                    <li>共享单车</li>
+                                </a>
+                                <a href="Charging.html">
+                                    <li>共享充电宝</li>
+                                </a>
+                            </ul>
+                        </div>
+
+                    </li>
+                    <li class="fl">
+                        <a href="#">热门活动</a>
+                        <div class="line"></div>
+                        <div class="navContent">
+                            <ul>
+                                <a href="activty_page.html">
+                                    <li>活动详情</li>
+                                </a>
+                                <a href="activity1.html">
+                                    <li>活动类型</li>
+                                </a>
+                            </ul>
+                        </div>
+
+                    </li>
+                    <li class="fl">
+                        <a href="#">社区精选</a>
+                        <div class="line"></div>
+                        <div class="navContent">
+                            <ul>
+                                <a href="myname.html">
+                                    <li>我的信息</li>
+                                </a>
+                                <!--<li>社区规范</li>-->
+                                <a href="In_community.html">
+                                    <li>进入社区</li>
+                                </a>
+                            </ul>
+                        </div>
+
+                    </li>
+                    <li class="fl">
+                        <a href="#">关于我们</a>
+                        <div class="line"></div>
+                        <div class="navContent">
+                            <ul>
+                                <a href="page.html">
+                                    <li>公司简介</li>
+                                </a>
+                                <!-- <a href="page.html">
+                                     <li>发展历程</li>
+                                 </a>-->
+                                <a href="culture.html">
+                                    <li>企业文化</li>
+                                </a>
+                                <a href="contact.html">
+                                    <li>加入我们</li>
+                                </a>
+                            </ul>
+                        </div>
+
+                    </li>
+                    <li class="fl">
+                        <a href="#joinUs">问题反馈</a>
+                        <div class="line"></div>
+                        <div class="navContent">
+                            <ul>
+                                <a href="cooperation.html">
+                                    <li>商务合作</li>
+                                </a>
+                                <a href="information.html">
+                                    <li>问题咨询</li>
+                                </a>
+                            </ul>
+                        </div>
+
+                    </li>
+                    <li class="fl">
+                        <a href="#">用户中心</a>
+                        <div class="line"></div>
+                        <div class="navContent">
+                            <div class="userImg"><img src="static/imge/userImg.png" width="100%" alt=""></div>
+                            <div class="userState cursor"><p><a href="login.html">登录</a></p></div>
+                            <div class="userState cursor"><p><a href="register.html">注册</a></p></div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="main-head">
+        <div class="main-head left">
+            <img src="static/imge/Clock/gile.jpg" alt="">
+            <div class="left-text">
+                <h2>自由女神像</h2>
+                <p>金门大桥是世界最大的单孔吊桥之一</p>
+            </div>
+        </div>
+        <div class="main-head right">
+            <h1 class="tit" style="font-size: 45px;margin-bottom: 10px">美国</h1>
+            <div class="entit">America</div>
+            <div class="countbox">
+                <div class="c_item">从城市街道到崇山峻岭辽阔平原到茂密森林，美国有众多自然文化景观，其丰富多样的程度令人叹为观止。</div>
+                <div class="c_item">建议游玩：<span class="sum">7</span>天。</div>
+                <div class="c_item">在美国，夏季是旅游旺季，春秋的气候宜人，游客相对较少，是最佳旅行时间，或者冬季来美国滑雪也是不错的选择。</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="main-boby">
+        <div class="b_hotcity">
+            <div class="hd">
+                <a data-beacon="hotcity_total" class="more" target="_blank" href="#">全部目的地</a>
+                <h2 class="tit">热门城市</h2>
+            </div>
+            <div class="ct">
+                <ul class="list_item clrfix">
+                    <li class="item">
+                        <div class="itembox">
+                            <div class="imgbox"><a data-beacon="hotcity"
+                                                   href="#" class="imglink"
+                                                   target="_blank" title="纽约旅游攻略">
+                                <div class="titbox"><span class="tit">纽约</span></div>
+                                <div class="titboxbg"></div>
+                                <img width="310" height="230" class="img" alt="纽约旅游景点图片"
+                                     src="https://img1.qunarzz.com/travel/poi/1604/2c/fad5d10f5f4536f7.jpg_r_480x360x95_dbb34ea6.jpg"></a>
+                            </div>
+                            <div class="desbox">纽约（New York，官方名称为The City of New York），是美国人口最多的城市，包括其都会区，它拥有世界上最…</div>
+                        </div>
+                    </li>
+                    <li class="item">
+                        <div class="itembox">
+                            <div class="imgbox"><a data-beacon="hotcity"
+                                                   href="#" class="imglink"
+                                                   target="_blank" title="旧金山旅游攻略">
+                                <div class="titbox"><span class="tit">旧金山</span></div>
+                                <div class="titboxbg"></div>
+                                <img width="310" height="230" class="img" alt="旧金山旅游景点图片"
+                                     src="https://img1.qunarzz.com/travel/d2/1709/dd/91dc264ec22d8cb5.jpg_r_480x360x95_118eb6dc.jpg"></a>
+                            </div>
+                            <div class="desbox">旧金山，又称“圣弗朗西斯科”、“三藩市”。美国加利福尼亚州太平洋岸海港、工商业大城市。位于太平洋与圣…</div>
+                        </div>
+                    </li>
+                    <li class="item">
+                        <div class="itembox">
+                            <div class="imgbox"><a data-beacon="hotcity"
+                                                   href="#" class="imglink"
+                                                   target="_blank" title="洛杉矶旅游攻略">
+                                <div class="titbox"><span class="tit">洛杉矶</span></div>
+                                <div class="titboxbg"></div>
+                                <img width="310" height="230" class="img" alt="洛杉矶旅游景点图片"
+                                     src="https://img1.qunarzz.com/travel/d6/1707/5d/5d62cd80a9369cb5.jpg_r_480x360x95_6de4b2ae.jpg"></a>
+                            </div>
+                            <div class="desbox">洛杉矶是位于美国西岸加州南部的城市，按照人口排名，洛杉矶是加州的第一大城，也是美国的第二大城，仅次于…</div>
+                        </div>
+                    </li>
+                    <li class="item">
+                        <div class="itembox">
+                            <div class="imgbox"><a data-beacon="hotcity"
+                                                   href="#" class="imglink"
+                                                   target="_blank" title="华盛顿旅游攻略">
+                                <div class="titbox"><span class="tit">华盛顿</span></div>
+                                <div class="titboxbg"></div>
+                                <img width="310" height="230" class="img" alt="华盛顿旅游景点图片"
+                                     src="https://tr-osdcp.qunarzz.com/tr-osd-tr-manager/img/0f5a06cfd9bfc67cebd2405e6ae02870.jpg_r_480x360x95_6872477a.jpg"></a>
+                            </div>
+                            <div class="desbox">美国首都华盛顿被美国人亲切地称为“国家的心脏”，它位于马里兰州和弗吉尼亚州交界处，它的全称为“华盛顿…</div>
+                        </div>
+                    </li>
+                    <li class="item">
+                        <div class="itembox">
+                            <div class="imgbox"><a data-beacon="hotcity"
+                                                   href="#" class="imglink"
+                                                   target="_blank" title="芝加哥旅游攻略">
+                                <div class="titbox"><span class="tit">芝加哥</span></div>
+                                <div class="titboxbg"></div>
+                                <img width="310" height="230" class="img" alt="芝加哥旅游景点图片"
+                                     src="https://tr-osdcp.qunarzz.com/tr-osd-tr-manager/img/3433582226a7e23a92c85cb2ef37d280.jpg_r_480x360x95_d6d98f39.jpg"></a>
+                            </div>
+                            <div class="desbox">芝加哥位于美国伊利诺州，东临密歇根湖。芝加哥及其郊区组成的大芝加哥地区，是美国仅次于纽约市和洛杉矶的…</div>
+                        </div>
+                    </li>
+                    <li class="item">
+                        <div class="itembox">
+                            <div class="imgbox"><a data-beacon="hotcity"
+                                                   href="#"
+                                                   class="imglink" target="_blank" title="拉斯维加斯旅游攻略">
+                                <div class="titbox"><span class="tit">拉斯维加斯</span></div>
+                                <div class="titboxbg"></div>
+                                <img width="310" height="230" class="img" alt="拉斯维加斯旅游景点图片"
+                                     src="https://img1.qunarzz.com/travel/d4/1602/b6/6b7b4d64c680abf7.jpg_r_480x360x95_0a5e8eb2.jpg"></a>
+                            </div>
+                            <div class="desbox">拉斯维加斯(Las Vegas)是西部旅游城。位于内华达州东南角，西南距洛杉矶466公里。 市区面积142平方公里，人…</div>
+                        </div>
+                    </li>
+                    <li class="item">
+                        <div class="itembox">
+                            <div class="imgbox"><a data-beacon="hotcity"
+                                                   href="#"
+                                                   class="imglink" target="_blank" title="拉斯维加斯旅游攻略">
+                                <div class="titbox"><span class="tit">拉斯维加斯</span></div>
+                                <div class="titboxbg"></div>
+                                <img width="310" height="230" class="img" alt="拉斯维加斯旅游景点图片"
+                                     src="https://img1.qunarzz.com/travel/d4/1602/b6/6b7b4d64c680abf7.jpg_r_480x360x95_0a5e8eb2.jpg"></a>
+                            </div>
+                            <div class="desbox">拉斯维加斯(Las Vegas)是西部旅游城。位于内华达州东南角，西南距洛杉矶466公里。 市区面积142平方公里，人…</div>
+                        </div>
+                    </li>
+                    <li class="item">
+                        <div class="itembox">
+                            <div class="imgbox"><a data-beacon="hotcity"
+                                                   href="#"
+                                                   class="imglink" target="_blank" title="拉斯维加斯旅游攻略">
+                                <div class="titbox"><span class="tit">拉斯维加斯</span></div>
+                                <div class="titboxbg"></div>
+                                <img width="310" height="230" class="img" alt="拉斯维加斯旅游景点图片"
+                                     src="https://img1.qunarzz.com/travel/d4/1602/b6/6b7b4d64c680abf7.jpg_r_480x360x95_0a5e8eb2.jpg"></a>
+                            </div>
+                            <div class="desbox">拉斯维加斯(Las Vegas)是西部旅游城。位于内华达州东南角，西南距洛杉矶466公里。 市区面积142平方公里，人…</div>
+                        </div>
+                    </li>
+                    <li class="item">
+                        <div class="itembox">
+                            <div class="imgbox"><a data-beacon="hotcity"
+                                                   href="#"
+                                                   class="imglink" target="_blank" title="拉斯维加斯旅游攻略">
+                                <div class="titbox"><span class="tit">拉斯维加斯</span></div>
+                                <div class="titboxbg"></div>
+                                <img width="310" height="230" class="img" alt="拉斯维加斯旅游景点图片"
+                                     src="https://img1.qunarzz.com/travel/d4/1602/b6/6b7b4d64c680abf7.jpg_r_480x360x95_0a5e8eb2.jpg"></a>
+                            </div>
+                            <div class="desbox">拉斯维加斯(Las Vegas)是西部旅游城。位于内华达州东南角，西南距洛杉矶466公里。 市区面积142平方公里，人…</div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+
+        <!---->
+        <div class="b_qa">
+            <div class="hd">
+                <div class="tagbox clrfix">
+                    <a href="http://travel.qunar.com/p-gj300493-meiguo-ask" target="_blank" class="qa_more"
+                       data-beacon="more_dist_ask">查看美国全部问答</a>
+                </div>
+                <h2 class="tit fl">问答</h2>
+            </div>
+            <div class="ct">
+                <div class="qn_item"><h3 class="qn_tit"><a href="http://travel.qunar.com/place/ask/1265402"
+                                                           target="_blank"
+                                                           data-beacon="ask_detail_title">去美国一次费用大概多少钱</a></h3>
+                    <div class="qn_nums"><span class="views"><i class="iconfont"></i><span>3431浏览</span></span><span
+                            class="answers"><i class="iconfont"></i><span>14回答</span></span></div>
+                    <div class="qn_answers"><a href="http://travel.qunar.com/place/ask/1265402" target="_blank"
+                                               data-beacon="ask_detail_reply">去美国去美国跟团多少钱</a></div>
+                    <div class="qn_info"><img class="user_image"
+                                              src="https://dimg04.c-ctrip.com/images/t1/headphoto/724/518/802/e201a429d7a54f72ade0df32a3d59b2f_C_180_180.jpg"><span
+                            class="user_name">M57****272</span><span class="time">2017.09.22回答</span></div>
+                </div>
+                <div class="qn_item"><h3 class="qn_tit"><a href="http://travel.qunar.com/place/ask/5145718"
+                                                           target="_blank" data-beacon="ask_detail_title">持有美国10年签证，去菲律宾旅游可以不用再办菲签吗？</a>
+                </h3>
+                    <div class="qn_nums"><span class="views"><i class="iconfont"></i><span>5741浏览</span></span><span
+                            class="answers"><i class="iconfont"></i><span>12回答</span></span></div>
+                    <div class="qn_answers"><a href="http://travel.qunar.com/place/ask/5145718" target="_blank"
+                                               data-beacon="ask_detail_reply">菲律宾的确颁布了该项规定，中国大陆护照，持有有效美签、澳签或者申根签证都可以免签进入菲律宾停留14天以内，但是一些菲律宾海关的工作...</a>
+                    </div>
+                    <div class="qn_info"><img class="user_image"
+                                              src="https://dimg04.c-ctrip.com/images/Z80w080000002tk1r63A5_C_180_180.jpg"><span
+                            class="user_name">熊2nd</span><span class="time">2017.11.26回答</span></div>
+                </div>
+                <div class="qn_item"><h3 class="qn_tit"><a href="http://travel.qunar.com/place/ask/4263777"
+                                                           target="_blank" data-beacon="ask_detail_title">请问:住香港机场酒店需要办理港澳通行证吗?第二天一早飞...</a>
+                </h3>
+                    <div class="qn_nums"><span class="views"><i class="iconfont"></i><span>988浏览</span></span><span
+                            class="answers"><i class="iconfont"></i><span>31回答</span></span></div>
+                    <div class="qn_answers"><a href="http://travel.qunar.com/place/ask/4263777" target="_blank"
+                                               data-beacon="ask_detail_reply">有护照就行，填完入境单，保留好入境单。到时需回收。第二天就可以飞美国啦</a>
+                    </div>
+                    <div class="qn_info"><img class="user_image"
+                                              src="https://dimg04.c-ctrip.com/images/Z803hk114vz8m7jnkEC05_C_180_180.jpg"><span
+                            class="user_name">ocean000001</span><span class="time">2021.01.03回答</span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <footer>
+        <div class="over-auto">
+            <div class="fl footer-fluid">
+                <p class="fluid-title letter-space"> 关于我们 </p>
+                <div class="fluid-content tuchong-desc"><br>
+                    科技推动出行智能方便 <br>
+                    在这里，发现基于共同兴趣的同好，鼓励原创和分享精神 <br>
+                    在这里，我们不需要重复购买,因为产品已经在街上可以共享
+                </div>
+            </div>
+
+            <div class="fl footer-fluid footer-download">
+                <p class="fluid-title letter-space"> 下载APP </p>
+                <div class="fluid-content">
+                    <img class="qrcode download" src="https://api.tuchong.com/qrcode?url=https://d.toutiao.com/kT8t/">
+                    <div class="qrcode-parallel">
+                        <a class="app-link" data-referer="official" target="_blank" title="点击下载iPhone客户端" href="#">
+                            iPhone版下载 </a>
+                        <a class="app-link" data-referer="official" title="点击下载Android客户端" href="#"> Android版下载 </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="fr footer-fluid text-center">
+                <p class="fluid-title"> 关注乐天 </p>
+
+                <div class="fluid-content">
+                    <div class="qrcode-parallel">
+                        <div class="link-logo wechat">
+                            <a href="#">
+                                <i class="icon-wechat"><img src="static/imge/activity-image/weibo.png" alt=""></i>
+                            </a>
+                            <a class="qrcode wechat"></a>
+                        </div>
+
+                        <div class="link-logo">
+                            <a href="#" target="_blank">
+                                <i class="icon-weibo"><img src="static/imge/activity-image/WeChat.png" alt=""></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="over-auto tuchong-detail">
+            <div class="footer-left">
+                <span>Copyright©2021 南京乐天科技有限公司</span>
+                <div class="slash-list">
+                    <a class="slash-item" href="#"><i>用户协议</i></a>
+                    <a class="slash-item" href="#"><i>隐私政策</i></a>
+                    <a class="switch-layout slash-item"><i>移动版</i></a>
+                    <a class="switch-layout slash-item"><i>电脑版</i></a>
+                </div>
+                <span style="margin-left: 50px">同一个世界，同一个梦想！</span>
+            </div>
+
+            <div class="footer-right slash-list">
+                <a class="slash-item" href="/"><i>帮助</i></a>
+                <a class="slash-item" href="/"><i>关于</i></a>
+                <a class="slash-item" href="/"><i>联系</i></a>
+                <a class="slash-item" href="/"><i>服务</i></a>
+                <a class="slash-item" href="contact.html"><i>加入我们</i></a>
+            </div>
+        </div>
+    </footer>
+</div>
+</body>
+</html>

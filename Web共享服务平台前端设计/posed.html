@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>旅行摆拍</title>
+    <link rel="stylesheet" href="static/css/initi.css">
+    <link rel="stylesheet" href="static/css/head-footer.css">
+    <script src="static/js/jquery.js"></script>
+</head>
+<style type="text/css">
+    .graphic-head-region {
+        background-color: #fff;
+    }
+
+    .head-img-region .copyright-contextmenu img {
+        margin-top: -1px;
+    }
+
+    .graphic-head-region .head-img-region .head-img {
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        display: block;
+        height: 430px;
+    }
+
+    .graphic-head-region .top-content-container {
+        margin-top: 20px;
+        margin-bottom: 15px;
+        width: 100%;
+        position: relative;
+    }
+
+    .main_container {
+        cursor: auto;
+        margin: 0 auto 0;
+    }
+
+    .graphic-head-region .top-content-container .graphic-title {
+        width: 650px;
+        margin: 0 auto;
+        text-align: center;
+        font-size: 20px;
+        color: #222;
+        line-height: 30px;
+    }
+
+    .button.new_fav.with_count {
+        /*padding-left: 40px;*/
+    }
+
+    .button.new_fav {
+        position: relative;
+        min-width: 70px;
+        text-align: center;
+        background-color: #ff4c4c;
+        border-color: #f33;
+        text-shadow: none;
+    }
+
+    .left {
+        float: right;
+        margin-right: 50px;
+    }
+
+    .button {
+        cursor: pointer;
+        font-weight: 700;
+        color: #fff;
+        display: inline-block;
+        padding: 0 10px;
+        height: 30px;
+        line-height: 28px;
+        border-radius: 3px;
+        text-decoration: none;
+        border: 1px solid #0085d1;
+        transition: background-color .1s ease-in-out;
+    }
+
+    .button .value {
+        cursor: pointer;
+        width: 100%;
+        height: 100%;
+        display: inline-block;
+        color: white;
+    }
+
+    .graphic-head-region .graphic-author {
+        width: 250px;
+        margin: 0 auto;
+        height: 25px;
+        line-height: 30px;
+        font-size: 18px;
+        font-weight: 500;
+        text-align: center;
+        color: #525558;
+        text-overflow: ellipsis;
+    }
+
+    .graphic-head-region .tags-container .tags-per {
+        display: inline-block;
+        width: 70px;
+        height: 20px;
+        font-size: 12px;
+        line-height: 20px;
+        border-radius: 12px;
+        background-color: #eaebed;
+    }
+
+    .graphic-head-region .tags-container {
+        margin-top: 15px;
+        width: 100%;
+        text-align: center;
+    }
+
+    .graphic-head-region .other-data-container {
+        padding: 20px 0;
+        width: 100%;
+        text-align: center;
+        font-size: 14px;
+        color: #b8c1c8;
+    }
+
+    .graphic-head-region .graphic_head_new_add {
+        margin: 0 auto;
+        max-width: 640px;
+        text-align: left;
+        padding: 12px 0 32px;
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+
+    .graphic-main-content-region {
+        background-color: #f7f8fa;
+        border: solid 1px #eeeff2;
+        height: auto;
+        padding-top: 20px;
+        padding-bottom: 30px;
+    }
+
+    .graphic-main-content-region .main-content-container {
+        width: 1040px;
+        margin: 0 auto;
+    }
+
+    .graphic-main-content-region .main-content-container .detail-txt {
+        font-size: 14px;
+        line-height: 1.5;
+        color: #525558;
+        margin-bottom: 20px;
+        text-align: left;
+    }
+
+    .graphic-main-content-region .main-content-container .detail-photo {
+        position: relative;
+        margin-bottom: 20px;
+    }
+
+    .graphic-main-content-region .main-content-container .detail-photo img {
+        width: 100%;
+        height: auto;
+    }
+</style>
+<body>
+<div class="main">
+    <div class="header">
+        <div style="height: 70px;background: #FFF">
+            <div class="logo fl">
+                <img src="static/imge/logo.png" width="100%" alt="">
+            </div>
+            <div class="navbar fr">
+                <ul>
+                    <li class="fl">
+                        <a href="#"> 首 页</a>
+                        <div class="line"></div>
+                        <div class="navContent"><br><br>Welcome to Rakuten Technology</div>
+                    </li>
+                    <li class="fl">
+                        <a href="#">产品分类</a>
+                        <div class="line"></div>
+                        <div class="navContent">
+                            <ul>
+                                <a href="car-sharing.html">
+                                    <li>共享汽车</li>
+                                </a>
+                                <a href="bike-sharing.html">
+                                    <li>共享单车</li>
+                                </a>
+                                <a href="Charging.html">
+                                    <li>共享充电宝</li>
+                                </a>
+                            </ul>
+                        </div>
+
+                    </li>
+                    <li class="fl">
+                        <a href="#">热门活动</a>
+                        <div class="line"></div>
+                        <div class="navContent">
+                            <ul>
+                                <a href="activty_page.html">
+                                    <li>活动详情</li>
+                                </a>
+                                <a href="activity1.html">
+                                    <li>活动类型</li>
+                                </a>
+                            </ul>
+                        </div>
+
+                    </li>
+                    <li class="fl">
+                        <a href="#">社区精选</a>
+                        <div class="line"></div>
+                        <div class="navContent">
+                            <ul>
+                                <a href="myname.html">
+                                    <li>我的信息</li>
+                                </a>
+                                <!--<li>社区规范</li>-->
+                                <a href="In_community.html">
+                                    <li>进入社区</li>
+                                </a>
+                            </ul>
+                        </div>
+
+                    </li>
+                    <li class="fl">
+                        <a href="#">关于我们</a>
+                        <div class="line"></div>
+                        <div class="navContent">
+                            <ul>
+                                <a href="page.html">
+                                    <li>公司简介</li>
+                                </a>
+                                <!-- <a href="page.html">
+                                     <li>发展历程</li>
+                                 </a>-->
+                                <a href="culture.html">
+                                    <li>企业文化</li>
+                                </a>
+                                <a href="contact.html">
+                                    <li>加入我们</li>
+                                </a>
+                            </ul>
+                        </div>
+
+                    </li>
+                    <li class="fl">
+                        <a href="#joinUs">问题反馈</a>
+                        <div class="line"></div>
+                        <div class="navContent">
+                            <ul>
+                                <a href="cooperation.html">
+                                    <li>商务合作</li>
+                                </a>
+                                <a href="information.html">
+                                    <li>问题咨询</li>
+                                </a>
+                            </ul>
+                        </div>
+
+                    </li>
+                    <li class="fl">
+                        <a href="#">用户中心</a>
+                        <div class="line"></div>
+                        <div class="navContent">
+                            <div class="userImg"><img src="static/imge/userImg.png" width="100%" alt=""></div>
+                            <div class="userState cursor"><p><a href="login.html">登录</a></p></div>
+                            <div class="userState cursor"><p><a href="register.html">注册</a></p></div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div>
+        <a href="javascript:;" id="btn" title="回到顶部" style="width:50px;
+         height:50px; position:fixed; right:50px; bottom:10px;
+         background:url('static/imge/o_信封.png') no-repeat;">
+        </a>
+    </div>
+
+    <div class="graphic-head-region">
+        <div class="head-img-region">
+            <div class="head-img copyright-contextmenu"
+                 style="background-image: url(static/imge/posed/download.jpg)">
+            </div>
+        </div>
+        <div class="top-content-container main_container">
+            <div class="graphic-title">打卡“二十三坊”</div>
+            <div class="button-action left">
+                <a class="button new_fav with_count">
+                    <span class="value">点赞量 30</span>
+                </a>
+            </div>
+            <div class="graphic-author"><span>王十三</span></div>
+            <div class="tags-container"><span class="tags-per">图文故事</span></div>
+            <div class="other-data-container"><span class="time-ago">大约 1 个月以前</span><span class="read-count">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;阅读257</span>
+            </div>
+            <div class="graphic_head_new_add">
+                <div class="graphic_description">
+                    01十五奎巷&nbsp;02晓霞弄&nbsp;03井弄&nbsp;01十五奎巷&nbsp;02晓霞弄&nbsp;03井弄
+                    &nbsp;03井弄&nbsp;01十五奎巷&nbsp;02晓霞弄&nbsp;03井弄
+                </div>
+            </div>
+        </div>
+        <div class="graphic-main-content-region">
+            <div class="main-content-container" id="main-content-container">
+                <div class="detail-txt"><span>        杭州自秦设钱唐县（唐避违忌改为钱塘）以来，历经2200年的沧桑嬗变，留下好多有历史、有故事的街巷里弄。但在迈向城市化的进程中，杭州的这些历史隗宝正在快速消逝……仅在1984年到2005年间，杭州消失的街巷多达698条（浙江在线-钱江晚报  2008年2月12日）。<br>       随着保护意识的加强，杭州终于下大力气规划并保护了一批有价值的老街老巷。其中知名度最高且迄今保存还算不错的当属这位于南宋御街（现中山南路）旁的二十三坊。<br>       寻忆杭州，边走边拍，咱走马观花先寻觅这二十三个坊打个卡，签个到。待以后有空再慢慢地去寻访更多的杭州故事……<br></span>
+                </div>
+                <div class="detail-photo"><a href="#" class="photo-img-per-link"><img alt=""
+                                                                                      class="copyright-contextmenu"
+                                                                                      src="static/imge/posed/download.jpg"></a>
+                </div>
+                <div class="detail-txt"><span>2020年11月10日，绘制在大马弄墙上的《二十三坊手绘地图》。<br><br><br></span></div>
+                <div class="detail-photo"><a href="#" class="photo-img-per-link"><img alt=""
+                                                                                      class="copyright-contextmenu"
+                                                                                      src="static/imge/posed/caa53baef2b041f5a45f73d8e64909ee.jpg"></a>
+                </div>
+                <div class="detail-txt"><span><br>
+                    十五奎巷，宋曾名竹竿巷，属长庆坊。巷名来源说法有二：一是巷子里徽州会馆内有一大石乌龟（石乌龟巷，不雅，改十五奎巷）；另一说是明嘉靖年间科举考试巷子里一举中十武魁（十武魁巷，谐音，成十五奎巷）。<br></span>
+                </div>
+                <div class="detail-photo"><a href="#" class="photo-img-per-link"><img alt=""
+                                                                                      class="copyright-contextmenu"
+                                                                                      src="static/imge/posed/3a1db42ef3f141bc95e1cb6fa087f43c.jpg"></a>
+                </div>
+                <div class="detail-txt"><span>2020年11月18日，蓝天白云下的十五奎巷中山南路口。左边墙壁除贴有“十五奎巷”的路牌外还写着“廿三坊”字样。首次走访二十三坊的人们除从吴山下来外大多都是先从这儿进去的……<br></span>
+                </div>
+                <div class="detail-photo"><a href="#" class="photo-img-per-link"><img alt=""
+                                                                                      class="copyright-contextmenu"
+                                                                                      src="static/imge/posed/c623bc40b5b44a7ab877a661a31daa59.jpg"></a>
+                </div>
+                <div class="detail-txt"><span>2020年11月18日，蓝天白云下的十五奎巷中山南路口。左边墙壁除贴有“十五奎巷”的路牌外还写着“廿三坊”字样。首次走访二十三坊的人们除从吴山下来外大多都是先从这儿进去的……<br></span>
+                </div>
+                <div class="detail-photo"><a href="#" class="photo-img-per-link"><img alt=""
+                                                                                      class="copyright-contextmenu"
+                                                                                      src="static/imge/posed/download.jpg"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="over-auto">
+            <div class="fl footer-fluid">
+                <p class="fluid-title letter-space"> 关于我们 </p>
+                <div class="fluid-content tuchong-desc"><br>
+                    科技推动出行智能方便 <br>
+                    在这里，发现基于共同兴趣的同好，鼓励原创和分享精神 <br>
+                    在这里，我们不需要重复购买,因为产品已经在街上可以共享
+                </div>
+            </div>
+
+            <div class="fl footer-fluid footer-download">
+                <p class="fluid-title letter-space"> 下载APP </p>
+                <div class="fluid-content">
+                    <img class="qrcode download" src="https://api.tuchong.com/qrcode?url=https://d.toutiao.com/kT8t/">
+                    <div class="qrcode-parallel">
+                        <a class="app-link" data-referer="official" target="_blank" title="点击下载iPhone客户端" href="#">
+                            iPhone版下载 </a>
+                        <a class="app-link" data-referer="official" title="点击下载Android客户端" href="#"> Android版下载 </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="fr footer-fluid text-center">
+                <p class="fluid-title"> 关注乐天 </p>
+
+                <div class="fluid-content">
+                    <div class="qrcode-parallel">
+                        <div class="link-logo wechat">
+                            <a href="#">
+                                <i class="icon-wechat"><img src="static/imge/activity-image/weibo.png" alt=""></i>
+                            </a>
+                            <a class="qrcode wechat"></a>
+                        </div>
+
+                        <div class="link-logo">
+                            <a href="#" target="_blank">
+                                <i class="icon-weibo"><img src="static/imge/activity-image/WeChat.png" alt=""></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="over-auto tuchong-detail">
+            <div class="footer-left">
+                <span>Copyright©2021 南京乐天科技有限公司</span>
+                <div class="slash-list">
+                    <a class="slash-item" href="#"><i>用户协议</i></a>
+                    <a class="slash-item" href="#"><i>隐私政策</i></a>
+                    <a class="switch-layout slash-item"><i>移动版</i></a>
+                    <a class="switch-layout slash-item"><i>电脑版</i></a>
+                </div>
+                <span style="margin-left: 50px">同一个世界，同一个梦想！</span>
+            </div>
+
+            <div class="footer-right slash-list">
+                <a class="slash-item" href="/"><i>帮助</i></a>
+                <a class="slash-item" href="/"><i>关于</i></a>
+                <a class="slash-item" href="/"><i>联系</i></a>
+                <a class="slash-item" href="/"><i>服务</i></a>
+                <a class="slash-item" href="contact.html"><i>加入我们</i></a>
+            </div>
+        </div>
+    </footer>
+</div>
+</body>
+<script>
+    $(document).ready(function () {
+        //首先将#btn隐藏
+        $("#btn").hide();
+        //当滚动条的位置处于距顶部50像素以下时，跳转链接出现，否则消失
+        $(function () {
+            $(window).scroll(function () {
+                if ($(window).scrollTop() > 50) {
+                    $("#btn").fadeIn(200);
+                } else {
+                    $("#btn").fadeOut(200);
+                }
+            });
+            //当点击跳转链接后，回到页面顶部位置
+            $("#btn").click(function () {
+                $('body,html').animate({
+                        scrollTop: 0
+                    },
+                    500);
+                return false;
+            });
+        });
+    });
+</script>
+</html>

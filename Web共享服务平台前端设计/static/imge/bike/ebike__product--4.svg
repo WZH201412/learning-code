@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="221px" height="200px" viewBox="0 0 221 200" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 55.2 (78181) - https://sketchapp.com -->
+    <title>pic_haluoyewu_haluozhuliche_chanpinjieshao_zhinengdianchi</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="44.1145947%" y1="112.957812%" x2="53.0063599%" y2="17.7909133%" id="linearGradient-1">
+            <stop stop-color="#F73E69" offset="0%"></stop>
+            <stop stop-color="#FF82A3" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="0%" y1="50%" x2="100%" y2="50%" id="linearGradient-2">
+            <stop stop-color="#F67265" offset="2%"></stop>
+            <stop stop-color="#FFE375" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="0%" y1="49.9798793%" x2="100%" y2="49.9798793%" id="linearGradient-3">
+            <stop stop-color="#F67265" offset="2%"></stop>
+            <stop stop-color="#FFE375" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="0%" y1="50%" x2="100%" y2="50%" id="linearGradient-4">
+            <stop stop-color="#00C1F8" offset="0%"></stop>
+            <stop stop-color="#0274EE" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="0%" y1="50%" x2="100%" y2="50%" id="linearGradient-5">
+            <stop stop-color="#00C1F8" offset="0%"></stop>
+            <stop stop-color="#0274EE" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="ui升级" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="哈啰助力车" transform="translate(-1308.000000, -2742.000000)" fill-rule="nonzero">
+            <g id="资源-47" transform="translate(1308.000000, 2742.000000)">
+                <polygon id="路径" fill="#F7416C" points="172.12 108.73 150.59 121.16 150.61 47.32 172.12 34.91"></polygon>
+                <polygon id="路径" fill="url(#linearGradient-1)" points="129.07 108.73 150.59 121.16 150.61 47.32 129.07 34.88"></polygon>
+                <polygon id="路径" fill="#FEDAE4" points="150.61 47.32 129.07 34.88 150.53 22.47 172.12 34.91"></polygon>
+                <g id="编组" opacity="0.6" transform="translate(129.000000, 7.000000)">
+                    <polygon id="路径" fill="#F77B66" points="43.14 27.89 21.61 40.32 21.64 24.85 43.14 12.44"></polygon>
+                    <polygon id="路径" fill="url(#linearGradient-2)" points="0.09 27.89 21.61 40.32 21.64 24.85 0.09 12.4"></polygon>
+                    <polygon id="路径" fill="url(#linearGradient-3)" points="21.64 24.85 0.09 12.4 21.55 0 43.14 12.44"></polygon>
+                </g>
+                <polygon id="路径" fill="#3ECEFF" points="125.29 135.75 103.77 148.18 103.79 90.71 125.29 78.3"></polygon>
+                <polygon id="路径" fill="url(#linearGradient-4)" points="82.24 135.75 103.77 148.18 103.79 90.71 82.25 78.26"></polygon>
+                <polygon id="路径" fill="#02B3F6" points="103.79 90.71 82.25 78.26 103.7 65.86 125.29 78.3"></polygon>
+                <polygon id="路径" fill="#3ECEFF" points="78.05 162.16 56.52 174.59 56.55 143.06 78.05 130.65"></polygon>
+                <polygon id="路径" fill="url(#linearGradient-5)" points="35 162.16 56.52 174.59 56.55 143.06 35 130.61"></polygon>
+                <polygon id="路径" fill="#02B3F6" points="56.55 143.06 35 130.61 56.46 118.21 78.05 130.65"></polygon>
+                <g id="编组" opacity="0.6" transform="translate(35.000000, 102.000000)">
+                    <polygon id="路径" fill="#5CF0D0" points="43.05 28.63 21.52 41.06 21.55 25.58 43.05 13.18"></polygon>
+                    <polygon id="路径" fill="#38CCD1" points="0 28.63 21.52 41.06 21.55 25.58 0 13.14"></polygon>
+                    <polygon id="路径" fill="#3CDBE1" points="21.55 25.58 0 13.14 21.46 0.73 43.05 13.18"></polygon>
+                </g>
+                <g id="编组" opacity="0.6" transform="translate(82.000000, 50.000000)">
+                    <polygon id="路径" fill="#5CF0D0" points="43.32 28.28 21.79 40.71 21.82 25.24 43.32 12.83"></polygon>
+                    <polygon id="路径" fill="#38CCD1" points="0.27 28.28 21.79 40.71 21.82 25.24 0.27 12.79"></polygon>
+                    <polygon id="路径" fill="#3CDBE1" points="21.82 25.24 0.27 12.79 21.73 0.39 43.32 12.83"></polygon>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

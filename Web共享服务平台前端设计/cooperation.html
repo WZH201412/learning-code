@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>商务合作</title>
+    <link rel="stylesheet" href="static/css/initi.css">
+    <link rel="stylesheet" href="static/css/head-footer.css">
+    <style type="text/css">
+        .main {
+            min-width: 1344px;
+            max-width: 1600px;
+            margin: auto;
+            width: 100%;
+        }
+
+        .line {
+            transition: .5s;
+            width: 0;
+            height: 1px;
+            background: red;
+            margin: auto;
+        }
+
+        .header {
+            height: 70px;
+            background: #fff;
+            box-shadow: 0 4px 7px rgba(0, 0, 0, .1);
+            position: relative;
+            z-index: 4;
+
+        }
+
+        .logo {
+            width: 180px;
+            height: 70px;
+            margin-left: 20px;
+            /*background: black;*/
+            /*border: 1px solid #EEE;*/
+            /*float: left;*/
+        }
+
+        .navbar {
+            /*background: black;*/
+            height: 70px;
+            width: auto;
+            margin-right: 60px;
+            /*float: left;*/
+        }
+
+        .navbar li {
+            /*position: relative;*/
+            width: 120px;
+            /*background: #414141;*/
+            height: 70px;
+            text-align: center;
+            font-size: 18px;
+        }
+
+        .navContent {
+            padding-top: 10px;
+            min-height: 100px;
+            background: rgba(255, 255, 255, .4);
+            /*background: red;*/
+            position: absolute;
+            width: 100%;
+            left: 0;
+            top: -40px;
+            /*display: none;*/
+            transition: .5s;
+            z-index: -1;
+            cursor: default;
+        }
+
+        .navContent ul {
+            margin-right: 36px;
+        }
+
+        .navContent ul li {
+            /*background: red;*/
+            float: right;
+            color: white;
+            font-size: 14px;
+            height: 40px;
+            margin-top: 20px;
+            margin-right: 10px;
+            line-height: 40px;
+            border-radius: 50px;
+            transition: .5s;
+            border: 1px solid rgba(0, 0, 0, .2);
+            /*margin: auto;*/
+        }
+
+        .navContent ul li:hover {
+            border: 1px solid #ccc;
+            color: #aaa;
+            background: rgba(255, 255, 255, .5);
+            font-weight: bold;
+
+        }
+
+        .navbar li:hover {
+            cursor: pointer;
+        }
+
+        .navbar li:hover .line {
+            width: 70%;
+        }
+
+        .navbar li:hover .navContent {
+            /*display: block;*/
+            top: 70px;
+        }
+
+        .navbar li > a {
+            color: black;
+            display: block;
+            height: 30px;
+            line-height: 40px;
+            margin-top: 15px;
+            margin-bottom: 10px;
+        }
+
+        .userImg {
+            height: 40px;
+            width: 40px;
+            position: absolute;
+            right: 240px;
+            top: 10px;
+            border: 1px solid #fff;
+            padding: 20px;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+
+        .userState {
+            position: absolute;
+            right: 20px;
+            border: 1px solid #FFF;
+            /*background: blue;*/
+            height: 40px;
+            width: 180px;
+        }
+
+        .userState a {
+            display: block;
+            color: white;
+            line-height: 40px;
+        }
+
+        .userState a:hover {
+            background: rgba(255, 255, 255, .8);
+            color: #555;
+        }
+
+
+        .userState:first-child {
+            top: 0;
+        }
+
+        .userState:last-child {
+            top: 60px;
+        }
+
+        .hed img {
+            margin: 0 auto;
+        }
+
+        .hed-text {
+            font-size: 35px;
+            margin-top: -200px;
+            color: white;
+            font-weight: bold;
+            text-align: center;
+            line-height: 7rem;
+        }
+
+        @media only screen and (min-width: 901px) {
+            .title {
+                margin-top: 50px;
+                padding: 100px 0 10px;
+                font-size: 35px;
+                color: black;
+                font-weight: 600;
+                text-align: center;
+            }
+        }
+        .hed-title{
+            padding: 20px;
+        }
+        .hed-title .icon_list {
+            max-width: 1200px;
+            min-width: 500px;
+            padding: 50px 0 50px 150px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .hed-title .icon_list .icon_box {
+            width: 120px;
+            height: 120px;
+            /*margin: 0 1.25rem;*/
+            border: 1px solid #d7d7d7;
+            border-radius: 50%;
+        }
+
+        .icon_list .icon_box .icon {
+            margin-left: 33px;
+            margin-top: 28px;
+            width: 50px;
+            height: 50px;
+            background-size: 100% 100%;
+        }
+
+        .icon_box .text {
+            line-height: 2;
+            text-align: center;
+        }
+
+        .business .img_text {
+            display: flex;
+            height: 324px;
+            width: 100%;
+            margin-bottom: 60px;
+        }
+
+        .business .img {
+            margin-top: 30px;
+            width: 100%;
+            margin-right: 150px;
+        }
+
+        .business p:nth-of-type(1) {
+            margin-top: 90px;
+            margin-bottom: 20px;
+            padding: 0 150px;
+        }
+
+        .business p {
+            font-size: 16px;
+            font-family: PingFangSC-Regular, PingFangSC, 'Microsoft YaHei';
+            font-weight: 400;
+            color: #666;
+            line-height: 26px;
+        }
+        .inquire {
+            /*width: 100%;*/
+            left: 150px;
+            width: 1200px;
+            position: relative;
+        }
+        .inquire .input {
+            margin-top: 100px;
+        }
+        .inquire .input .input-container:nth-of-type(odd) {
+            padding-right: 25px;
+        }
+         .inquire .input .input-container {
+             width: 50%;
+             float: left;
+             position: relative;
+             box-sizing: border-box;
+             margin-bottom: 60px;
+         }
+        .inquire .input .input-container input {
+            border-bottom: 1px solid #999;
+            width: 100%;
+            outline: 0;
+            padding-bottom: 20px;
+            font-size: 24px;
+            font-family: PingFangSC-Regular,PingFang SC,'Microsoft YaHei';
+            color: #333;
+            line-height: 33px;
+        }
+         input {
+             border: none;
+         }
+        .inquire .contact {
+            clear: both;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            margin-top: 100px;
+        }
+        .inquire .contact .btn {
+            cursor: pointer;
+            width: 350px;
+            height: 50px;
+            background: #0096ff;
+            border-radius: 2px;
+            font-size: 24px;
+            font-family: PingFangSC-Medium,PingFang SC,'Microsoft YaHei';
+            font-weight: 500;
+            color: #fff;
+            line-height: 50px;
+            margin-bottom: 25px;
+            text-align: center;
+        }
+        .inquire .contact .contact-mail {
+            height: 22px;
+            font-size: 16px;
+            font-family: PingFangSC-Medium,PingFang SC,'Microsoft YaHei';
+            font-weight: 500;
+            color: #666;
+            line-height: 22px;
+        }
+    </style>
+</head>
+<body>
+<div class="main">
+    <div class="header">
+        <div style="height: 70px;background: #FFF">
+            <div class="logo fl">
+                <img src="static/imge/logo.png" width="100%" alt="">
+            </div>
+            <div class="navbar fr">
+                <ul>
+                    <li class="fl">
+                        <a href="#"> 首 页</a>
+                        <div class="line"></div>
+                        <div class="navContent"><br><br>Welcome to Rakuten Technology</div>
+                    </li>
+                    <li class="fl">
+                        <a href="#">产品分类</a>
+                        <div class="line"></div>
+                        <div class="navContent">
+                            <ul>
+                                <a href="car-sharing.html">
+                                    <li>共享汽车</li>
+                                </a>
+                                <a href="bike-sharing.html">
+                                    <li>共享单车</li>
+                                </a>
+                                <a href="Charging.html">
+                                    <li>共享充电宝</li>
+                                </a>
+                            </ul>
+                        </div>
+
+                    </li>
+                    <li class="fl">
+                        <a href="#">热门活动</a>
+                        <div class="line"></div>
+                        <div class="navContent">
+                            <ul>
+                                <a href="activty_page.html">
+                                    <li>活动详情</li>
+                                </a>
+                                <a href="activity1.html">
+                                    <li>活动类型</li>
+                                </a>
+                            </ul>
+                        </div>
+
+                    </li>
+                    <li class="fl">
+                        <a href="#">社区精选</a>
+                        <div class="line"></div>
+                        <div class="navContent">
+                            <ul>
+                                <a href="myname.html">
+                                    <li>我的信息</li>
+                                </a>
+                                <!--<li>社区规范</li>-->
+                                <a href="In_community.html">
+                                    <li>进入社区</li>
+                                </a>
+                            </ul>
+                        </div>
+
+                    </li>
+                    <li class="fl">
+                        <a href="#">关于我们</a>
+                        <div class="line"></div>
+                        <div class="navContent">
+                            <ul>
+                                <a href="page.html">
+                                    <li>公司简介</li>
+                                </a>
+                                <!-- <a href="page.html">
+                                     <li>发展历程</li>
+                                 </a>-->
+                                <a href="culture.html">
+                                    <li>企业文化</li>
+                                </a>
+                                <a href="contact.html">
+                                    <li>加入我们</li>
+                                </a>
+                            </ul>
+                        </div>
+
+                    </li>
+                    <li class="fl">
+                        <a href="#joinUs">问题反馈</a>
+                        <div class="line"></div>
+                        <div class="navContent">
+                            <ul>
+                                <a href="cooperation.html">
+                                    <li>商务合作</li>
+                                </a>
+                                <a href="information.html">
+                                    <li>问题咨询</li>
+                                </a>
+                            </ul>
+                        </div>
+
+                    </li>
+                    <li class="fl">
+                        <a href="#">用户中心</a>
+                        <div class="line"></div>
+                        <div class="navContent">
+                            <div class="userImg"><img src="static/imge/userImg.png" width="100%" alt=""></div>
+                            <div class="userState cursor"><p><a href="login.html">登录</a></p></div>
+                            <div class="userState cursor"><p><a href="register.html">注册</a></p></div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!---->
+    <div class="hed">
+        <img src="static/imge/cooperation/3840w_918h_019FA1595494039.jpg" width="100%" alt="">
+        <div class="hed-text">我们一起携手共进！</div>
+    </div>
+
+    <div class="hed-title">
+        <div class="title">应用场景</div>
+        <div class="icon_list">
+            <div class="icon_box">
+                <div class="icon"
+                     style="background-image: url(static/imge/cooperation/huatong.66c893a4.png);"></div>
+                <div class="text">
+                    娱乐
+                </div>
+            </div>
+            <div class="icon_box">
+                <div class="icon"
+                     style="background-image: url(static/imge/cooperation/air.49b3adf7.png);"></div>
+                <div class="text">
+                    出行
+                </div>
+            </div>
+            <div class="icon_box">
+                <div class="icon"
+                     style="background-image: url(static/imge/cooperation/food.7db90b29.png);"></div>
+                <div class="text">
+                    餐饮
+                </div>
+            </div>
+            <div class="icon_box">
+                <div class="icon"
+                     style="background-image: url(static/imge/cooperation/house.4e5d732a.png);"></div>
+                <div class="text">
+                    公共场所
+                </div>
+            </div>
+        </div>
+        <section class="business" style="margin-top: -100px">
+            <div class="section-title">
+                <div class="title">业务规模</div>
+            </div>
+            <div class="img_text">
+                <div class="text">
+                    <p>
+                        哈啰出行是国内领先的专业移动出行平台，致力于为用户提供便捷、高效、普惠、安全的出行工具和服务。
+                        公司于2016年9月在上海成立。成立四年多来，秉持着“科技推动出行进化”的使命，凭借卓越的创新能力、差异化的发展战略和技术驱动下的优异运营能力，哈啰从激烈的市场竞争中脱颖而出。
+                        目前公司已进化为包括两轮出行（哈啰单车、哈啰助力车、哈啰电动车、小哈换电）、四轮出行（哈啰顺风车、全网叫车、哈啰打车）等的综合化移动出行平台。</p>
+                </div>
+                <div class="img">
+                    <img src="static/imge/cooperation/contact__brand--5.png" alt="">
+                </div>
+            </div>
+        </section>
+        <section class="inquire">
+            <div class="section-title">
+                <div class="title">品牌合作咨询</div>
+            </div>
+            <div class="input">
+                <div class="input-container"><input type="text" class="company" id="company" maxlength="20"
+                                                    placeholder="公司"></div>
+                <div class="input-container"><input type="text" class="position" id="position" maxlength="20"
+                                                    placeholder="职位" oninput="canSubmit()"></div>
+                <div class="input-container"><input type="text" class="name" id="name1" maxlength="20" placeholder="姓名"
+                                                    oninput="canSubmit()"></div>
+                <div class="input-container"><input type="text" class="phone" id="phone" maxlength="40" placeholder="手机"
+                                                    oninput="canSubmit()"></div>
+                <div class="input-container"><input type="text" class="mail" id="mail" maxlength="50" placeholder="邮箱"
+                                                    oninput="canSubmit()"></div>
+                <div class="input-container"><input type="text" class="need" id="need" maxlength="200"
+                                                    placeholder="合作需求" oninput="canSubmit()"></div>
+            </div>
+            <div class="contact">
+                <div id="submit" class="btn no">预约咨询顾问</div>
+                <span class="contact-mail">联系方式：www.baidu.com</span></div>
+        </section>
+    </div>
+
+    <footer>
+        <div class="over-auto">
+            <div class="fl footer-fluid">
+                <p class="fluid-title letter-space"> 关于我们 </p>
+                <div class="fluid-content tuchong-desc"><br>
+                    科技推动出行智能方便 <br>
+                    在这里，发现基于共同兴趣的同好，鼓励原创和分享精神 <br>
+                    在这里，我们不需要重复购买,因为产品已经在街上可以共享
+                </div>
+            </div>
+
+            <div class="fl footer-fluid footer-download">
+                <p class="fluid-title letter-space"> 下载APP </p>
+                <div class="fluid-content">
+                    <img class="qrcode download" src="https://api.tuchong.com/qrcode?url=https://d.toutiao.com/kT8t/">
+                    <div class="qrcode-parallel">
+                        <a class="app-link" data-referer="official" target="_blank" title="点击下载iPhone客户端" href="#">
+                            iPhone版下载 </a>
+                        <a class="app-link" data-referer="official" title="点击下载Android客户端" href="#"> Android版下载 </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="fr footer-fluid text-center">
+                <p class="fluid-title"> 关注乐天 </p>
+
+                <div class="fluid-content">
+                    <div class="qrcode-parallel">
+                        <div class="link-logo wechat">
+                            <a href="#">
+                                <i class="icon-wechat"><img src="static/imge/activity-image/weibo.png" alt=""></i>
+                            </a>
+                            <a class="qrcode wechat"></a>
+                        </div>
+
+                        <div class="link-logo">
+                            <a href="#" target="_blank">
+                                <i class="icon-weibo"><img src="static/imge/activity-image/WeChat.png" alt=""></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="over-auto tuchong-detail">
+            <div class="footer-left">
+                <span>Copyright©2021 南京乐天科技有限公司</span>
+                <div class="slash-list">
+                    <a class="slash-item" href="#"><i>用户协议</i></a>
+                    <a class="slash-item" href="#"><i>隐私政策</i></a>
+                    <a class="switch-layout slash-item"><i>移动版</i></a>
+                    <a class="switch-layout slash-item"><i>电脑版</i></a>
+                </div>
+                <span style="margin-left: 50px">同一个世界，同一个梦想！</span>
+            </div>
+
+            <div class="footer-right slash-list">
+                <a class="slash-item" href="/"><i>帮助</i></a>
+                <a class="slash-item" href="/"><i>关于</i></a>
+                <a class="slash-item" href="/"><i>联系</i></a>
+                <a class="slash-item" href="/"><i>服务</i></a>
+                <a class="slash-item" href="contact.html"><i>加入我们</i></a>
+            </div>
+        </div>
+    </footer>
+</div>
+</body>
+</html>
